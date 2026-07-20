@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ViraDengo - Feed</title>
+    <link rel="stylesheet" href="./assets/feed.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/e901c9005c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <img class="logoImagem" src="img/logo.png" alt="" />
+        <img class="viraDengo" src="img/viraDengo.png" alt="" />
+      </div>
+
+      <nav class="box">
+        <ul class="menu">
+          <li><a class="list" href="./index.html">Início</a></li>
+          <li><a class="list" href="#">Doação</a></li>
+          <li><a class="list" href="#">Profissionais</a></li>
+          <li><a class="list" href="#">Voluntariado</a></li>
+        </ul>
+      </nav>
+      <a class="botao" href=""><i class="fa-solid fa-paw"></i>Quero doar</a>
+    </header>
+    <div class="conteudo-central">
+      <!-- STORIES -->
+      <section class="stories">
+        <div class="stories-header">
+          <h3>Stories</h3>
+          <a href="#" class="ver-todos">Ver todos</a>
+        </div>
+
+        <div class="stories-lista">
+          <div class="story story-add">
+            <div class="story-avatar story-add-avatar">
+              <span>+</span>
+            </div>
+            <p>Seu story</p>
+          </div>
+
+          <div class="story">
+            <div class="story-avatar"></div>
+            <p>Amigos de Patas</p>
+          </div>
+
+          <div class="story">
+            <div class="story-avatar"></div>
+            <p>Patinhas Felizes</p>
+          </div>
+
+          <div class="story">
+            <div class="story-avatar"></div>
+            <p>Lar Doce Lar</p>
+          </div>
+
+          <div class="story">
+            <div class="story-avatar"></div>
+            <p>Cão sem Dono</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- BUSCA -->
+      <div class="busca">
+        <input
+          type="text"
+          placeholder="Buscar campanhas, voluntariados ou itens..."
+        />
+        <button class="btn-busca">🔍</button>
+      </div>
+
+      <!-- FEED -->
+      <section class="feed">
+        <article class="card">
+          <div class="card-imagem">
+            <span class="tag tag-campanha">Campanha gratuita</span>
+            <img
+              src="img/feed/vacina.jpg"
+              alt="Campanha de vacinação antirrábica"
+            />
+          </div>
+          <div class="card-conteudo">
+            <h3>Campanha de vacinação antirrábica</h3>
+            <div class="card-autor">
+              <span class="check">✔</span> ONG Amigos de Patas
+            </div>
+            <p class="card-descricao">
+              Vacinação gratuita para cães e gatos. Proteja seu melhor amigo!
+              🐾🐾
+            </p>
+            <div class="card-info">
+              <span>📅 25 de maio de 2024</span>
+              <span>🕒 09h às 15h</span>
+              <span>📍 Praça da Sé, São Paulo - SP</span>
+            </div>
+            <button class="btn-acao btn-detalhes">Ver detalhes</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-imagem">
+            <span class="tag tag-item">Item doado</span>
+            <button class="btn-salvar">🔖</button>
+            <img
+              src="img/feed/doacao.png"
+              alt="Caminha para cães porte médio"
+            />
+          </div>
+          <div class="card-conteudo">
+            <h3>Caminha para cães porte médio</h3>
+            <div class="card-autor">
+              <span class="icone-usuario">👤</span> Doador: Juliana Martins
+            </div>
+            <p class="card-descricao">
+              Caminha em ótimo estado, pouco usada. Meu pet ganhou outra e quero
+              doar!
+            </p>
+            <div class="card-info">
+              <span>📍 Vila Mariana, São Paulo - SP</span>
+              <span>🕒 Publicado há 2 horas</span>
+            </div>
+            <button class="btn-acao btn-interesse">Tenho interesse</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-imagem">
+            <span class="tag tag-voluntariado">Voluntariado</span>
+            <button class="btn-salvar">🔖</button>
+            <img
+              src="img/feed/dois-caes-petlove.jpg"
+              alt="Mutirão de socialização de cães"
+            />
+          </div>
+          <div class="card-conteudo">
+            <h3>Mutirão de socialização de cães</h3>
+            <div class="card-autor">
+              <span class="check">✔</span> ONG Lar Doce Lar
+            </div>
+            <p class="card-descricao">
+              Precisamos de voluntários para ajudar na socialização dos cães
+              resgatados.
+            </p>
+            <div class="card-info">
+              <span>📅 18 de maio de 2024</span>
+              <span>🕒 09h às 12h</span>
+              <span>📍 Lar Doce Lar - São Paulo/SP</span>
+              <span>👥 5 vagas disponíveis</span>
+            </div>
+            <button class="btn-acao btn-participar">Quero participar</button>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-imagem">
+            <span class="tag tag-item">Item doado</span>
+            <button class="btn-salvar">🔖</button>
+            <img src="img/feed/doacao2.jpg" alt="Ração para cães adultos" />
+          </div>
+          <div class="card-conteudo">
+            <h3>Ração para cães adultos</h3>
+            <div class="card-autor">
+              <span class="icone-usuario">👤</span> Doador: Marcos Silva
+            </div>
+            <p class="card-descricao">
+              Pacote de ração premium, lacrado, sobrou da compra do meu pet.
+            </p>
+            <div class="card-info">
+              <span>📍 Moema, São Paulo - SP</span>
+              <span>🕒 Publicado há 5 horas</span>
+            </div>
+            <button class="btn-acao btn-interesse">Tenho interesse</button>
+          </div>
+        </article>
+      </section>
+    </div>
+  </body>
+</html>

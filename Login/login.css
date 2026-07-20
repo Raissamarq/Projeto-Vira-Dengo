@@ -1,0 +1,369 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+:root {
+  --cor-primaria: #ff8615;
+  --cor-secundaria: #006d77;
+  --cor-fundo: #faf6f1;
+  --cor-laranja-100: #ffe7d1;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  background-color: var(--cor-fundo);
+  background-image: url(img/fundo\ viradengo.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+header {
+  display: flex;
+  align-items: center;
+  padding: 5px 100px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--cor-fundo);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logoImagem {
+  width: 80px;
+}
+
+.viraDengo {
+  width: 150px;
+  margin: 20px 0px;
+}
+
+.box {
+  margin-left: auto;
+}
+
+.menu {
+  display: flex;
+  margin-right: 40px;
+  list-style: none;
+}
+
+.list {
+  background: #ff8c1a;
+  color: white;
+  padding: 10px 28px;
+  border-radius: 999px;
+}
+
+.botao {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-fundo);
+  padding: 10px 25px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+}
+
+.fa-paw {
+  margin-right: 10px;
+}
+
+.menu li {
+  padding: 0 8px;
+}
+
+.login-card {
+  min-height: calc(100vh - 90px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.titulo-principal {
+  font-size: 40px;
+  color: var(--cor-primaria);
+}
+
+.subtitulo {
+  font-size: 20px;
+  color: var(--cor-secundaria);
+  margin-bottom: 30px;
+}
+
+.campo {
+  display: block;
+  margin-bottom: 18px;
+  text-align: left;
+  width: 280px;
+}
+
+.campo label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #3a4a4a;
+  margin-bottom: 6px;
+}
+
+.campo input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cfc9bd;
+  border-radius: 8px;
+  font-size: 14px;
+  font: inherit;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.campo input:focus {
+  border-color: var(--cor-secundaria);
+}
+
+.btn-entrar {
+  margin-top: 10px;
+  background-color: var(--cor-primaria);
+  color: var(--cor-fundo);
+  padding: 14px 28px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  width: 280px;
+  transition: 0.3s;
+}
+
+.btn-entrar:hover {
+  background-color: #e67610;
+  transform: scale(1.03);
+}
+
+.botao-continuar {
+  background-color: var(--cor-primaria);
+  color: var(--cor-fundo);
+  padding: 14px 28px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font: inherit;
+  display: block;
+  width: fit-content;
+  margin: 50px auto 0;
+  transition: 0.3s;
+}
+
+.botao-continuar:hover {
+  background-color: #e67610;
+  transform: scale(1.03);
+}
+
+.cadastro {
+  margin-top: 20px;
+  font-size: 14px;
+  color: #333;
+}
+
+.cadastro a {
+  color: var(--cor-secundaria);
+  font-weight: 600;
+}
+
+.esqueceu-senha {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+.opcao {
+  width: 240px;
+  padding: 25px;
+  background: var(--cor-fundo);
+  border-radius: 16px;
+  border: 1.5px solid rgba(237, 190, 146, 0.35);
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.opcao:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+  border-color: var(--cor-primaria);
+}
+
+.opcao h2 {
+  color: var(--cor-primaria);
+}
+
+.opcao p {
+  color: var(--cor-secundaria);
+}
+:root {
+  --laranja: #f2994a;
+  --teal: #1f7a7a;
+  --teal-dark: #145c5c;
+  --cinza-borda: #e0dcd3;
+}
+
+/* ===== DIVISOR "ou continue com" ===== */
+.divisor {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--teal);
+  font-size: 12px;
+  margin-bottom: 20px;
+}
+.divisor::before,
+.divisor::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: repeating-linear-gradient(
+    to right,
+    var(--cinza-borda) 0,
+    var(--cinza-borda) 4px,
+    transparent 4px,
+    transparent 8px
+  );
+}
+
+.social-login {
+  display: flex;
+  gap: 14px;
+  margin: 0 auto 24px auto; /* era "margin-bottom: 24px" -> faltava limitar a largura */
+  max-width: 420px; /* ajusta esse valor pro tamanho real do seu card de login */
+}
+
+.btn-social {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 30px;
+  border: none;
+  background: var(--teal);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    background 0.2s ease,
+    transform 0.15s ease;
+}
+.btn-social:hover {
+  background: var(--teal-dark);
+  transform: translateY(-1px);
+}
+
+.btn-social svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.btn-social.google svg {
+  background: #fff;
+  border-radius: 50%;
+  padding: 2px;
+}
+
+.cadastro-rodape {
+  max-width: 420px; /* mesmo limite do .social-login, pra tudo alinhar */
+  margin: 0 auto;
+  text-align: center;
+  font-size: 13px;
+}
+.cadastro-rodape p {
+  color: var(--teal);
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+.cadastro-rodape a {
+  color: var(--laranja);
+  font-weight: 700;
+  text-decoration: none;
+}
+.cadastro-rodape a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .social-login {
+    flex-direction: column;
+  }
+}
+
+footer {
+  height: 250px;
+  background-color: var(--cor-laranja-100);
+  color: var(--cor-secundaria);
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 50px;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  gap: 10px;
+}
+
+.footer-logo p {
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.logo-img-footer {
+  width: 100px;
+}
+
+.nome-img-footer {
+  width: 140px;
+}
+
+footer div {
+  list-style: none;
+}
+
+footer div p {
+  font-weight: bold;
+}
+
+.footer-nav-cont {
+  display: flex;
+  gap: 150px;
+}

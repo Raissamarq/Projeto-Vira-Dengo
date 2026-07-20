@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro Usuário e Voluntário</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./CadastroUsuario/cadastro-usuario.css" />
+  </head>
+  <body>
+    <header>
+      <div>
+        <img class="logoImagem" src="./img/logo.png" alt="" />
+        <img class="viraDengo" src="./img/viraDengo.png" alt="" />
+      </div>
+
+      <nav class="box">
+        <ul class="menu">
+          <li><a class="list" href="#">Início</a></li>
+          <li><a class="list" href="#">Doação</a></li>
+          <li><a class="list" href="#">Profissionais</a></li>
+          <li><a class="list" href="#">Sobre Nós</a></li>
+        </ul>
+      </nav>
+      <a class="botao" href=""><i class="fa-solid fa-paw"></i>Quero doar</a>
+    </header>
+
+    <main>
+      <h1 class="titulo-principal">
+        Cadastro de Usúario e <span>Voluntário</span>
+      </h1>
+      <p class="subtitulo">
+        Vamos Criar <span>conexões</span> que <span>mudam</span> vidas
+      </p>
+
+      <div class="cards-selecao">
+        <label class="card-opcao">
+          <input type="radio" name="tipo-cadastro" value="usuario" checked />
+          <div class="card-opcao__header">
+            <span class="card-opcao__titulo">Usuário Comum</span>
+            <span class="card-opcao__radio"></span>
+          </div>
+          <p class="card-opcao__desc">
+            Quero buscar <strong class="destaque-laranja">doações</strong> e
+            <strong class="destaque-laranja">serviços</strong> para meu pet.
+          </p>
+        </label>
+
+        <label class="card-opcao">
+          <input type="radio" name="tipo-cadastro" value="voluntario" />
+          <div class="card-opcao__header">
+            <span class="card-opcao__titulo">Voluntário</span>
+            <span class="card-opcao__radio"></span>
+          </div>
+          <p class="card-opcao__desc">
+            Quero <strong class="destaque-laranja">ajudar</strong> com meu tempo
+            e <strong class="destaque-laranja">dedicação</strong>.
+          </p>
+        </label>
+      </div>
+      <div class="secao">
+        <h2 class="titulo-secao">
+          <i class="fa-solid fa-user"></i> Dados Pessoais
+        </h2>
+
+        <div class="colunas">
+          <fieldset class="coluna">
+            <legend class="oculta">Informações de contato</legend>
+
+            <div class="campo">
+              <label for="nomeCompleto">Nome Completo</label>
+              <input
+                type="text"
+                id="nomeCompleto"
+                name="nomeCompleto"
+                placeholder="Digite seu nome"
+                required
+              />
+            </div>
+
+            <div class="campo">
+              <label for="telefone">Telefone/WhatsApp</label>
+              <input
+                type="tel"
+                id="telefone"
+                name="telefone"
+                placeholder="(00) 00000-0000"
+                required
+              />
+            </div>
+
+            <div class="campo">
+              <label for="email">E-mail</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="email@exemplo.com"
+                required
+              />
+            </div>
+
+            <div class="campo">
+              <label for="sobreVoce">Descrição do Seu Trabalho</label>
+              <textarea
+                id="sobreVoce"
+                name="sobreVoce"
+                maxlength="500"
+                placeholder="Conte um pouco sobre você e sua afinidade com pet's"
+              ></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset class="coluna">
+            <legend class="oculta">Documentos e localização</legend>
+
+            <div class="campo">
+              <label for="CPF">CPF</label>
+              <input
+                type="text"
+                id="CPF"
+                name="CPF"
+                placeholder="000.000.000-00"
+                required
+              />
+            </div>
+
+            <div class="campo">
+              <label for="data">Data de Nascimento</label>
+              <input type="date" id="data" name="dataDeNascimento" required />
+            </div>
+
+            <div class="campo">
+              <label for="cidade">Cidade</label>
+              <input
+                type="text"
+                id="cidade"
+                name="cidade"
+                placeholder="Cidade"
+                required
+              />
+            </div>
+
+            <div class="campo">
+              <p class="label-documentos">
+                <i class="fa-solid fa-file-lines"></i>Foto de Perfil (Opcional)
+              </p>
+              <div class="upload-area">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <p>Clique para <span class="destaque-laranja">Enviar</span></p>
+                <span>Imagem (máx. 10MB)</span>
+                <label for="fotoPerfil" class="btn-selecionar-arquivo"
+                  >Selecionar arquivo</label
+                >
+                <input
+                  type="file"
+                  id="fotoPerfil"
+                  name="foto"
+                  accept=".pdf,image/*"
+                  hidden
+                />
+              </div>
+            </div>
+          </fieldset>
+        </div>
+      </div>
+
+      <div class="secao">
+        <h2 class="titulo-secao">
+          <i class="fa-solid fa-lock"></i> Credenciais de Acesso
+        </h2>
+
+        <div class="colunas">
+          <div class="campo">
+            <label for="senha">Senha</label>
+            <input
+              type="password"
+              id="senha"
+              name="senha"
+              placeholder="**********"
+              required
+            />
+          </div>
+
+          <div class="campo">
+            <label for="confirmarSenha">Confirmar Senha</label>
+            <input
+              type="password"
+              id="confirmarSenha"
+              name="confirmarSenha"
+              placeholder="**********"
+              required
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="aviso-seguranca">
+        <i class="fa-solid fa-shield-halved"></i>
+        <div class="aviso-seguranca__texto">
+          <p class="aviso-seguranca__titulo">Seus dados estão seguros!</p>
+          <p class="aviso-seguranca__descricao">
+            Utilizamos suas informações apenas para conectar você a
+            oportunidades que fazem a diferença na vida dos pets.
+          </p>
+        </div>
+      </div>
+
+      <button type="submit" class="btn-continuar">
+        Continuar <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </main>
+
+    <footer>
+      <section class="footer-logo">
+        <img class="logo-img-footer" src="img/logo1.webp" alt="imagem-logo" />
+        <img class="nome-img-footer" src="img/logo2.webp" alt="nome-logo" />
+        <p class="span-negrito">
+          O serviço que faz você e seu pet virarem fãs.
+        </p>
+      </section>
+      <section class="footer-nav-cont">
+        <div class="footer-nav">
+          <p>Navegação</p>
+          <li><a href="">Início</a></li>
+          <li><a href="">Doação</a></li>
+          <li><a href="">Profissionais</a></li>
+          <li><a href="">Voluntariado</a></li>
+        </div>
+        <div class="footer-contato">
+          <p>Contato</p>
+          <li>ViraDengo@gmail.com</li>
+          <li>Tel.: 11 977666555</li>
+        </div>
+        <div class="footer-tutorial">
+          <p>Suporte</p>
+          <li>Como funciona? (Doação)</li>
+          <li>Como funciona? (Voluntário)</li>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

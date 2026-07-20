@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro ONG</title>
+  <link rel="stylesheet" href="./CadastroOng/cadastro-ong.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <img class="logoImagem" src="./img/logo.png" alt="logo" />
+      <img class="viraDengo" src="./img/viraDengo.png" alt="viradengo" />
+    </div>
+
+    <nav class="box">
+      <ul class="menu">
+        <li><a class="list" href="#">Início</a></li>
+        <li><a class="list" href="#">Doação</a></li>
+        <li><a class="list" href="#">Profissionais</a></li>
+        <li><a class="list" href="#">Sobre Nós</a></li>
+      </ul>
+    </nav>
+    <a class="botao" href=""><i class="fa-solid fa-paw"></i>Quero doar</a>
+  </header>
+
+
+  <main>
+
+    <div class="cadastro">
+
+      <a href="#" class="voltar"> ← Voltar</a>
+    </div>
+
+
+    <h1 class="titulo-principal">Cadastro de <span>ONG</span></h1>
+    <p class="subtitulo"> Sua causa <span>merece</span> ser encotrada</p>
+
+    <div class="colunas">
+      <fieldset class="secao">
+        <legend> <i class="fa-solid fa-building"></i> Dados da Organização </legend>
+
+
+        <div class="campo">
+          <label for="nomeOng"> Nome da ONG / Organização</label>
+          <input type="text" id="nomeOng" name="nomeOng" placeholder="Digite o nome da sua instituição" required>
+        </div>
+
+        <div class="campo">
+          <label for="cnpj"> CNPJ</label>
+          <input type="text" id="cnpj" name="cnpj" placeholder="00.000.000/0000-00" required />
+        </div>
+
+        <div class="campo">
+          <label for="dataFundacao">Data de Fundação</label>
+          <input type="date" id="dataFundacao" name="dataFundacao" required />
+        </div>
+
+        <div class="campo">
+          <label for="emailinstitucional"> E-mail Institucional</label>
+          <input type="email" id="emailinstitucional" name="emailinstitucional" placeholder="contato@suaong.com"
+            required />
+        </div>
+
+
+        <div class="campo">
+          <label for="telefone"> Telefone/WhatsApp</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required />
+        </div>
+
+        <div class="campo">
+          <label for="site"> Site (Opcional)</label>
+          <input type="url" id="site" name="site" placeholder="https://www.suaong.org.br" />
+        </div>
+
+
+        <div class="campo">
+          <label for="sobreOng"> Sobre a ONG</label>
+          <textarea id="sobreOng" name="sobreOng" maxlength="500"
+            placeholder="Conte um pouco sobre a missão, visão e os objetivos da sua orgaanização."></textarea>
+        </div>
+      </fieldset>
+
+
+
+      <fieldset class="secao">
+        <legend> <i class="fa-solid fa-location-dot"></i> Endereço da Sede </legend>
+
+        <div class="campo">
+          <label for="cep">CEP</label>
+          <input type="text" id="cep" name="cep" placeholder="00000-000" required />
+        </div>
+
+        <div class="campo">
+          <label for="endereco">Endereço</label>
+          <input type="text" id="endereco" name="endereco" placeholder="Rua, Avenida, Número" required />
+        </div>
+
+        <div class="campo">
+          <label for="complemento">Complemento (Opcional)</label>
+          <input type="text" id="complemento" name="complemento" placeholder="Apartamento, Bloco, etc." />
+        </div>
+
+        <div class="campo-linha">
+          <div class="campo">
+            <label for="bairro">Bairro</label>
+            <input type="text" id="bairro" name="bairro" placeholder="Bairro" required />
+          </div>
+
+          <div class="campo">
+            <label for="cidade">Cidade</label>
+            <input type="text" id="cidade" name="cidade" placeholder="Cidade" required />
+          </div>
+        </div>
+
+        <div class="campo-linha">
+          <div class="campo">
+            <label for="estado">Estado</label>
+            <select id="estado" name="estado" required>
+              <option value="">Selecione</option>
+
+            </select>
+          </div>
+
+          <div class="campo">
+            <label for="pais">País</label>
+            <select id="pais" name="pais" required>
+              <option value="Brasil" selected>Brasil</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="campo">
+          <p class="label-documentos"><i class="fa-solid fa-file-lines"></i> Documentos</p>
+          <div class="upload-area">
+            <i class="fa-solid fa-cloud-arrow-up"></i>
+            <p>Envie o Estatuto Social da ONG</p>
+            <span>PDF ou Imagem (máx. 10MB)</span>
+            <label for="estatuto" class="btn-selecionar-arquivo">Selecionar arquivo</label>
+            <input type="file" id="estatuto" name="estatuto" accept=".pdf,image/*" hidden />
+          </div>
+        </div>
+      </fieldset>
+
+
+
+      <fieldset class="secao">
+        <legend><i class="fa-solid fa-user"></i> Responsável Legal</legend>
+
+        <div class="campo">
+          <label for="nomeResponsavel">Nome Completo</label>
+          <input type="text" id="nomeResponsavel" name="nomeResponsavel" placeholder="Digite o nome completo"
+            required />
+        </div>
+
+
+        <div class="campo">
+          <label for="cargo">Cargo na ONG</label>
+          <input type="text" id="cargo" name="cargo" placeholder="Ex: Presidente, Diretor, etc." required />
+        </div>
+
+        <div class="campo">
+          <label for="emailResponsavel">E-mail</label>
+          <input type="email" id="emailResponsavel" name="emailResponsavel" placeholder="email@exemplo.com" required />
+        </div>
+
+        <div class="campo">
+          <label for="telefoneResponsavel">Telefone / WhatsApp</label>
+          <input type="tel" id="telefoneResponsavel" name="telefoneResponsavel" placeholder="(00) 00000-0000"
+            required />
+        </div>
+
+        <div class="campo campo-checkboxes">
+          <p class="label-causa"><i class="fa-solid fa-paw"></i>Causa de Atuação</p>
+          <span class="sublabel">Principais áreas de atuação (Selecione uma ou mais)</span>
+
+          <label class="checkbox-item">
+            <input type="checkbox" name="causa" value="resgate">Resgate e Reabilitação</label>
+
+
+          <label class="checkbox-item">
+            <input type="checkbox" name="causa" value="adocao" /> Adoção
+          </label>
+
+          <label class="checkbox-item">
+            <input type="checkbox" name="causa" value="castracao" />Castração e Controle Populacional
+          </label>
+
+          <label class="checkbox-item">
+            <input type="checkbox" name="causa" value="educacao" />Educação e Conscientização</label>
+
+          <label class="checkbox-item">
+            <input type="checkbox" name="causa" value="saude" />Saúde e Bem-estar Animal</label>
+
+          <label class="checkbox-item">
+            <input type="checkbox" name="causa" value="outros" />Outros</label>
+
+          </label>
+        </div>
+    </div>
+    </fieldset>
+
+    
+<div class="aviso-seguranca">
+  <i class="fa-solid fa-shield-halved"></i>
+  <div class="aviso-seguranca__texto">
+    <p class="aviso-seguranca__titulo">Seus dados estão seguros!</p>
+    <p class="aviso-seguranca__descricao">
+      Utilizamos suas informações apenas para conectar você a
+      oportunidades que fazem a diferença na vida dos pets.
+    </p>
+  </div>
+</div>
+
+<button type="submit" class="btn-continuar">
+  Continuar <i class="fa-solid fa-arrow-right"></i>
+</button>
+
+  <footer>
+<section class="footer-logo">
+        <img class="logo-img-footer" src="img/logo1.webp" alt="imagem-logo" />
+        <img class="nome-img-footer" src="img/logo2.webp" alt="nome-logo" />
+        <p class="span-negrito">
+          O serviço que faz você e seu pet virarem fãs.
+        </p>
+      </section>
+      <section class="footer-nav-cont">
+        <div class="footer-nav">
+          <p>Navegação</p>
+          <li><a href="">Início</a></li>
+          <li><a href="">Doação</a></li>
+          <li><a href="">Profissionais</a></li>
+          <li><a href="">Voluntariado</a></li>
+        </div>
+        <div class="footer-contato">
+          <p>Contato</p>
+          <li>ViraDengo@gmail.com</li>
+          <li>Tel.: 11 977666555</li>
+        </div>
+        <div class="footer-tutorial">
+          <p>Suporte</p>
+          <li>Como funciona? (Doação)</li>
+          <li>Como funciona? (Voluntário)</li>
+        </div>
+      </section>
+  </footer>
+
+</body>
+
+</html>
+cadastro.ong.html
+9 KB
