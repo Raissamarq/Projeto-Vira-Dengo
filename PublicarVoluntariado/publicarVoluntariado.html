@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar Vaga de Voluntariado | ViraDengo</title>
+    <link rel="stylesheet" href="./publicarVoluntariado.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <header>
+      <a href="../index.html" class="logo">
+        <img class="logoImagem" src="../img/logo.png" alt="Ícone ViraDengo" />
+        <img class="viraDengo" src="../img/viraDengo.webp" alt="ViraDengo" />
+      </a>
+      <nav>
+        <ul class="menu">
+          <li><a class="ativo" href="#">Início</a></li>
+          <li><a href="#">Profissionais</a></li>
+          <li><a href="#">Doação</a></li>
+          <li><a href="#">Adoção</a></li>
+          <li><a href="#">Cadastrar-se</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="pagina">
+
+      <a class="voltar" href="#"><i class="fa-solid fa-arrow-left"></i> Voltar</a>
+
+      <h1 class="titulo-pagina">Publicar Vaga de Voluntariado</h1>
+      <p class="subtitulo-pagina">Encontre pessoas dispostas a fazer a diferença nos seus projetos. Preencha os campos abaixo para publicar sua oportunidade.</p>
+
+      <div class="conteudo">
+
+        <div class="coluna-esquerda">
+
+          <section class="card">
+
+            <div class="secao-titulo">
+              <span class="secao-numero">1</span>
+              <i class="fa-solid fa-circle-info"></i>
+              <h2>Informações gerais</h2>
+            </div>
+
+            <div class="linha linha-desigual">
+              <div class="campo">
+                <label for="titulo-vaga">Título da vaga <span class="obrigatorio">*</span></label>
+                <input type="text" id="titulo-vaga" placeholder="Ex: Auxílio no Banho e Tosa">
+              </div>
+
+              <div class="campo">
+                <label for="descricao-atividade">Descrição da atividade <span class="obrigatorio">*</span></label>
+                <div class="editor-texto">
+                  <div class="editor-barra">
+                    <button type="button"><i class="fa-solid fa-bold"></i></button>
+                    <button type="button"><i class="fa-solid fa-italic"></i></button>
+                    <button type="button"><i class="fa-solid fa-underline"></i></button>
+                    <span class="editor-separador"></span>
+                    <button type="button"><i class="fa-solid fa-list-ul"></i></button>
+                    <button type="button"><i class="fa-solid fa-list-ol"></i></button>
+                    <span class="editor-separador"></span>
+                    <button type="button"><i class="fa-solid fa-link"></i></button>
+                  </div>
+                  <textarea id="descricao-atividade" placeholder="Conte detalhes sobre a atividade, o que o voluntário irá fazer, objetivos do projeto, etc."></textarea>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="card">
+
+            <div class="secao-titulo">
+              <span class="secao-numero">2</span>
+              <i class="fa-solid fa-calendar-days"></i>
+              <h2>Data, horário e local</h2>
+            </div>
+
+            <div class="linha linha-tres">
+              <div class="campo">
+                <label for="data-atividade">Data da atividade <span class="obrigatorio">*</span></label>
+                <input type="date" id="data-atividade">
+              </div>
+              <div class="campo">
+                <label for="horario">Horário <span class="obrigatorio">*</span></label>
+                <input type="time" id="horario">
+              </div>
+              <div class="campo">
+                <label for="local">Local <span class="obrigatorio">*</span></label>
+                <input type="text" id="local" placeholder="Ex: Rua das Flores, 123 - São Paulo/SP">
+                <p class="ajuda-campo">Informe o endereço completo ou selecione no mapa</p>
+              </div>
+            </div>
+
+            <div class="caixa-mapa">
+              <div class="caixa-mapa-texto">
+                <i class="fa-solid fa-location-dot"></i>
+                <div>
+                  <strong>Selecione o local no mapa</strong>
+                  <p>Arraste o marcador para escolher o ponto exato da atividade.</p>
+                </div>
+              </div>
+              <button type="button" class="botao-contorno botao-pequeno">Selecionar no mapa</button>
+            </div>
+          </section>
+
+          <section class="card">
+
+            <div class="secao-titulo">
+              <span class="secao-numero">3</span>
+              <i class="fa-solid fa-users"></i>
+              <h2>Quantidade de voluntários</h2>
+            </div>
+
+            <label for="qtd-voluntarios">Quantidade de voluntários necessários <span class="obrigatorio">*</span></label>
+            <div class="stepper">
+              <button type="button" class="stepper-botao" aria-label="Diminuir quantidade">−</button>
+              <input type="number" id="qtd-voluntarios" class="stepper-input" value="1" min="1">
+              <button type="button" class="stepper-botao" aria-label="Aumentar quantidade">+</button>
+            </div>
+            <p class="ajuda-campo">Informe quantas pessoas são necessárias para essa atividade.</p>
+          </section>
+
+          <section class="card">
+
+            <div class="secao-titulo">
+              <span class="secao-numero">4</span>
+              <i class="fa-solid fa-clipboard-check"></i>
+              <h2>Requisitos e informações adicionais</h2>
+            </div>
+
+            <div class="linha">
+              <div class="campo">
+                <label for="habilidades">Habilidades necessárias (opcional)</label>
+                <textarea id="habilidades" class="textarea-curta" placeholder="Ex: boa comunicação, cuidado com..."></textarea>
+              </div>
+              <div class="campo">
+                <label for="experiencia">Experiência necessária</label>
+                <select id="experiencia">
+                  <option selected disabled>Selecione uma opção</option>
+                  <option>Nenhuma experiência necessária</option>
+                  <option>Experiência básica</option>
+                  <option>Experiência avançada</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="linha">
+              <div class="campo">
+                <label for="menor-idade">Aceita menores de idade? (opcional)</label>
+                <select id="menor-idade">
+                  <option selected disabled>Selecione uma opção</option>
+                  <option>Sim, com autorização dos responsáveis</option>
+                  <option>Não</option>
+                </select>
+              </div>
+              <div class="campo">
+                <label for="experiencia-previa">Exige experiência prévia?</label>
+                <select id="experiencia-previa">
+                  <option selected disabled>Selecione uma opção</option>
+                  <option>Sim</option>
+                  <option>Não</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="campo">
+              <label for="observacoes">Outras observações (opcional)</label>
+              <textarea id="observacoes" placeholder="Outras informações importantes, como alimentação, transporte, roupas, materiais que o voluntário deve levar, etc."></textarea>
+            </div>
+          </section>
+
+          <section class="card">
+
+            <div class="secao-titulo">
+              <span class="secao-numero">5</span>
+              <i class="fa-solid fa-image"></i>
+              <h2>Imagem da oportunidade (opcional)</h2>
+            </div>
+
+            <div class="upload-fotos upload-fotos-unico">
+              <input type="file" id="input-imagem-vaga" accept="image/*" hidden>
+              <label for="input-imagem-vaga" class="upload-area upload-area-larga">
+                <i class="fa-solid fa-camera"></i>
+                <p><strong>Adicione uma imagem de capa</strong></p>
+                <p>A imagem ajuda a chamar mais voluntários!</p>
+                <p class="limite-fotos">Formatos: JPG, PNG. Tamanho máx: 5 MB</p>
+              </label>
+            </div>
+          </section>
+
+          <div class="acoes-formulario">
+            <button type="button" class="botao-contorno botao-pequeno">Salvar como rascunho</button>
+          </div>
+
+          <p class="aviso-revisao"><i class="fa-solid fa-shield-halved"></i> Todas as vagas passam por revisão antes da publicação para garantir um ambiente seguro e confiável.</p>
+
+        </div>
+
+        <div class="coluna-direita">
+
+          <div class="preview-imagem-vaga">
+            <img src="https://images.pexels.com/photos/16395150/pexels-photo-16395150/free-photo-of-dog-and-cat-sitting-together.jpeg?w=1260&amp;h=750&amp;dpr=1" alt="Cachorro e gato juntos">
+          </div>
+
+          <section class="card card-lembrete">
+            <h4><i class="fa-solid fa-heart"></i> Dicas para uma boa vaga</h4>
+            <ul class="lista-dicas">
+              <li>
+                <span class="icone-dica"><i class="fa-solid fa-bullseye"></i></span>
+                <div>
+                  <strong>Seja claro e objetivo</strong>
+                  <p>Explique de forma simples o que será feito e qual o impacto da atividade.</p>
+                </div>
+              </li>
+              <li>
+                <span class="icone-dica"><i class="fa-solid fa-location-dot"></i></span>
+                <div>
+                  <strong>Informe todos os detalhes</strong>
+                  <p>Data, horário, local e atividades ajudam o voluntário a decidir.</p>
+                </div>
+              </li>
+              <li>
+                <span class="icone-dica"><i class="fa-solid fa-star"></i></span>
+                <div>
+                  <strong>Defina expectativas</strong>
+                  <p>Deixe claro o nível de experiência ou habilidades específicas.</p>
+                </div>
+              </li>
+              <li>
+                <span class="icone-dica"><i class="fa-solid fa-bolt"></i></span>
+                <div>
+                  <strong>Responda rápido</strong>
+                  <p>Atenção e agilidade aumentam as chances de engajamento.</p>
+                </div>
+              </li>
+            </ul>
+          </section>
+
+          <h3 class="titulo-preview"><i class="fa-regular fa-eye"></i> Pré-visualização da vaga</h3>
+
+          <section class="card preview-card-vazio">
+            <i class="fa-solid fa-camera"></i>
+            <p><strong>Sua vaga aparecerá assim</strong></p>
+            <p>Este preview será exibido aqui após preencher os campos.</p>
+          </section>
+
+        </div>
+
+      </div>
+
+    </main>
+
+    <!-- #region DIVISION-HEART -->
+    <footer>
+      <section class="footer-logo">
+        <img class="logo-img-footer" src="img/logo.png" alt="imagem-logo" />
+        <img class="nome-img-footer" src="img/viraDengo.webp" alt="nome-logo" />
+        <p class="span-negrito">O serviço que faz você e seu pet virarem fãs.</p>
+      </section>
+
+      <section class="footer-nav-cont">
+        <div class="footer-nav">
+          <p>Navegação</p>
+          <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Profissionais</a></li>
+            <li><a href="#">Doação</a></li>
+            <li><a href="#">Adoção</a></li>
+            <li><a href="#">Cadastre-se</a></li>
+          </ul>
+        </div>
+        <div class="footer-contato">
+          <p>Contato</p>
+          <ul>
+            <li>ViraDengo@gmail.com</li>
+            <li>Tel.: 11 977666555</li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <p>Siga-nos</p>
+          <ul>
+            <li>@viradengoofc</li>
+          </ul>
+        </div>
+        <div class="footer-politicas">
+          <p>Políticas</p>
+          <ul>
+            <li><a href="#">Termos de Uso</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+          </ul>
+        </div>
+      </section>
+    </footer>
+    <!-- #endregion -->
+
+</body>
+</html>

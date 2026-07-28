@@ -23,6 +23,7 @@ body {
 
 /* MENU endregion*/
 
+
 header {
   display: flex;
   align-items: center;
@@ -40,7 +41,7 @@ a {
 }
 
 .logoImagem {
-  width: 80px;
+  width: 100px;
 }
 
 .viraDengo {
@@ -49,7 +50,7 @@ a {
 }
 
 .box {
-  margin-left: auto;
+  margin: auto;
 }
 
 .menu {
@@ -59,20 +60,30 @@ a {
 }
 
 .list {
-  background: #ff8c1a;
-  color: white;
+  color: var(--cor-secundaria);
   padding: 10px 28px;
   border-radius: 999px;
+  font-weight: bold;
 }
 
-.botao {
-  background-color: var(--cor-secundaria);
+.list:hover {
   color: var(--cor-fundo);
+  background: var(--cor-primaria);
+}
+
+.botaoHome {
+  color: var(--cor-secundaria);
   padding: 10px 25px;
   border-radius: 999px;
-  border: none;
+  border: solid 1px var(--cor-secundaria);
   cursor: pointer;
   font: inherit;
+}
+
+.botaoHome:hover {
+  background-color: var(--cor-primaria);
+  color: var(--cor-fundo);
+  border: solid 1px var(--cor-laranja-100);
 }
 
 .menu li {

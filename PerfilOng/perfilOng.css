@@ -1,0 +1,214 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f0e9;
+  margin: 0;
+  padding: 0;
+  color: #333;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 10px 40px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoImagem {
+  width: 60px;
+}
+
+.viraDengo {
+  height: 40px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  background-color: #ff8c1a;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+nav ul li:first-child a {
+  background-color: #006d6b;
+}
+
+nav ul li a:hover {
+  background-color: #ff9f3a;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 40px;
+  gap: 40px;
+}
+
+.perfil-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 40px;
+}
+
+.perfil {
+ flex: 1 1 35%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  min-height: 420px;
+
+  /* 🔧 Centralização vertical e horizontal */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.foto-perfil img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto 15px auto;
+}
+
+.verificado {
+  color: #00b67a;
+  font-size: 18px;
+}
+
+.local {
+  text-align: center;
+  margin-top: 10px;
+  color: #555;
+}
+
+.data,
+.status,
+.descricao-status {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+}
+
+.info {
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  
+}
+
+.card h3 {
+  color: #006d6b;
+  margin-bottom: 10px;
+}
+
+.tags span {
+  background-color: #d8e8e7;
+  color: #006d6b;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  margin-right: 5px;
+}
+
+.acoes {
+  display: Flex-direction;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.acao-card {
+  flex: 1 1 22%;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 25px 20px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.acao-card:hover {
+  transform: translateY(-5px);
+}
+
+.icon {
+  width: 55px;
+  height: 55px;
+  background-color: #d8e8e7;
+  color: #006d6b;
+}
+
+  footer {
+  height: 250px;
+  background-color: var(--cor-laranja-100);
+  color: var(--cor-secundaria);
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 50px;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  gap: 10px;
+}
+
+.footer-logo p {
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.logo-img-footer {
+  width: 100px;
+}
+
+.nome-img-footer {
+  width: 140px;
+}
+
+footer div {
+  list-style: none;
+}
+
+footer div p {
+  font-weight: bold;
+}
+
+.footer-nav-cont {
+  display: flex;
+  gap: 150px;
+}

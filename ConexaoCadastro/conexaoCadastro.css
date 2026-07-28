@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  background-color: var(--cor-fundo);
+  color: var(--cor-secundaria);
+}
+
+:root {
+  --cor-primaria: #ff8615;
+  --cor-secundaria: #006d77;
+  --cor-fundo: #faf6f1;
+  --cor-laranja-100: #ffe7d1;
+}
+
+
+.form-section{
+    min-height: calc(100vh - 90px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    text-align:center;
+    
+
+}
+
+.titulo-principal{
+    font-size: 40px;
+    color: #ff8615;
+}
+
+.subtitulo{
+    font-size: 32px;
+    color: #006d77;
+}
+
+.opcoes-login{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+
+
+.opcao{
+    width: 240px;
+    padding: 25px;
+
+    background: #faf6f1;
+    border-radius: 16px;
+    border: 1.5px solid rgba(237, 190, 146, 0.35);
+
+    text-align: center;
+
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.opcao h2{
+    color: var(--cor-primaria);
+
+
+}
+
+.opcao p{
+    color: var(--cor-secundaria);
+}
+
+
+.botao-continuar{
+  background-color: #ff8615;
+  color: var(--cor-fundo);
+
+  padding: 14px 28px;
+  border-radius: 999px;
+
+  border: none;
+  cursor: pointer;
+
+  font: inherit;
+
+  display: block;
+  width: fit-content;
+  margin: 50px auto 0;
+
+  transition: 0.3s;
+
+}
+
+header {
+  display: flex;
+  align-items: center;
+  padding: 5px 100px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--cor-fundo);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logoImagem {
+  width: 100px;
+}
+
+.viraDengo {
+  width: 150px;
+  margin: 20px 0px;
+}
+
+.box {
+  margin: auto;
+}
+
+.menu {
+  display: flex;
+  margin-right: 40px;
+  list-style: none;
+}
+
+.list {
+  color: var(--cor-secundaria);
+  padding: 10px 28px;
+  border-radius: 999px;
+  font-weight: bold;
+}
+
+.list:hover {
+  color: var(--cor-fundo);
+  background: var(--cor-primaria);
+}
+
+.botaoHome {
+  color: var(--cor-secundaria);
+  padding: 10px 25px;
+  border-radius: 999px;
+  border: solid 1px var(--cor-secundaria);
+  cursor: pointer;
+  font: inherit;
+}
+
+.botaoHome:hover {
+  background-color: var(--cor-primaria);
+  color: var(--cor-fundo);
+  border: solid 1px var(--cor-laranja-100);
+}
+
+.menu li {
+  padding: 0 8px;
+}
+
+.fa-paw {
+  margin-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+
