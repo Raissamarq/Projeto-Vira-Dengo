@@ -23,7 +23,6 @@ body {
 
 /* MENU endregion*/
 
-
 header {
   display: flex;
   align-items: center;
@@ -92,6 +91,12 @@ a {
 
 .fa-paw {
   margin-right: 10px;
+}
+
+.perfil-box img {
+  width: 60px;
+  border-radius: 50%;
+  border: solid 3.5px var(--cor-primaria);
 }
 
 /* endregion*/

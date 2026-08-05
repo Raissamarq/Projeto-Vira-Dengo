@@ -12,19 +12,23 @@
   </head>
   <body>
     <header>
-      <a href="#" class="logo">
-        <img class="logoImagem" src="../img/logo.png" alt="Ícone ViraDengo" />
-        <img class="viraDengo" src="../img/viraDengo.png" alt="ViraDengo" />
-      </a>
-      <nav>
+      <div>
+        <img class="logoImagem" src="img/logoImagem.webp" alt="" />
+      </div>
+
+      <nav class="box">
         <ul class="menu">
-          <li><a class="ativo" href="#">Início</a></li>
-          <li><a href="#">Profissionais</a></li>
-          <li><a href="#">Doação</a></li>
-          <li><a href="#">Adoção</a></li>
-          <li><a href="#">Cadastrar-se</a></li>
+          <li><a class="list" href="Feed/feed.html">Conexões</a></li>
+          <li><a class="list" href="index.html">Home</a></li>
+          <li><a class="list" href="#">Profissionais</a></li>
         </ul>
       </nav>
+
+      <div class="perfil-box">
+        <a href="PerfilUsuario/perfilUsuario.html">
+          <img src="img/woman.webp" alt="" />
+        </a>
+      </div>
     </header>
 
     <main class="pagina">
@@ -73,13 +77,37 @@
             </div>
 
             <div class="condicao">
-              <button type="button" class="opcao-condicao selecionada">
-                Novo
-              </button>
-              <button type="button" class="opcao-condicao">Seminovo</button>
-              <button type="button" class="opcao-condicao">
-                Usado - Bom Estado
-              </button>
+              <input
+                type="radio"
+                name="condicao"
+                id="condicao-novo"
+                class="radio-condicao"
+                checked
+                hidden
+              />
+              <label for="condicao-novo" class="opcao-condicao">Novo</label>
+
+              <input
+                type="radio"
+                name="condicao"
+                id="condicao-seminovo"
+                class="radio-condicao"
+                hidden
+              />
+              <label for="condicao-seminovo" class="opcao-condicao"
+                >Seminovo</label
+              >
+
+              <input
+                type="radio"
+                name="condicao"
+                id="condicao-usado"
+                class="radio-condicao"
+                hidden
+              />
+              <label for="condicao-usado" class="opcao-condicao"
+                >Usado - Bom Estado</label
+              >
             </div>
           </section>
 
@@ -91,7 +119,15 @@
             </p>
 
             <div class="upload-fotos">
-              <div class="upload-area">
+              <input
+                type="file"
+                id="input-fotos"
+                accept="image/*"
+                multiple
+                hidden
+              />
+
+              <div id="upload-area" class="upload-area">
                 <i class="fa-solid fa-camera"></i>
                 <p><strong>Clique para adicionar fotos</strong></p>
                 <p>ou arraste e solte aqui</p>
@@ -137,16 +173,19 @@
               <i class="fa-solid fa-bowl-food"></i>
               <i class="fa-solid fa-bowl-food"></i>
             </div>
-            <h4 class="preview-titulo">Título do item</h4>
+            <h4 class="preview-titulo" id="preview-titulo">Título do item</h4>
             <p class="preview-categoria">
-              <i class="fa-solid fa-tag"></i> Categoria
+              <i class="fa-solid fa-tag"></i>
+              <span id="preview-categoria">Categoria</span>
             </p>
-            <p class="preview-descricao">Descrição do item aparecerá aqui...</p>
+            <p class="preview-descricao" id="preview-descricao">
+              Descrição do item aparecerá aqui...
+            </p>
 
             <div class="linha preview-info">
               <div>
                 <p class="rotulo">Quantidade</p>
-                <p class="valor">Condição</p>
+                <p class="valor" id="preview-condicao">Condição</p>
               </div>
               <div class="alinhar-direita">
                 <p class="rotulo">Quantidade Disponível</p>
@@ -157,7 +196,7 @@
             <p class="preview-local">
               <i class="fa-solid fa-location-dot"></i> Localização
             </p>
-            <p class="valor">Cidade - Estado</p>
+            <p class="valor" id="preview-local">Cidade - Estado</p>
           </section>
 
           <section class="card card-lembrete">
@@ -187,5 +226,60 @@
         </div>
       </div>
     </main>
+
+    <!-- #region DIVISION-HEART -->
+    <footer>
+      <section class="footer-logo">
+        <img
+          class="logo-img-footer"
+          src="img/logo-footer.png"
+          alt="imagem-logo"
+        />
+        <img
+          class="nome-img-footer"
+          src="img/nome-footer.webp"
+          alt="nome-logo"
+        />
+        <p class="span-negrito">
+          O serviço que faz você e seu pet virarem fãs.
+        </p>
+      </section>
+
+      <section class="footer-nav-cont">
+        <div class="footer-nav">
+          <p>Navegação</p>
+          <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Profissionais</a></li>
+            <li><a href="#">Doação</a></li>
+            <li><a href="#">Adoção</a></li>
+            <li><a href="#">Cadastre-se</a></li>
+          </ul>
+        </div>
+        <div class="footer-contato">
+          <p>Contato</p>
+          <ul>
+            <li>ViraDengo@gmail.com</li>
+            <li>Tel.: 11 977666555</li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <p>Siga-nos</p>
+          <ul>
+            <li>@viradengoofc</li>
+          </ul>
+        </div>
+        <div class="footer-politicas">
+          <p>Políticas</p>
+          <ul>
+            <li><a href="#">Termos de Uso</a></li>
+            <li><a href="#">Política de Privacidade</a></li>
+          </ul>
+        </div>
+      </section>
+    </footer>
+    <!-- #endregion -->
+
+    <script src="script.js"></script>
   </body>
 </html>

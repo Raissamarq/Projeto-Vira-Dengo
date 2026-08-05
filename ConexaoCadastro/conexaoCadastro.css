@@ -9,6 +9,7 @@ body {
   line-height: 1.5;
   background-color: var(--cor-fundo);
   color: var(--cor-secundaria);
+  background-image: url(../img/imagemDeFundo.png);
 }
 
 :root {
@@ -18,66 +19,80 @@ body {
   --cor-laranja-100: #ffe7d1;
 }
 
+.form-section {
+  min-height: calc(100vh - 90px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 
-.form-section{
-    min-height: calc(100vh - 90px);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-
-    text-align:center;
-    
-
+  text-align: center;
 }
 
-.titulo-principal{
-    font-size: 40px;
-    color: #ff8615;
+.titulo-principal {
+  font-size: 40px;
+  color: #ff8615;
 }
 
-.subtitulo{
-    font-size: 32px;
-    color: #006d77;
+.subtitulo {
+  font-size: 32px;
+  color: #006d77;
 }
 
-.opcoes-login{
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-top: 40px;
+.opcoes-login {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
 }
 
+.opcao {
+  width: 240px;
+  padding: 25px;
 
+  background: #faf6f1;
+  border-radius: 16px;
+  border: 1.5px solid rgba(237, 190, 146, 0.35);
 
-.opcao{
-    width: 240px;
-    padding: 25px;
+  text-align: center;
 
-    background: #faf6f1;
-    border-radius: 16px;
-    border: 1.5px solid rgba(237, 190, 146, 0.35);
-
-    text-align: center;
-
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    cursor: pointer;
-
-    transition: 0.3s;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  transition: 0.3s;
 }
 
-.opcao h2{
-    color: var(--cor-primaria);
-
-
+.opcao h2 {
+  color: var(--cor-primaria);
 }
 
-.opcao p{
-    color: var(--cor-secundaria);
+.opcao p {
+  color: var(--cor-secundaria);
 }
 
+.opcao img {
+  width: 80px;
+  transition: 0.3s;
+}
 
-.botao-continuar{
+.opcao:hover img {
+  width: 80px;
+  transform: scale(1.2);
+}
+
+.opcao:hover {
+  background-color: color-mix(in srgb, var(--cor-secundaria) 60%, transparent);
+  transform: translateY(-12px) scale(1.2);
+}
+
+.opcao:hover h2 {
+  color: var(--cor-fundo);
+}
+
+.opcao:hover p {
+  color: var(--cor-fundo);
+}
+
+.botao-continuar {
   background-color: #ff8615;
   color: var(--cor-fundo);
 
@@ -94,7 +109,6 @@ body {
   margin: 50px auto 0;
 
   transition: 0.3s;
-
 }
 
 header {
@@ -166,13 +180,3 @@ a {
 .fa-paw {
   margin-right: 10px;
 }
-
-
-
-
-
-
-
-
-
-
