@@ -29,11 +29,20 @@
       </ul>
     </nav>
     <div class="perfil-box">
-      <a href="../PerfilUsuario/perfilUsuario.html">
-        <img src="../img/woman.jpg" alt="" />
-      </a>
+      <input type="checkbox" id="perfil-toggle" class="perfil-toggle-input" />
+      <label for="perfil-toggle">
+        <img src="../img/woman.jpg" alt="Perfil" class="perfil-icone" />
+      </label>
+
+      <div class="perfil-dropdown">
+        <a href="../PerfilUsuario/perfilUsuario.html">Meu Perfil</a>
+        <a href="../PerfilOng/perfilOng.html">Perfil ONG</a>
+        <a href="">Configurações</a>
+        <a href="../index.html">Sair</a>
+      </div>
     </div>
   </header>
+
   <body>
     <div class="conteudo-central">
       <!-- STORIES -->
@@ -82,25 +91,6 @@
         <button class="btn-busca">🔍</button>
       </div>
 
-      <div class="box">
-        <ul class="menu">
-          <li><a class="list" href="../PublicarDoacao/doacao.html">Doar</a></li>
-          <li>
-            <a
-              class="list"
-              href="../PublicarVoluntariado/publicarVoluntariado.html"
-              >Voluntariar</a
-            >
-          </li>
-          <li>
-            <a class="list" href="../PerfilUsuario/perfilUsuario.html"
-              >Usuario</a
-            >
-          </li>
-          <li><a class="list" href="../PerfilOng/perfilOng.html">ONG</a></li>
-        </ul>
-      </div>
-
       <!-- FEED -->
       <section class="feed">
         <article class="card">
@@ -125,7 +115,6 @@
             <button class="btn-acao btn-detalhes">Ver detalhes</button>
           </div>
         </article>
-
         <article class="card">
           <div class="card-imagem">
             <span class="tag tag-item">Item doado</span>
@@ -201,4 +190,57 @@
       </section>
     </div>
   </body>
+  <footer>
+    <section class="footer-logo">
+      <img
+        class="logo-img-footer"
+        src="../img/logoImagem.png"
+        alt="imagem-logo"
+      />
+      <img class="nome-img-footer" src="../img/viraDengo.png" alt="nome-logo" />
+      <p class="span-negrito">O serviço que faz você e seu pet virarem fãs.</p>
+    </section>
+    <section class="footer-nav-cont">
+      <div class="footer-nav">
+        <p>Navegação</p>
+        <li><a href="">Início</a></li>
+        <li><a href="">Doação</a></li>
+        <li><a href="">Profissionais</a></li>
+        <li><a href="">Voluntariado</a></li>
+      </div>
+      <div class="footer-contato">
+        <p>Contato</p>
+        <li>ViraDengo@gmail.com</li>
+        <li>Tel.: 11 977666555</li>
+      </div>
+      <div class="footer-tutorial">
+        <p>Suporte</p>
+        <li>Como funciona? (Doação)</li>
+        <li>Como funciona? (Voluntário)</li>
+      </div>
+    </section>
+  </footer>
+  <div class="menu-inferior">
+    <div class="botao-add">
+      <a href="../PublicarDoacao/doacao.html"
+        ><button>
+          <img src="../img/icons/paw-add.png" alt="" /> Doação
+        </button></a
+      >
+    </div>
+    <div class="botao-add">
+      <a href="../PublicarVoluntariado/publicarVoluntariado.html"
+        ><button>
+          <img src="../img/icons/paw-add.png" alt="" /> Voluntariado
+        </button></a
+      >
+    </div>
+    <div class="botao-add">
+      <a href="">
+        <button>
+          <img src="../img/icons/messenger.png" alt="" /> Mensagem
+        </button></a
+      >
+    </div>
+  </div>
 </html>

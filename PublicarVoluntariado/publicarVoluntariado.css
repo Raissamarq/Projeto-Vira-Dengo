@@ -28,7 +28,7 @@ ul {
   list-style: none;
 }
 
-/* ---------- HEADER ---------- */
+/* MENU endregion */
 
 header {
   display: flex;
@@ -39,6 +39,11 @@ header {
   top: 0;
   z-index: 100;
   background: var(--cor-fundo);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .logoImagem {
@@ -100,6 +105,8 @@ header {
   border-radius: 50%;
   border: solid 3.5px var(--cor-primaria);
 }
+
+/* endregion */
 
 /* ---------- PÁGINA ---------- */
 

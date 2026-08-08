@@ -1,329 +1,302 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Perfil de Usuário</title>
-    <link rel="stylesheet" href="./perfilUsuario.css">
-</head>
-<body>
+    <link rel="stylesheet" href="perfilUsuario.css" />
+  </head>
+  <body>
+    <header>
+    <div>
+      <img class="logoImagem" src="../img/logoImagem.png" alt="" />
+    </div>
 
-<header>
-      <div class="marca">
-        <img class="logoImagem" src="../img/logo_viradengo.webp" alt="" />
-        <img class="viraDengo" src="../img/viraDengo.png" alt="" />
-      </div>
+    <nav class="box">
+      <ul class="menu">
+        <li><a class="list" href="../Feed/feed.html">Conexões</a></li>
+        <li><a class="list" href="../index.html">Home</a></li>
+        <li><a class="list" href="#">Profissionais</a></li>
+      </ul>
+    </nav>
+    <div class="perfil-box">
+      <input type="checkbox" id="perfil-toggle" class="perfil-toggle-input" />
+  <label for="perfil-toggle">
+    <img src="../img/woman.jpg" alt="Perfil" class="perfil-icone" />
+  </label>
 
-      <nav class="box">
-        <ul class="menu">
-          <li><a class="list" href="#">Início</a></li>
-          <li><a class="list" href="#">Doação</a></li>
-          <li><a class="list" href="#">Profissionais</a></li>
-          <li><a class="list" href="#">Sobre Nós</a></li>
-        </ul>
-      </nav>
-      <a class="botao" href=""><i class="fa-solid fa-paw"></i>Quero doar</a>
-    </header> 
+  <div class="perfil-dropdown">
+    <a href="../PerfilUsuario/perfilUsuario.html">Meu Perfil</a>
+        <a href="../PerfilOng/perfilOng.html">Perfil ONG</a>
+    <a href="">Configurações</a>
+    <a href="../index.html">Sair</a>
+  </div>
+    </div>
+  </header>
 
-     <main>
-
-        <div class="coluna-esquerda">
-
-    <section class="perfil">
-        <div class="foto-perfil">
-            <img src="./img/juliana.png" alt="Foto de perfil do usuário">
+    <main>
+      <div class="coluna-esquerda">
+        <section class="perfil">
+          <div class="foto-perfil">
+            <img src="../img/woman.jpg"Foto de perfil do usuário" />
             <button class="btn-camera">
-                <img src="./img/icone_camera.png">
+              <img src="./img/icone_camera.png" />
             </button>
-        </div>
+          </div>
 
-        <div class="dados-perfil">
-            <h1>Juliana Martins</h1>
+          <div class="dados-perfil">
+            <h1 id="nome-perfil">Juliana Martins</h1>
             <p class="localizacao">📍 São Paulo, SP</p>
             <p class="data-cadastro">Entrou 17 de março de 2025</p>
-            <p class="descricao">Amante dos animais e voluntária sempre que possível.</p>
-        </div>
+            <p class="descricao" id="descricao-perfil">
+              Amante dos animais e voluntária sempre que possível.
+            </p>
+          </div>
 
-        <button class="btn-editar">
-           <img src="./img/icone_editar.png"> Editar Perfil
-        </button>
+          <button class="btn-editar" id="btn-editar-perfil">
+            <img src="./img/icone_editar.png" /> 
+            
+            <span id="texto-btn-editar-perfil">
+                Editar Perfil
+            </span>
+          </button>
+        </section> 
 
-    </section>
-
-  <section class="visao-geral">
-
-        <nav class="abas">
-
+        <section class="visao-geral">
+          <nav class="abas">
             <button class="aba ativa">
-                <img src="./img/icone_visaogeral.png">
-                Visão Geral</button>
+              <img src="./img/icone_visaogeral.png" />
+              Visão Geral
+            </button>
 
             <button class="aba">
-                <img src="./img/icone_doacao.png">
-                Minhas Doações</button>
+              <img src="./img/icone_doacao.png" />
+              Minhas Doações
+            </button>
 
             <button class="aba">
-                <img src="./img/icone_acoes.png">
-                Voluntariado</button>
+              <img src="./img/icone_acoes.png" />
+              Voluntariado
+            </button>
 
             <button class="aba">
-                <img src="./img/icone_mensagens.png">
-                Mensagem</button>
+              <img src="./img/icone_mensagens.png" />
+              Mensagem
+            </button>
 
             <button class="aba">
-                <img src="./img/icone_favs.png">
-                Favoritos</button>
+              <img src="./img/icone_favs.png" />
+              Favoritos
+            </button>
 
             <button class="aba">
-                <img src="./img/icone_configuracao.png">
-                Configurações</button>
+              <img src="./img/icone_configuracao.png" />
+              Configurações
+            </button>
+          </nav>
 
-        </nav>
+          <div class="cards-resumo">
+            <article class="card-resumo">
+              <div class="topo-card">
+                <div class="icone-card">
+                  <img src="./img/icone_doacao.png" alt="Ícone de doações" />
+                </div>
 
-        <div class="cards-resumo">
+                <div class="conteudo-card">
+                  <h2>5</h2>
+                  <h3>Doações realizadas</h3>
+                  <p>Itens doados com sucesso.</p>
+                </div>
+              </div>
+
+              <button class="btn-card">Ver doações</button>
+            </article>
 
             <article class="card-resumo">
-
-                <div class="topo-card">
-
+              <div class="topo-card">
                 <div class="icone-card">
-                    <img src="./img/icone_doacao.png" alt="Ícone de doações">
+                  <img src="img/icone_acoes.png" alt="Ícone de voluntariado" />
                 </div>
 
                 <div class="conteudo-card">
-                    <h2>5</h2>
-                    <h3>Doações realizadas</h3>
-                    <p>Itens doados com sucesso.</p>
-
+                  <h2>3</h2>
+                  <h3>Ações voluntárias</h3>
+                  <p>Participações confirmadas.</p>
                 </div>
+              </div>
 
-                </div>
-
-                    <button class="btn-card">
-                        Ver doações
-                    </button>
-
-
+              <button class="btn-card">Ver minhas ações</button>
             </article>
 
-             <article class="card-resumo">
-
-                <div class="topo-card">
-
+            <article class="card-resumo">
+              <div class="topo-card">
                 <div class="icone-card">
-                    <img src="img/icone_acoes.png" alt="Ícone de voluntariado">
+                  <img
+                    src="./img/icone_mensagens.png"
+                    alt="Ícone de mensagens"
+                  />
                 </div>
 
                 <div class="conteudo-card">
-
-                    <h2>3</h2>
-                    <h3>Ações voluntárias</h3>
-                    <p>Participações confirmadas.</p>
-
-                    </div>
-
+                  <h2>7</h2>
+                  <h3>Conversas</h3>
+                  <p>Conversas ativas no chat.</p>
                 </div>
+              </div>
 
-                    <button class="btn-card">
-                        Ver minhas ações
-                    </button>
-                
+              <button class="btn-card">Ver mensagens</button>
             </article>
+          </div>
+        </section>
 
-             <article class="card-resumo">
-
-                <div class="topo-card">
-
-                <div class="icone-card">
-                    <img src="./img/icone_mensagens.png" alt="Ícone de mensagens">
-                </div>
-
-                <div class="conteudo-card">
-
-                    <h2>7</h2>
-                    <h3>Conversas</h3>
-                    <p>Conversas ativas no chat.</p>
-
-                    </div>
-
-                </div>
-
-                    <button class="btn-card">
-                        Ver mensagens
-                    </button>
-                
-            </article>
-
-        </div>
-
-    </section>
-
-     <section class="atividades">
-
-        <div class="conteudo-atividades">
-
+        <section class="atividades">
+          <div class="conteudo-atividades">
             <h2>
-                <img src="./img/icone_atividades.png">
-                Atividades recentes
+              <img src="./img/icone_atividades.png" />
+              Atividades recentes
             </h2>
 
             <div class="estado-atividades">
+              <img
+                src="./img/cachorro_atividades.png"
+                alt="Ilustração de cachorro"
+              />
 
-            <img src="./img/cachorro_atividades.png" alt="Ilustração de cachorro">
+              <p>Nenhuma atividade recente.</p>
+            </div>
+          </div>
+        </section>
+      </div>
 
-            <p>Nenhuma atividade recente.</p>
-
-        </div>
-
-        </div>
-
-    </section>
-
-        </div>
-
-        <div class="coluna-direita">
-
+      <div class="coluna-direita">
         <section class="sobre">
+          <h2>
+            <img src="./img/icone_sobre.png" />
+            Sobre você
+          </h2>
 
-        <h2>
-            <img src="./img/icone_sobre.png">
-            Sobre você</h2>
+          <p>
+            Conte um pouco sobre você, sua relação com os animais e o que motiva
+            você a fazer parte do ViraDengo.
+          </p>
 
-        <p>Conte um pouco sobre você, sua relação com os animais e o que motiva você a fazer parte do ViraDengo.</p>
-
-        <button class="btn-editar">
-            <img src="./img/icone_editar.png">
+          <button class="btn-editar">
+            <img src="./img/icone_editar.png" />
             Editar
-        </button>
+          </button>
+        </section>
 
-    </section>
+        <section class="informacoes">
+          <h2>
+            <img src="./img/icone_informacoes.png" />
+            Informações Pessoais
+          </h2>
 
-    <section class="informacoes">
-
-        <h2>
-            <img src="./img/icone_informacoes.png">
-            Informações Pessoais</h2>
-
-        <div class="lista-informacao">
-
+          <div class="lista-informacao">
             <h3>
-                <img src="./img/icone_sobre.png">
-                Nome Completo</h3>
+              <img src="./img/icone_sobre.png" />
+              Nome Completo
+            </h3>
             <p>Juliana Martins</p>
 
             <h3>
-                <img src="./img/icone_email.png">
-                E-mail</h3>
+              <img src="./img/icone_email.png" />
+              E-mail
+            </h3>
             <p>julianamartins@gmail.com</p>
 
             <h3>
-                <img src="./img/icone_telefone.png">
-                Telefone</h3>
+              <img src="./img/icone_telefone.png" />
+              Telefone
+            </h3>
             <p>(11) 99999-9999</p>
-        
-        
+
             <h3>
-                <img src="./img/icone_local.png">
-                Cidade</h3>
+              <img src="./img/icone_local.png" />
+              Cidade
+            </h3>
             <p>São Paulo, SP</p>
-        </div>
+          </div>
 
-        <button class="btn-editar">
-             <img src="./img/icone_editar.png">
+          <button class="btn-editar">
+            <img src="./img/icone_editar.png" />
             Editar
-        </button>
-   
-    </section>
+          </button>
+        </section>
 
-    <section class="preferencias">
+        <section class="preferencias">
+          <div class="cabecalho-preferencias">
+            <h2>
+              <img src="./img/icone_voluntariado.png" />
+              Preferências de ajuda
+            </h2>
 
-        <div class="cabecalho-preferencias">
+            <button class="btn-editar">
+              <img src="./img/icone_editar.png" />
+              Editar
+            </button>
+          </div>
 
-        <h2>
-            <img src="./img/icone_voluntariado.png">
-            Preferências de ajuda</h2>
-
-        <button class="btn-editar">
-             <img src="./img/icone_editar.png">
-            Editar
-        </button>
-
-        </div>
-
-        <p class="descricao-preferencias">
+          <p class="descricao-preferencias">
             Você pode escolher como deseja ajudar:
-        </p>
+          </p>
 
-        <div class="opcoes-preferencia">
-
+          <div class="opcoes-preferencia">
             <button class="opcao-preferencia-doacao">
-                <img src="./img/icone_doacao.png">
-                Doação de Itens
+              <img src="./img/icone_doacao.png" />
+              Doação de Itens
             </button>
 
             <button class="opcao-preferencia-voluntario">
-                <img src="./img/icone_voluntariado.png">
-                Voluntariado
+              <img src="./img/icone_voluntariado.png" />
+              Voluntariado
             </button>
+          </div>
+        </section>
 
-        </div>
+        <section class="pets">
+          <h2>Seus pets</h2>
 
-    </section>
+          <div class="lista-pets">
+            <article class="pet">
+              <img src="./img/mel.png" alt="Foto da Mel" />
 
-    <section class="pets">
+              <div class="informacoes-pet">
+                <h3>Mel</h3>
+                <p>Cachorra</p>
+                <p>>3 anos</p>
+                <span>Vira-lata</span>
+              </div>
+            </article>
 
-        <h2>Seus pets</h2>
+            <article class="pet">
+              <img src="./img/luna.png" alt="Foto da Luna" />
 
-       <div class="lista-pets">
+              <div class="informacoes-pet">
+                <h3>Luna</h3>
+                <p>Gata</p>
+                <p>2 anos</p>
+                <span>SRD</span>
+              </div>
+            </article>
 
-    <article class="pet">
+            <button class="adicionar-pet">
+              <span class="icone-adicionar">+</span>
 
-        <img src="./img/mel.png" alt="Foto da Mel">
+              <span class="texto-adicionar"> Adicionar pet </span>
+            </button>
+          </div>
+        </section>
+      </div>
+    </main>
 
-        <div class="informacoes-pet">
-            <h3>Mel</h3>
-            <p>Cachorra</p>
-            <p>3 anos</p>
-            <span>Vira-lata</span>
-        </div>
-
-    </article>
-
-    <article class="pet">
-
-        <img src="./img/luna.png" alt="Foto da Luna">
-
-        <div class="informacoes-pet">
-            <h3>Luna</h3>
-            <p>Gata</p> 
-            <p>2 anos</p>
-            <span>SRD</span>
-        </div>
-
-    </article>
-
-    <button class="adicionar-pet">
-
-        <span class="icone-adicionar">+</span>
-
-        <span class="texto-adicionar">
-            Adicionar pet
-        </span>
-
-    </button>
-
-</div>
-
-    </section>
-
-        </div>
-
-     </main>
-
-     <footer>
+    <footer>
       <section class="footer-logo">
-        <img class="logo-img-footer" src="img/logo_viradengo.webp" alt="imagem-logo" />
-        <img class="nome-img-footer" src="img/viraDengo.png" alt="nome-logo" />
+        <img
+          class="logo-img-footer"
+          src="img/logoImagem.webp"
+          alt="imagem-logo"
+        />
         <p class="span-negrito">
           O serviço que faz você e seu pet virarem fãs.
         </p>
@@ -348,5 +321,72 @@
         </div>
       </section>
     </footer>
-</body>
+
+    <div class="fundo-modal" id="fundo-modal">
+
+    <div class="modal-editar-perfil">
+
+        <div class="cabecalho-modal">
+            <h2>Editar perfil</h2>
+
+            <button
+                type="button"
+                class="btn-fechar-modal"
+                id="btn-fechar-modal"
+                aria-label="Fechar edição"
+            >
+                &times;
+            </button>
+        </div>
+
+        <form id="form-editar-perfil">
+
+            <div class="campo-formulario">
+                <label for="input-nome-perfil">Nome</label>
+
+                <input
+                    type="text"
+                    id="input-nome-perfil"
+                    required
+                >
+            </div>
+
+            <div class="campo-formulario">
+                <label for="input-descricao-perfil">
+                    Descrição
+                </label>
+
+                <textarea
+                    id="input-descricao-perfil"
+                    rows="4"
+                ></textarea>
+            </div>
+
+            <div class="acoes-modal">
+                <button
+                    type="button"
+                    class="btn-cancelar"
+                    id="btn-cancelar-edicao"
+                >
+                    Cancelar
+                </button>
+
+                <button
+                    type="submit"
+                    class="btn-salvar"
+                >
+                    Salvar alterações
+                </button>
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+<script src="./script.js"></script>
+
+    <script src="script.js"></script>
+  </body>
 </html>

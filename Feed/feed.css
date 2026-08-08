@@ -6,8 +6,10 @@
   --cor-texto: #333;
   --cor-texto-claro: #777;
   --cor-borda: #eee;
-  --cor-fundo: #f7f7f9;
   --radius: 14px;
+  --cor-fundo: #faf6f1;
+  --cor-sub-fundo: #fff8f8;
+  --cor-laranja-100: #ffe7d1;
 }
 
 * {
@@ -19,9 +21,10 @@ body {
   font-family: 'Segoe UI', Roboto, Arial, sans-serif;
   background: var(--cor-fundo);
   color: var(--cor-texto);
+  color: var(--cor-secundaria);
 }
 
-/* MENU endregion*/
+/* MENU endregion */
 
 header {
   display: flex;
@@ -93,13 +96,58 @@ a {
   margin-right: 10px;
 }
 
-.perfil-box img {
+/* #endregion */
+
+/* #region DROPDOWN */
+
+.perfil-box {
+  position: relative;
+  display: inline-block;
+}
+
+.perfil-toggle-input {
+  display: none;
+}
+
+.perfil-icone {
   width: 60px;
   border-radius: 50%;
   border: solid 3.5px var(--cor-primaria);
+  cursor: pointer;
+  object-fit: cover;
 }
 
-/* endregion*/
+.perfil-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 55px;
+  background-color: var(--cor-borda);
+  min-width: 160px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.perfil-dropdown a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: var(--cor-secundaria);
+  font-size: 14px;
+}
+
+.perfil-dropdown a:hover {
+  background-color: var(--cor-sub-fundo);
+}
+
+/* Mostra o dropdown quando o checkbox está marcado */
+.perfil-toggle-input:checked ~ .perfil-dropdown {
+  display: block;
+}
+
+/* #endregion */
 
 .conteudo-central {
   max-width: 620px;
@@ -109,10 +157,11 @@ a {
 
 /* ===== STORIES ===== */
 .stories {
-  background: #fff;
+  background: var(--cor-sub-fundo);
   border-radius: var(--radius);
-  padding: 20px;
+  padding: 15px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 0.1px rgba(0, 109, 119, 0.5) solid;
 }
 
 .stories-header {
@@ -135,7 +184,7 @@ a {
 
 .stories-lista {
   display: flex;
-  gap: 18px;
+  gap: 10px;
   overflow-x: auto;
 }
 
@@ -189,11 +238,12 @@ a {
 .busca {
   display: flex;
   align-items: center;
-  background: #fff;
+  background: var(--cor-sub-fundo);
   border-radius: 30px;
   padding: 12px 20px;
   margin: 20px 0;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  border: 0.1px rgba(0, 109, 119, 0.5) solid;
 }
 
 .busca input {
@@ -219,7 +269,7 @@ a {
 }
 
 .card {
-  background: #fff;
+  background: var(--cor-sub-fundo);
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
@@ -246,7 +296,7 @@ a {
   font-weight: 600;
   padding: 5px 12px;
   border-radius: 20px;
-  color: #fff;
+  color: var(--cor-sub-fundo);
   z-index: 2;
 }
 
@@ -276,6 +326,7 @@ a {
 
 .card-conteudo {
   padding: 18px 20px 20px;
+  border: 0.1px rgba(0, 109, 119, 0.5) solid;
 }
 
 .card-conteudo h3 {
@@ -289,7 +340,7 @@ a {
   align-items: center;
   gap: 6px;
   font-size: 13px;
-  color: var(--cor-texto-claro);
+  color: var(--cor-secundaria);
   margin-bottom: 8px;
 }
 
@@ -300,7 +351,7 @@ a {
 
 .card-descricao {
   font-size: 14px;
-  color: var(--cor-texto);
+  color: var(--cor-secundaria);
   margin: 0 0 12px;
   line-height: 1.4;
 }
@@ -310,7 +361,7 @@ a {
   flex-wrap: wrap;
   gap: 10px;
   font-size: 12px;
-  color: var(--cor-texto-claro);
+  color: var(--cor-secundaria);
   margin-bottom: 15px;
 }
 
@@ -338,7 +389,92 @@ a {
   color: var(--cor-verde);
 }
 
+/* #region MENU INFERIOR */
+
+.menu-inferior {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cor-fundo);
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: flex;
+  padding: 20px 100px;
+  box-sizing: border-box;
+  gap: 40px;
+}
+
+.menu-inferior button {
+  background: none;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--cor-secundaria);
+}
+
+.menu-inferior a button img {
+  width: 20px;
+}
+
+.botao-add {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* #endregion */
+
 /* ===== RESPONSIVO ===== */
+
+footer {
+  height: 250px;
+  background-color: var(--cor-laranja-100);
+  color: var(--cor-secundaria);
+  display: flex;
+  justify-content: space-between;
+  padding: 30px 50px;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  gap: 10px;
+}
+
+.footer-logo p {
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.logo-img-footer {
+  width: 100px;
+}
+
+.nome-img-footer {
+  width: 140px;
+}
+
+footer div {
+  list-style: none;
+}
+
+footer div p {
+  font-weight: bold;
+}
+
+.footer-nav-cont {
+  display: flex;
+  gap: 150px;
+}
+
 @media (max-width: 480px) {
   .conteudo-central {
     padding: 20px 12px 40px;
