@@ -16,231 +16,268 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <header>
-    <div>
-      <img class="logoImagem" src="../img/logoImagem.png" alt="" />
-    </div>
-
-    <nav class="box">
-      <ul class="menu">
-        <li><a class="list" href="../Feed/feed.html">Conexões</a></li>
-        <li><a class="list" href="../index.html">Home</a></li>
-        <li><a class="list" href="#">Profissionais</a></li>
-      </ul>
-    </nav>
-    <div class="perfil-box">
-      <input type="checkbox" id="perfil-toggle" class="perfil-toggle-input" />
-      <label for="perfil-toggle">
-        <img src="../img/woman.jpg" alt="Perfil" class="perfil-icone" />
-      </label>
-
-      <div class="perfil-dropdown">
-        <a href="../PerfilUsuario/perfilUsuario.html">Meu Perfil</a>
-        <a href="../PerfilOng/perfilOng.html">Perfil ONG</a>
-        <a href="">Configurações</a>
-        <a href="../index.html">Sair</a>
-      </div>
-    </div>
-  </header>
 
   <body>
-    <div class="conteudo-central">
-      <!-- STORIES -->
-      <section class="stories">
-        <div class="stories-header">
-          <h3>Stories</h3>
-          <a href="#" class="ver-todos">Ver todos</a>
-        </div>
-
-        <div class="stories-lista">
-          <div class="story story-add">
-            <div class="story-avatar story-add-avatar">
-              <span>+</span>
-            </div>
-            <p>Seu story</p>
-          </div>
-
-          <div class="story">
-            <div class="story-avatar"></div>
-            <p>Amigos de Patas</p>
-          </div>
-
-          <div class="story">
-            <div class="story-avatar"></div>
-            <p>Patinhas Felizes</p>
-          </div>
-
-          <div class="story">
-            <div class="story-avatar"></div>
-            <p>Lar Doce Lar</p>
-          </div>
-
-          <div class="story">
-            <div class="story-avatar"></div>
-            <p>Cão sem Dono</p>
-          </div>
-        </div>
-      </section>
-
-      <!-- BUSCA -->
-      <div class="busca">
-        <input
-          type="text"
-          placeholder="Buscar campanhas, voluntariados ou itens..."
-        />
-        <button class="btn-busca">🔍</button>
+    <header>
+      <div>
+        <img class="logoImagem" src="../img/logoImagem.png" alt="" />
       </div>
 
-      <!-- FEED -->
-      <section class="feed">
-        <article class="card">
-          <div class="card-imagem">
-            <span class="tag tag-campanha">Campanha gratuita</span>
-            <img src="img/vacina.jpg" alt="Campanha de vacinação antirrábica" />
-          </div>
-          <div class="card-conteudo">
-            <h3>Campanha de vacinação antirrábica</h3>
-            <div class="card-autor">
-              <span class="check">✔</span> ONG Amigos de Patas
-            </div>
-            <p class="card-descricao">
-              Vacinação gratuita para cães e gatos. Proteja seu melhor amigo!
-              🐾🐾
-            </p>
-            <div class="card-info">
-              <span>📅 25 de maio de 2024</span>
-              <span>🕒 09h às 15h</span>
-              <span>📍 Praça da Sé, São Paulo - SP</span>
-            </div>
-            <button class="btn-acao btn-detalhes">Ver detalhes</button>
-          </div>
-        </article>
-        <article class="card">
-          <div class="card-imagem">
-            <span class="tag tag-item">Item doado</span>
-            <button class="btn-salvar">🔖</button>
-            <img src="img/doacao.png" alt="Caminha para cães porte médio" />
-          </div>
-          <div class="card-conteudo">
-            <h3>Caminha para cães porte médio</h3>
-            <div class="card-autor">
-              <span class="icone-usuario">👤</span> Doador: Juliana Martins
-            </div>
-            <p class="card-descricao">
-              Caminha em ótimo estado, pouco usada. Meu pet ganhou outra e quero
-              doar!
-            </p>
-            <div class="card-info">
-              <span>📍 Vila Mariana, São Paulo - SP</span>
-              <span>🕒 Publicado há 2 horas</span>
-            </div>
-            <button class="btn-acao btn-interesse">Tenho interesse</button>
-          </div>
-        </article>
+      <nav class="box">
+        <ul class="menu">
+          <li><a class="list" href="../Feed/feed.html">Conexões</a></li>
+          <li><a class="list" href="../index.html">Home</a></li>
+          <li><a class="list" href="#">Profissionais</a></li>
+        </ul>
+      </nav>
+      <div class="perfil-box">
+        <input type="checkbox" id="perfil-toggle" class="perfil-toggle-input" />
+        <label for="perfil-toggle">
+          <img src="../img/woman.jpg" alt="Perfil" class="perfil-icone" />
+        </label>
 
-        <article class="card">
-          <div class="card-imagem">
-            <span class="tag tag-voluntariado">Voluntariado</span>
-            <button class="btn-salvar">🔖</button>
-            <img
-              src="img/dois-caes-petlove.jpg"
-              alt="Mutirão de socialização de cães"
-            />
+        <div class="perfil-dropdown">
+          <a href="../PerfilUsuario/perfilUsuario.html">Meu Perfil</a>
+          <a href="../PerfilOng/perfilOng.html">Perfil ONG</a>
+          <a href="">Configurações</a>
+          <a href="../index.html">Sair</a>
+        </div>
+      </div>
+    </header>
+    <div class="conteudo-geral">
+      <div class="conteudo-esquerda">
+        <div class="intro-filtro">
+          <h3>Filtros</h3>
+          <div>
+            <label>Limpar filtros</label>
           </div>
-          <div class="card-conteudo">
-            <h3>Mutirão de socialização de cães</h3>
-            <div class="card-autor">
-              <span class="check">✔</span> ONG Lar Doce Lar
-            </div>
-            <p class="card-descricao">
-              Precisamos de voluntários para ajudar na socialização dos cães
-              resgatados.
-            </p>
-            <div class="card-info">
-              <span>📅 18 de maio de 2024</span>
-              <span>🕒 09h às 12h</span>
-              <span>📍 Lar Doce Lar - São Paulo/SP</span>
-              <span>👥 5 vagas disponíveis</span>
-            </div>
-            <button class="btn-acao btn-participar">Quero participar</button>
-          </div>
-        </article>
+        </div>
 
-        <article class="card">
-          <div class="card-imagem">
-            <span class="tag tag-item">Item doado</span>
-            <button class="btn-salvar">🔖</button>
-            <img src="img/doacao2.jpg" alt="Ração para cães adultos" />
+        <div class="filtro-item">
+          <input type="checkbox" id="Todos" class="filtro-checkbox" />
+          <label for="todos" class="filtro-botao">Todos os posts</label>
+        </div>
+        <div class="filtro-item">
+          <input type="checkbox" id="Campanhas" class="filtro-checkbox" />
+          <label for="campanhas" class="filtro-botao">Campanhas</label>
+        </div>
+        <div class="filtro-item">
+          <input type="checkbox" id="Voluntariado" class="filtro-checkbox" />
+          <label for="Voluntariado" class="filtro-botao">Voluntariado</label>
+        </div>
+        <div class="filtro-item">
+          <input type="checkbox" id="Itens doados" class="filtro-checkbox" />
+          <label for="Itens doados" class="filtro-botao">Itens doados</label>
+        </div>
+      </div>
+      <div class="conteudo-central">
+        <!-- STORIES -->
+        <section class="stories">
+          <div class="stories-header">
+            <h3>Stories</h3>
+            <a href="#" class="ver-todos">Ver todos</a>
           </div>
-          <div class="card-conteudo">
-            <h3>Ração para cães adultos</h3>
-            <div class="card-autor">
-              <span class="icone-usuario">👤</span> Doador: Marcos Silva
+
+          <div class="stories-lista">
+            <div class="story story-add">
+              <div class="story-avatar story-add-avatar">
+                <span>+</span>
+              </div>
+              <p>Seu story</p>
             </div>
-            <p class="card-descricao">
-              Pacote de ração premium, lacrado, sobrou da compra do meu pet.
-            </p>
-            <div class="card-info">
-              <span>📍 Moema, São Paulo - SP</span>
-              <span>🕒 Publicado há 5 horas</span>
+
+            <div class="story">
+              <div class="story-avatar"></div>
+              <p>Amigos de Patas</p>
             </div>
-            <button class="btn-acao btn-interesse">Tenho interesse</button>
+
+            <div class="story">
+              <div class="story-avatar"></div>
+              <p>Patinhas Felizes</p>
+            </div>
+
+            <div class="story">
+              <div class="story-avatar"></div>
+              <p>Lar Doce Lar</p>
+            </div>
+
+            <div class="story">
+              <div class="story-avatar"></div>
+              <p>Cão sem Dono</p>
+            </div>
           </div>
-        </article>
+        </section>
+
+        <!-- BUSCA -->
+        <div class="busca">
+          <input
+            type="text"
+            placeholder="Buscar campanhas, voluntariados ou itens..."
+          />
+          <button class="btn-busca">🔍</button>
+        </div>
+
+        <!-- FEED -->
+        <section class="feed">
+          <article class="card">
+            <div class="card-imagem">
+              <span class="tag tag-campanha">Campanha gratuita</span>
+              <img
+                src="img/vacina.jpg"
+                alt="Campanha de vacinação antirrábica"
+              />
+            </div>
+            <div class="card-conteudo">
+              <h3>Campanha de vacinação antirrábica</h3>
+              <div class="card-autor">
+                <span class="check">✔</span> ONG Amigos de Patas
+              </div>
+              <p class="card-descricao">
+                Vacinação gratuita para cães e gatos. Proteja seu melhor amigo!
+                🐾🐾
+              </p>
+              <div class="card-info">
+                <span>📅 25 de maio de 2024</span>
+                <span>🕒 09h às 15h</span>
+                <span>📍 Praça da Sé, São Paulo - SP</span>
+              </div>
+              <button class="btn-acao btn-detalhes">Ver detalhes</button>
+            </div>
+          </article>
+          <article class="card">
+            <div class="card-imagem">
+              <span class="tag tag-item">Item doado</span>
+              <button class="btn-salvar">🔖</button>
+              <img src="img/doacao.png" alt="Caminha para cães porte médio" />
+            </div>
+            <div class="card-conteudo">
+              <h3>Caminha para cães porte médio</h3>
+              <div class="card-autor">
+                <span class="icone-usuario">👤</span> Doador: Juliana Martins
+              </div>
+              <p class="card-descricao">
+                Caminha em ótimo estado, pouco usada. Meu pet ganhou outra e
+                quero doar!
+              </p>
+              <div class="card-info">
+                <span>📍 Vila Mariana, São Paulo - SP</span>
+                <span>🕒 Publicado há 2 horas</span>
+              </div>
+              <button class="btn-acao btn-interesse">Tenho interesse</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-imagem">
+              <span class="tag tag-voluntariado">Voluntariado</span>
+              <button class="btn-salvar">🔖</button>
+              <img
+                src="img/dois-caes-petlove.jpg"
+                alt="Mutirão de socialização de cães"
+              />
+            </div>
+            <div class="card-conteudo">
+              <h3>Mutirão de socialização de cães</h3>
+              <div class="card-autor">
+                <span class="check">✔</span> ONG Lar Doce Lar
+              </div>
+              <p class="card-descricao">
+                Precisamos de voluntários para ajudar na socialização dos cães
+                resgatados.
+              </p>
+              <div class="card-info">
+                <span>📅 18 de maio de 2024</span>
+                <span>🕒 09h às 12h</span>
+                <span>📍 Lar Doce Lar - São Paulo/SP</span>
+                <span>👥 5 vagas disponíveis</span>
+              </div>
+              <button class="btn-acao btn-participar">Quero participar</button>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-imagem">
+              <span class="tag tag-item">Item doado</span>
+              <button class="btn-salvar">🔖</button>
+              <img src="img/doacao2.jpg" alt="Ração para cães adultos" />
+            </div>
+            <div class="card-conteudo">
+              <h3>Ração para cães adultos</h3>
+              <div class="card-autor">
+                <span class="icone-usuario">👤</span> Doador: Marcos Silva
+              </div>
+              <p class="card-descricao">
+                Pacote de ração premium, lacrado, sobrou da compra do meu pet.
+              </p>
+              <div class="card-info">
+                <span>📍 Moema, São Paulo - SP</span>
+                <span>🕒 Publicado há 5 horas</span>
+              </div>
+              <button class="btn-acao btn-interesse">Tenho interesse</button>
+            </div>
+          </article>
+        </section>
+      </div>
+      <div class="conteudo-direita">asasasas</div>
+    </div>
+    <footer>
+      <section class="footer-logo">
+        <img
+          class="logo-img-footer"
+          src="../img/logoImagem.png"
+          alt="imagem-logo"
+        />
+        <img
+          class="nome-img-footer"
+          src="../img/viraDengo.png"
+          alt="nome-logo"
+        />
+        <p class="span-negrito">
+          O serviço que faz você e seu pet virarem fãs.
+        </p>
       </section>
+      <section class="footer-nav-cont">
+        <div class="footer-nav">
+          <p>Navegação</p>
+          <li><a href="">Início</a></li>
+          <li><a href="">Doação</a></li>
+          <li><a href="">Profissionais</a></li>
+          <li><a href="">Voluntariado</a></li>
+        </div>
+        <div class="footer-contato">
+          <p>Contato</p>
+          <li>ViraDengo@gmail.com</li>
+          <li>Tel.: 11 977666555</li>
+        </div>
+        <div class="footer-tutorial">
+          <p>Suporte</p>
+          <li>Como funciona? (Doação)</li>
+          <li>Como funciona? (Voluntário)</li>
+        </div>
+      </section>
+    </footer>
+    <div class="menu-inferior">
+      <div class="botao-add">
+        <a href="../PublicarDoacao/doacao.html"
+          ><button>
+            <img src="../img/icons/paw-add.png" alt="" /> Doação
+          </button></a
+        >
+      </div>
+      <div class="botao-add">
+        <a href="../PublicarVoluntariado/publicarVoluntariado.html"
+          ><button>
+            <img src="../img/icons/paw-add.png" alt="" /> Voluntariado
+          </button></a
+        >
+      </div>
+      <div class="botao-add">
+        <a href="">
+          <button>
+            <img src="../img/icons/messenger.png" alt="" /> Mensagem
+          </button></a
+        >
+      </div>
     </div>
   </body>
-  <footer>
-    <section class="footer-logo">
-      <img
-        class="logo-img-footer"
-        src="../img/logoImagem.png"
-        alt="imagem-logo"
-      />
-      <img class="nome-img-footer" src="../img/viraDengo.png" alt="nome-logo" />
-      <p class="span-negrito">O serviço que faz você e seu pet virarem fãs.</p>
-    </section>
-    <section class="footer-nav-cont">
-      <div class="footer-nav">
-        <p>Navegação</p>
-        <li><a href="">Início</a></li>
-        <li><a href="">Doação</a></li>
-        <li><a href="">Profissionais</a></li>
-        <li><a href="">Voluntariado</a></li>
-      </div>
-      <div class="footer-contato">
-        <p>Contato</p>
-        <li>ViraDengo@gmail.com</li>
-        <li>Tel.: 11 977666555</li>
-      </div>
-      <div class="footer-tutorial">
-        <p>Suporte</p>
-        <li>Como funciona? (Doação)</li>
-        <li>Como funciona? (Voluntário)</li>
-      </div>
-    </section>
-  </footer>
-  <div class="menu-inferior">
-    <div class="botao-add">
-      <a href="../PublicarDoacao/doacao.html"
-        ><button>
-          <img src="../img/icons/paw-add.png" alt="" /> Doação
-        </button></a
-      >
-    </div>
-    <div class="botao-add">
-      <a href="../PublicarVoluntariado/publicarVoluntariado.html"
-        ><button>
-          <img src="../img/icons/paw-add.png" alt="" /> Voluntariado
-        </button></a
-      >
-    </div>
-    <div class="botao-add">
-      <a href="">
-        <button>
-          <img src="../img/icons/messenger.png" alt="" /> Mensagem
-        </button></a
-      >
-    </div>
-  </div>
 </html>

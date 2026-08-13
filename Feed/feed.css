@@ -149,11 +149,43 @@ a {
 
 /* #endregion */
 
+.conteudo-geral {
+  display: flex;
+  align-items: flex-start;
+}
+
 .conteudo-central {
-  max-width: 620px;
+  max-width: 40%;
   margin: 0 auto;
   padding: 30px 20px 60px;
 }
+
+.conteudo-direita {
+  flex: 0 1 28%;
+  min-width: 0;
+  background-color: red;
+}
+
+/* #region Filtro  */
+
+.conteudo-esquerda {
+  flex: 0 1 28%;
+  min-width: 0;
+  background-color: var(--cor-sub-fundo);
+  margin: 50px 25px;
+  padding: 0px 20px;
+  padding-bottom: 80px;
+  border: 0.1px rgba(0, 109, 119, 0.5) solid;
+  border-radius: var(--radius);
+}
+
+.intro-filtro {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* #endregion */
 
 /* ===== STORIES ===== */
 .stories {

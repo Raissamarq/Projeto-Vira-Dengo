@@ -67,6 +67,7 @@ body {
 
 .opcao p {
   color: var(--cor-secundaria);
+  min-height: 48px;
 }
 
 .opcao img {
@@ -179,4 +180,11 @@ a {
 
 .fa-paw {
   margin-right: 10px;
+}
+
+.login {
+  font-size: 20px;
+  color: #006d77;
+  margin-top: 30px;
+  text-decoration: underline;
 }

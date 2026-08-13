@@ -1,3 +1,4 @@
+/* #css global*/
 * {
   margin: 0;
   padding: 0;
@@ -15,7 +16,9 @@ a {
   --cor-fundo: #faf6f1;
   --cor-laranja-100: #ffe7d1;
 }
+/* #endregion*/
 
+/* #region body*/
 body {
   font-family: 'Poppins', sans-serif;
   line-height: 1.5;
@@ -35,6 +38,9 @@ a {
 ul {
   list-style: none;
 }
+/* #endregion*/
+
+/* #region MENU*/
 header {
   display: flex;
   align-items: center;
@@ -52,7 +58,7 @@ a {
 }
 
 .logoImagem {
-  width: 80px;
+  width: 100px;
 }
 
 .viraDengo {
@@ -61,7 +67,7 @@ a {
 }
 
 .box {
-  margin-left: auto;
+  margin: auto;
 }
 
 .menu {
@@ -71,32 +77,45 @@ a {
 }
 
 .list {
-  background: #ff8c1a;
-  color: white;
+  color: var(--cor-secundaria);
   padding: 10px 28px;
   border-radius: 999px;
+  font-weight: bold;
 }
 
-.botao {
-  background-color: var(--cor-secundaria);
+.list:hover {
   color: var(--cor-fundo);
+  background: var(--cor-primaria);
+}
+
+.botaoHome {
+  color: var(--cor-secundaria);
   padding: 10px 25px;
   border-radius: 999px;
-  border: none;
+  border: solid 1px var(--cor-secundaria);
   cursor: pointer;
   font: inherit;
 }
 
-.fa-paw {
-  margin-right: 10px;
+.botaoHome:hover {
+  background-color: var(--cor-primaria);
+  color: var(--cor-fundo);
+  border: solid 1px var(--cor-laranja-100);
 }
 
 .menu li {
   padding: 0 8px;
 }
 
+.fa-paw {
+  margin-right: 10px;
+}
+
+/* #endregion*/
+
+/* #region Card Login*/
 .login-card {
-  min-height: calc(100vh - 90px);
+  padding: 60px 0 20px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -233,14 +252,16 @@ a {
   --teal-dark: #145c5c;
   --cinza-borda: #e0dcd3;
 }
+/* #endregion*/
 
-/* ===== DIVISOR "ou continue com" ===== */
+/* #region divisor*/
 .divisor {
   display: flex;
   align-items: center;
   gap: 12px;
   color: var(--teal);
   font-size: 12px;
+  margin-top: 10px;
   margin-bottom: 20px;
 }
 .divisor::before,
@@ -256,12 +277,14 @@ a {
     transparent 8px
   );
 }
+/* #endregion*/
 
+/* #region botÃ£o*/
 .social-login {
   display: flex;
   gap: 14px;
-  margin: 0 auto 24px auto; /* era "margin-bottom: 24px" -> faltava limitar a largura */
-  max-width: 420px; /* ajusta esse valor pro tamanho real do seu card de login */
+  margin: 0 auto 24px auto;
+  max-width: 420px;
 }
 
 .btn-social {
@@ -298,10 +321,12 @@ a {
   border-radius: 50%;
   padding: 2px;
 }
+/* #endregion*/
 
+/* #region cadastro*/
 .cadastro-rodape {
-  max-width: 420px; /* mesmo limite do .social-login, pra tudo alinhar */
-  margin: 0 auto;
+  max-width: 420px;
+  margin: 0 auto 40px auto;
   text-align: center;
   font-size: 13px;
 }
@@ -324,7 +349,9 @@ a {
     flex-direction: column;
   }
 }
+/* #endregion*/
 
+/* #region footer*/
 footer {
   height: 250px;
   background-color: var(--cor-laranja-100);
@@ -367,3 +394,37 @@ footer div p {
   display: flex;
   gap: 150px;
 }
+/* #endregion*/
+
+/* #region Imagem Dalmata*/
+.login-wrapper {
+  position: relative;
+  min-height: calc(100vh - 90px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-conteudo {
+  width: 420px;
+}
+
+.login-dalmata {
+  position: absolute;
+  right: 40px;
+  bottom: 0;
+  width: 320px;
+  height: auto;
+}
+/* #endregion*/
+
+/* #region media queries*/
+@media (max-width: 768px) {
+  .login-wrapper {
+    flex-direction: column;
+  }
+  .login-dalmata {
+    max-width: 220px;
+  }
+}
+/* #endregion*/
