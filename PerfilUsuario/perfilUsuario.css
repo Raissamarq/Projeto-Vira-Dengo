@@ -1038,6 +1038,151 @@ footer div p {
   }
 }
 
+@media (max-width: 600px) {
+  main {
+    padding: 0 12px;
+  }
+
+  .perfil {
+    padding: 20px;
+  }
+
+  .foto-perfil {
+    width: 100px;
+    height: 100px;
+  }
+
+  .foto-perfil img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .dados-perfil h1 {
+    font-size: 22px;
+  }
+
+  .btn-editar {
+    padding: 10px 16px;
+    font-size: 13px;
+  }
+
+  .abas {
+    padding: 0 12px;
+  }
+
+  .aba {
+    padding: 14px 10px;
+    font-size: 14px;
+  }
+
+  .aba img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .cards-resumo {
+    padding: 20px 16px 24px;
+    gap: 16px;
+  }
+
+  .card-resumo {
+    padding: 14px 10px;
+  }
+
+  .icone-card {
+    width: 50px;
+    height: 50px;
+  }
+
+  .icone-card img {
+    width: 26px;
+    height: 26px;
+  }
+
+  .conteudo-atividades {
+    padding: 16px 20px 20px;
+  }
+
+  .conteudo-atividades img {
+    width: 200px;
+    height: 220px;
+  }
+
+  .conteudo-atividades p {
+    font-size: 14px;
+  }
+
+  .conteudo-atividades h2 {
+    font-size: 16px;
+  }
+
+  .conteudo-atividades h2 img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .estado-atividades {
+    gap: 20px;
+  }
+
+  .estado-atividades > img {
+    width: 180px;
+  }
+
+  .estado-atividades p {
+    font-size: 14px;
+  }
+
+  .sobre,
+  .informacoes,
+  .preferencias,
+  .pets {
+    padding: 20px;
+  }
+
+  .sobre h2,
+  .informacoes h2,
+  .preferencias h2,
+  .pets h2 {
+    font-size: 18px;
+  }
+
+  .lista-informacao h3 {
+    font-size: 13px;
+  }
+
+  .opcao-preferencia-doacao,
+  .opcao-preferencia-voluntario {
+    width: 100%;
+    height: auto;
+    padding: 14px 16px;
+    gap: 16px;
+    justify-content: flex-start;
+  }
+
+  .pet > img {
+    width: 52px;
+    height: 52px;
+  }
+
+  .informacoes-pet h3 {
+    font-size: 14px;
+  }
+
+  .adicionar-pet {
+    width: 80px;
+    height: 80px;
+  }
+
+  .icone-adicionar {
+    font-size: 18px;
+  }
+
+  .texto-adicionar {
+    font-size: 9px;
+  }
+}
+
 @media (max-width: 480px) {
   /* == HEADER == */
   header {

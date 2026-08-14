@@ -732,9 +732,76 @@ footer div p {
    RESPONSIVIDADE
 ========================= */
 
-@media (max-width: 950px) {
+@media (max-width: 1024px) {
   header {
-    padding: 10px 30px;
+    padding: 5px 24px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+
+  .box {
+    margin: 0;
+    order: 3;
+    width: 100%;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  .pagina-planos {
+    padding: 50px 24px 60px;
+  }
+
+  .cabecalho-planos h1 {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 5px 16px;
+  }
+
+  .logoImagem {
+    width: 60px;
+  }
+
+  .viraDengo {
+    width: 100px;
+  }
+
+  .list {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+
+  .menu li {
+    padding: 0 4px;
+  }
+
+  .perfil-box img {
+    width: 40px;
+    border-width: 2.5px;
+  }
+
+  .pagina-planos {
+    padding: 40px 16px 50px;
+  }
+
+  .cabecalho-planos h1 {
+    font-size: 30px;
+  }
+
+  .cabecalho-planos p {
+    font-size: 15px;
+  }
+
+  .tipo-usuario {
+    width: 100%;
+    max-width: 450px;
   }
 
   .planos-container {
@@ -743,8 +810,8 @@ footer div p {
   }
 
   .card-plano {
-    width: 90%;
-    max-width: 500px;
+    width: 100%;
+    max-width: 450px;
   }
 
   .card-plano.destaque {
@@ -757,63 +824,225 @@ footer div p {
 
   .vantagens {
     flex-direction: column;
-
     gap: 25px;
+    padding: 20px;
   }
 
   .vantagem:not(:last-child) {
     border-right: none;
-
     border-bottom: 1px solid #dddddd;
-
     padding-bottom: 25px;
   }
 
-  footer {
-    height: auto;
-
-    flex-direction: column;
-
-    align-items: center;
-
-    gap: 30px;
-  }
-
-  .footer-nav-cont {
-    flex-wrap: wrap;
-
-    justify-content: center;
-
-    gap: 50px;
-  }
-}
-
-@media (max-width: 650px) {
-  .menu {
-    display: none;
-  }
-
-  header {
-    justify-content: space-between;
-  }
-
-  .pagina-planos {
-    padding: 40px 15px;
-  }
-
-  .cabecalho-planos h1 {
-    font-size: 32px;
-  }
-
-  .tipo-usuario {
-    width: 100%;
-  }
-
-  .card-plano {
-    width: 100%;
+  .vantagem {
+    padding: 0 15px;
   }
 
   .btn-continuar {
     width: 100%;
+    max-width: 400px;
+  }
+
+  footer {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 24px 20px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    width: auto;
+  }
+
+  .footer-nav-cont {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cabecalho-planos h1 {
+    font-size: 28px;
+  }
+
+  .cabecalho-planos p {
+    font-size: 14px;
+  }
+
+  .etapa {
+    font-size: 13px;
+    padding: 6px 14px;
+  }
+
+  .tipo-btn {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .card-plano {
+    padding: 24px 20px;
+    min-height: auto;
+  }
+
+  .icone-plano {
+    width: 56px;
+    height: 56px;
+    font-size: 24px;
+  }
+
+  .card-plano h2 {
+    font-size: 19px;
+  }
+
+  .preco {
+    font-size: 26px;
+  }
+
+  .preco span {
+    font-size: 12px;
+  }
+
+  .beneficios li {
+    font-size: 14px;
+  }
+
+  .btn-plano {
+    padding: 10px 16px;
+    font-size: 14px;
+  }
+
+  .vantagem-icone {
+    min-width: 48px;
+    height: 48px;
+    font-size: 20px;
+  }
+
+  .vantagem h3 {
+    font-size: 15px;
+  }
+
+  .vantagem p {
+    font-size: 12px;
+  }
+
+  .btn-continuar {
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  .pagamento-seguro {
+    font-size: 11px;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 5px 12px;
+  }
+
+  .logoImagem {
+    width: 50px;
+  }
+
+  .viraDengo {
+    width: 80px;
+  }
+
+  .list {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .menu li {
+    padding: 0 3px;
+  }
+
+  .pagina-planos {
+    padding: 30px 12px 40px;
+  }
+
+  .cabecalho-planos h1 {
+    font-size: 24px;
+  }
+
+  .cabecalho-planos p {
+    font-size: 13px;
+  }
+
+  .tipo-btn {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .card-plano {
+    padding: 20px 16px;
+    border-radius: 12px;
+  }
+
+  .icone-plano {
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+  }
+
+  .card-plano h2 {
+    font-size: 17px;
+  }
+
+  .preco {
+    font-size: 24px;
+  }
+
+  .beneficios {
+    gap: 12px;
+  }
+
+  .beneficios li {
+    font-size: 13px;
+  }
+
+  .btn-plano {
+    padding: 10px 14px;
+    font-size: 13px;
+  }
+
+  .vantagens {
+    padding: 16px 12px;
+    gap: 20px;
+  }
+
+  .vantagem {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    padding: 0;
+  }
+
+  .vantagem-icone {
+    min-width: 44px;
+    height: 44px;
+    font-size: 18px;
+  }
+
+  .vantagem h3 {
+    font-size: 14px;
+  }
+
+  .vantagem p {
+    font-size: 12px;
+  }
+
+  .btn-continuar {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .footer-nav-cont {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
   }
 }

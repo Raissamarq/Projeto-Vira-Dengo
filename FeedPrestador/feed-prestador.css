@@ -700,13 +700,209 @@ footer div p {
 /* #endregion */
 
 /* #region RESPONSIVO */
-@media (max-width: 900px) {
+
+@media (max-width: 1024px) {
+  header {
+    padding: 5px 24px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+
+  .box {
+    margin: 0;
+    order: 3;
+    width: 100%;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  .pagina-profissionais {
+    padding: 40px 4%;
+  }
+
+  .hero-profissionais {
+    gap: 30px;
+  }
+
+  .hero-imagem {
+    width: 280px;
+    height: 280px;
+  }
+
+  .hero-fundo {
+    width: 280px;
+  }
+
+  .hero-pets {
+    width: 260px;
+    height: 260px;
+  }
+
+  .por-que-imagem {
+    width: 280px;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 5px 16px;
+  }
+
+  .logoImagem {
+    width: 60px;
+  }
+
+  .viraDengo {
+    width: 100px;
+  }
+
+  .list {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+
+  .menu li {
+    padding: 0 4px;
+  }
+
+  .perfil-box img {
+    width: 40px;
+    border-width: 2.5px;
+  }
+
+  .pagina-profissionais {
+    padding: 30px 16px;
+  }
+
+  .hero-profissionais {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+    margin-bottom: 40px;
+  }
+
+  .hero-texto {
+    max-width: 100%;
+  }
+
+  .hero-titulo {
+    font-size: 2rem;
+  }
+
+  .hero-botoes {
+    justify-content: center;
+  }
+
+  .hero-imagem {
+    width: 240px;
+    height: 240px;
+  }
+
+  .hero-fundo {
+    width: 240px;
+  }
+
+  .hero-pets {
+    width: 220px;
+    height: 220px;
+  }
+
+  .filtro-busca {
+    padding: 16px;
+  }
+
+  .filtro-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .filtro-campo {
+    min-width: 100%;
+  }
+
+  .btn-buscar-filtro {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .titulo-secao {
+    font-size: 1.5rem;
+  }
+
   .categorias-grid {
     grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  .categoria-icone {
+    width: 56px;
+    height: 56px;
+    font-size: 20px;
+  }
+
+  .categoria-nome {
+    font-size: 12px;
   }
 
   .profissionais-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .profissional-imagem {
+    height: 140px;
+  }
+
+  .por-que-escolher {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px 20px;
+    gap: 24px;
+  }
+
+  .por-que-texto {
+    min-width: 100%;
+  }
+
+  .subtitulo-secao--esquerda {
+    text-align: center;
+    max-width: 100%;
+  }
+
+  .beneficios-grid {
+    justify-content: center;
+  }
+
+  .beneficio-item {
+    max-width: 140px;
+  }
+
+  .por-que-imagem {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  footer {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 20px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    width: auto;
+  }
+
+  .footer-nav-cont {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
   }
 }
 
@@ -718,5 +914,181 @@ footer div p {
   .profissionais-grid {
     grid-template-columns: 1fr;
   }
+
+  .hero-titulo {
+    font-size: 1.75rem;
+  }
+
+  .hero-subtitulo {
+    font-size: 0.9rem;
+  }
+
+  .btn-buscar-profissionais,
+  .btn-como-funciona {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .categoria-icone {
+    width: 52px;
+    height: 52px;
+    font-size: 18px;
+  }
+
+  .beneficio-item {
+    max-width: 100%;
+  }
 }
+
+@media (max-width: 480px) {
+  header {
+    padding: 5px 12px;
+  }
+
+  .logoImagem {
+    width: 50px;
+  }
+
+  .viraDengo {
+    width: 80px;
+  }
+
+  .list {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .menu li {
+    padding: 0 3px;
+  }
+
+  .pagina-profissionais {
+    padding: 20px 12px;
+  }
+
+  .hero-titulo {
+    font-size: 1.5rem;
+  }
+
+  .hero-subtitulo {
+    font-size: 0.85rem;
+  }
+
+  .hero-botoes {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .btn-buscar-profissionais,
+  .btn-como-funciona {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-imagem {
+    width: 200px;
+    height: 200px;
+  }
+
+  .hero-fundo {
+    width: 200px;
+  }
+
+  .hero-pets {
+    width: 180px;
+    height: 180px;
+  }
+
+  .filtro-busca {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .filtro-campo {
+    padding: 8px 12px;
+    font-size: 13px;
+  }
+
+  .btn-buscar-filtro {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+
+  .titulo-secao {
+    font-size: 1.3rem;
+  }
+
+  .subtitulo-secao {
+    font-size: 13px;
+  }
+
+  .categorias-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .categoria-icone {
+    width: 48px;
+    height: 48px;
+    font-size: 16px;
+  }
+
+  .categoria-nome {
+    font-size: 11px;
+  }
+
+  .profissional-imagem {
+    height: 120px;
+  }
+
+  .profissional-info {
+    padding: 12px;
+  }
+
+  .profissional-nome {
+    font-size: 14px;
+  }
+
+  .profissional-especialidade {
+    font-size: 12px;
+  }
+
+  .por-que-escolher {
+    padding: 20px 16px;
+    border-radius: 12px;
+  }
+
+  .titulo-secao--esquerda {
+    font-size: 1.3rem;
+  }
+
+  .subtitulo-secao--esquerda {
+    font-size: 13px;
+  }
+
+  .beneficio-icone {
+    width: 40px;
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .beneficio-titulo {
+    font-size: 13px;
+  }
+
+  .beneficio-descricao {
+    font-size: 11px;
+  }
+
+  .por-que-imagem {
+    max-width: 260px;
+  }
+
+  .footer-nav-cont {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+}
+
 /* #endregion */

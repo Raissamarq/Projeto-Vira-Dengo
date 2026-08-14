@@ -966,10 +966,11 @@ footer li a:hover {
 
 /* ---------- RESPONSIVO ---------- */
 
-/* Tablet */
-@media (max-width: 900px) {
+/* ---------- RESPONSIVO ---------- */
+
+@media (max-width: 1024px) {
   header {
-    padding: 10px 24px;
+    padding: 5px 24px;
     flex-wrap: wrap;
     row-gap: 10px;
   }
@@ -987,32 +988,121 @@ footer li a:hover {
   }
 
   .pagina {
-    padding: 24px 20px 60px;
+    padding: 28px 24px 70px;
   }
 
   .conteudo {
     grid-template-columns: 1fr;
   }
 
-  .linha,
-  .linha-desigual,
-  .linha-tres {
-    grid-template-columns: 1fr;
+  .titulo-pagina {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 5px 16px;
+  }
+
+  .logoImagem {
+    width: 60px;
+  }
+
+  .viraDengo {
+    width: 100px;
+  }
+
+  .list {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+
+  .menu li {
+    padding: 0 4px;
+  }
+
+  .perfil-box img {
+    width: 40px;
+    border-width: 2.5px;
+  }
+
+  .pagina {
+    padding: 24px 16px 60px;
+  }
+
+  .titulo-pagina {
+    font-size: 1.6rem;
+  }
+
+  .subtitulo-pagina {
+    font-size: 0.9rem;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .campo label {
+    font-size: 0.85rem;
+  }
+
+  .campo input,
+  .campo select,
+  .campo textarea {
+    padding: 10px 12px;
+    font-size: 0.85rem;
   }
 
   .upload-fotos {
     grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
   }
 
-  .caixa-mapa {
-    flex-direction: column;
-    align-items: flex-start;
+  .upload-area {
+    padding: 18px 8px;
+  }
+
+  .upload-area i {
+    font-size: 1.4rem;
+  }
+
+  .upload-area p {
+    font-size: 0.8rem;
+  }
+
+  .slot-foto {
+    min-height: 80px;
+    font-size: 1.1rem;
+  }
+
+  .preview-imagem {
+    height: 120px;
+    font-size: 2rem;
+  }
+
+  .preview-titulo {
+    font-size: 1rem;
+  }
+
+  .preview-descricao {
+    font-size: 0.8rem;
+  }
+
+  .secao-titulo h2 {
+    font-size: 1rem;
+  }
+
+  .botao-publicar,
+  .botao-cancelar {
+    padding: 14px;
+    font-size: 0.9rem;
   }
 
   footer {
     flex-direction: column;
     align-items: center;
-    padding: 30px 24px;
+    padding: 24px 20px;
     min-height: auto;
     text-align: center;
   }
@@ -1024,14 +1114,17 @@ footer li a:hover {
   }
 }
 
-/* Celular */
 @media (max-width: 600px) {
   header {
-    padding: 10px 16px;
+    padding: 5px 16px;
   }
 
   .logoImagem {
     width: 60px;
+  }
+
+  .viraDengo {
+    width: 100px;
   }
 
   .list {
@@ -1113,5 +1206,147 @@ footer li a:hover {
 
   .footer-logo {
     width: auto;
+  }
+}
+
+@media (max-width: 480px) {
+  header {
+    padding: 5px 12px;
+  }
+
+  .logoImagem {
+    width: 50px;
+  }
+
+  .viraDengo {
+    width: 80px;
+  }
+
+  .list {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .menu li {
+    padding: 0 3px;
+  }
+
+  .perfil-box img {
+    width: 36px;
+    border-width: 2px;
+  }
+
+  .pagina {
+    padding: 16px 12px 40px;
+  }
+
+  .titulo-pagina {
+    font-size: 1.25rem;
+  }
+
+  .subtitulo-pagina {
+    font-size: 0.8rem;
+  }
+
+  .card {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  .card h2 {
+    font-size: 1.1rem;
+  }
+
+  .campo label {
+    font-size: 0.8rem;
+  }
+
+  .campo input,
+  .campo select,
+  .campo textarea {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+
+  .upload-fotos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .upload-area {
+    padding: 14px 6px;
+  }
+
+  .upload-area i {
+    font-size: 1.2rem;
+  }
+
+  .upload-area p {
+    font-size: 0.75rem;
+  }
+
+  .slot-foto {
+    min-height: 70px;
+    font-size: 1rem;
+  }
+
+  .preview-imagem {
+    height: 100px;
+    font-size: 1.5rem;
+  }
+
+  .preview-titulo {
+    font-size: 0.95rem;
+  }
+
+  .preview-categoria {
+    font-size: 0.75rem;
+  }
+
+  .preview-descricao {
+    font-size: 0.75rem;
+  }
+
+  .preview-info {
+    font-size: 0.75rem;
+  }
+
+  .secao-titulo h2 {
+    font-size: 0.95rem;
+  }
+
+  .secao-numero {
+    width: 20px;
+    height: 20px;
+    font-size: 0.7rem;
+  }
+
+  .editor-barra button {
+    width: 22px;
+    height: 22px;
+  }
+
+  .botao-publicar,
+  .botao-cancelar {
+    padding: 12px;
+    font-size: 0.85rem;
+  }
+
+  .botao-publicar-inline {
+    padding: 10px 20px;
+    font-size: 0.85rem;
+  }
+
+  .aviso-revisao {
+    padding: 12px 14px;
+    font-size: 0.78rem;
+  }
+
+  .footer-nav-cont {
+    gap: 16px;
+  }
+
+  footer li {
+    font-size: 0.8rem;
   }
 }
