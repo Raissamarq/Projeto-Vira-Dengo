@@ -1,24 +1,25 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cadastro ONG</title>
-  <link rel="stylesheet" href="./cadastro-ong.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
-
-<body>
-   <header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro ONG</title>
+    <link rel="stylesheet" href="cadastro-ong.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
       <div>
-        <img class="logoImagem" src="img/logo1.webp" alt="" />
+        <img class="logoImagem" src="../img/logoImagem.png" alt="" />
       </div>
 
       <nav class="box">
         <ul class="menu">
           <li><a class="list" href="./Feed/feed.html">Conexões</a></li>
-          <li><a class="list" href="./index.html">Home</a></li>
+          <li><a class="list" href="../index.html">Home</a></li>
           <li><a class="list" href="#">Profissionais</a></li>
         </ul>
       </nav>
@@ -27,202 +28,537 @@
       >
     </header>
 
+    <main>
+      <div class="cadastro">
+        <a href="#" class="voltar"> ← Voltar</a>
+      </div>
 
-  <main>
-
-    <div class="cadastro">
-
-      <a href="#" class="voltar"> ← Voltar</a>
-    </div>
-
-
-    <h1 class="titulo-principal">Cadastro de <span>ONG</span></h1>
-    <p class="subtitulo"> Sua causa <span>merece</span> ser encotrada</p>
-
-    <div class="colunas">
-      <fieldset class="secao">
-        <legend> <i class="fa-solid fa-building"></i> Dados da Organização </legend>
-
-
-        <div class="campo">
-          <label for="nomeOng"> Nome da ONG / Organização</label>
-          <input type="text" id="nomeOng" name="nomeOng" placeholder="Digite o nome da sua instituição" required>
+      <div class="cadastro-intro">
+        <div>
+          <img src="../img/icons/ong.png" alt="" />
         </div>
-
-        <div class="campo">
-          <label for="cnpj"> CNPJ</label>
-          <input type="text" id="cnpj" name="cnpj" placeholder="00.000.000/0000-00" required />
+        <div>
+          <h1 class="titulo-principal">Cadastro de <span>ONG</span></h1>
+          <p class="subtitulo">Sua causa <span>merece</span> ser encontrada.</p>
         </div>
+      </div>
 
-        <div class="campo">
-          <label for="dataFundacao">Data de Fundação</label>
-          <input type="date" id="dataFundacao" name="dataFundacao" required />
-        </div>
+      <div class="img-container">
+        <img class="frente" src="../img/dalmata.png" alt="" />
+      </div>
 
-        <div class="campo">
-          <label for="emailinstitucional"> E-mail Institucional</label>
-          <input type="email" id="emailinstitucional" name="emailinstitucional" placeholder="contato@suaong.com"
-            required />
-        </div>
+      <!-- Indicador de Progresso / Etapas -->
+      <div class="progresso-etapas" aria-label="Progresso do cadastro">
+        <div
+          class="progresso-etapas__barra"
+          role="progressbar"
+          aria-valuenow="1"
+          aria-valuemin="1"
+          aria-valuemax="5"
+        ></div>
+        <ol class="progresso-etapas__lista">
+          <li class="progresso-etapas__item ativo" data-step="1">
+            <span class="progresso-etapas__numero">1</span>
+            <span class="progresso-etapas__label">Dados da ONG</span>
+          </li>
+          <li class="progresso-etapas__item" data-step="2">
+            <span class="progresso-etapas__numero">2</span>
+            <span class="progresso-etapas__label">Endereço</span>
+          </li>
+          <li class="progresso-etapas__item" data-step="3">
+            <span class="progresso-etapas__numero">3</span>
+            <span class="progresso-etapas__label">Documentos</span>
+          </li>
+          <li class="progresso-etapas__item" data-step="4">
+            <span class="progresso-etapas__numero">4</span>
+            <span class="progresso-etapas__label">Responsável</span>
+          </li>
+          <li class="progresso-etapas__item" data-step="5">
+            <span class="progresso-etapas__numero">5</span>
+            <span class="progresso-etapas__label">Causas</span>
+          </li>
+        </ol>
+      </div>
 
+      <form
+        action="../cadastrar-ong"
+        method="post"
+        class="form-cadastro-ong"
+        novalidate
+      >
+        <!-- ETAPA 1: Dados da ONG -->
+        <div class="form-step ativo" data-step="1">
+          <fieldset class="secao">
+            <div class="secao-titulo">
+              <i class="fa-solid fa-building"></i> Dados da Organização
+            </div>
 
-        <div class="campo">
-          <label for="telefone"> Telefone/WhatsApp</label>
-          <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required />
-        </div>
+            <div class="campo">
+              <label for="nomeOng">Nome da ONG / Organização</label>
+              <input
+                type="text"
+                id="nomeOng"
+                name="nomeOng"
+                placeholder="Digite o nome da sua instituição"
+                required
+              />
+            </div>
 
-        <div class="campo">
-          <label for="site"> Site (Opcional)</label>
-          <input type="url" id="site" name="site" placeholder="https://www.suaong.org.br" />
-        </div>
+            <div class="campo">
+              <label for="cnpj">CNPJ</label>
+              <input
+                type="text"
+                id="cnpj"
+                name="cnpj"
+                placeholder="00.000.000/0000-00"
+                required
+                maxlength="18"
+                data-mask="cnpj"
+              />
+            </div>
 
+            <div class="campo">
+              <label for="dataFundacao">Data de Fundação</label>
+              <input
+                type="date"
+                id="dataFundacao"
+                name="dataFundacao"
+                required
+              />
+            </div>
 
-        <div class="campo">
-          <label for="sobreOng"> Sobre a ONG</label>
-          <textarea id="sobreOng" name="sobreOng" maxlength="500"
-            placeholder="Conte um pouco sobre a missão, visão e os objetivos da sua orgaanização."></textarea>
-        </div>
-      </fieldset>
+            <div class="campo">
+              <label for="emailinstitucional">E-mail Institucional</label>
+              <input
+                type="email"
+                id="emailinstitucional"
+                name="emailinstitucional"
+                placeholder="contato@suaong.com"
+                required
+              />
+            </div>
 
+            <div class="campo">
+              <label for="telefone">Telefone/WhatsApp</label>
+              <input
+                type="tel"
+                id="telefone"
+                name="telefone"
+                placeholder="(00) 00000-0000"
+                required
+                maxlength="15"
+                data-mask="telefone"
+              />
+            </div>
 
+            <div class="campo">
+              <label for="site">Site (Opcional)</label>
+              <input
+                type="url"
+                id="site"
+                name="site"
+                placeholder="https://www.suaong.org.br"
+              />
+            </div>
 
-      <fieldset class="secao">
-        <legend> <i class="fa-solid fa-location-dot"></i> Endereço da Sede </legend>
+            <div class="campo">
+              <label for="sobreOng">Sobre a ONG</label>
+              <textarea
+                id="sobreOng"
+                name="sobreOng"
+                maxlength="500"
+                placeholder="Conte um pouco sobre a missão, visão e os objetivos da sua organização."
+              ></textarea>
+            </div>
+          </fieldset>
 
-        <div class="campo">
-          <label for="cep">CEP</label>
-          <input type="text" id="cep" name="cep" placeholder="00000-000" required />
-        </div>
-
-        <div class="campo">
-          <label for="endereco">Endereço</label>
-          <input type="text" id="endereco" name="endereco" placeholder="Rua, Avenida, Número" required />
-        </div>
-
-        <div class="campo">
-          <label for="complemento">Complemento (Opcional)</label>
-          <input type="text" id="complemento" name="complemento" placeholder="Apartamento, Bloco, etc." />
-        </div>
-
-        <div class="campo-linha">
-          <div class="campo">
-            <label for="bairro">Bairro</label>
-            <input type="text" id="bairro" name="bairro" placeholder="Bairro" required />
+          <div class="navegacao-etapas">
+            <span></span>
+            <button type="button" class="btn-proximo">Próximo →</button>
           </div>
+        </div>
 
-          <div class="campo">
-            <label for="cidade">Cidade</label>
-            <input type="text" id="cidade" name="cidade" placeholder="Cidade" required />
+        <!-- ETAPA 2: Endereço da Sede -->
+        <div class="form-step" data-step="2">
+          <fieldset class="secao">
+            <div class="secao-titulo">
+              <i class="fa-solid fa-location-dot"></i> Endereço da Sede
+            </div>
+
+            <div class="campo">
+              <label for="cep">CEP</label>
+              <input
+                type="text"
+                id="cep"
+                name="cep"
+                placeholder="00000-000"
+                required
+                maxlength="9"
+                data-mask="cep"
+              />
+            </div>
+
+            <div class="campo">
+              <label for="endereco">Endereço</label>
+              <input
+                type="text"
+                id="endereco"
+                name="endereco"
+                placeholder="Rua, Avenida, Número"
+                required
+              />
+            </div>
+
+            <div class="campo">
+              <label for="complemento">Complemento (Opcional)</label>
+              <input
+                type="text"
+                id="complemento"
+                name="complemento"
+                placeholder="Apartamento, Bloco, etc."
+              />
+            </div>
+
+            <div class="campo-linha">
+              <div class="campo">
+                <label for="bairro">Bairro</label>
+                <input
+                  type="text"
+                  id="bairro"
+                  name="bairro"
+                  placeholder="Bairro"
+                  required
+                />
+              </div>
+
+              <div class="campo">
+                <label for="cidade">Cidade</label>
+                <input
+                  type="text"
+                  id="cidade"
+                  name="cidade"
+                  placeholder="Cidade"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="campo-linha">
+              <div class="campo">
+                <label for="estado">Estado</label>
+                <select id="estado" name="estado" required>
+                  <option value="">Selecione</option>
+                </select>
+              </div>
+
+              <div class="campo">
+                <label for="pais">País</label>
+                <select id="pais" name="pais" required>
+                  <option value="Brasil" selected>Brasil</option>
+                </select>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="navegacao-etapas">
+            <button type="button" class="btn-voltar-etapa">← Voltar</button>
+            <button type="button" class="btn-proximo">Próximo →</button>
           </div>
         </div>
 
-        <div class="campo-linha">
-          <div class="campo">
-            <label for="estado">Estado</label>
-            <select id="estado" name="estado" required>
-              <option value="">Selecione</option>
+        <!-- ETAPA 3: Documentos -->
+        <div class="form-step" data-step="3">
+          <fieldset class="secao">
+            <div class="secao-titulo">
+              <i class="fa-solid fa-file-lines"></i> Documentos Obrigatórios
+            </div>
 
-            </select>
+            <div class="campo">
+              <p class="label-documentos">
+                <i class="fa-solid fa-file-contract"></i> Estatuto Social da ONG
+              </p>
+              <div class="upload-area">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <p>Envie o Estatuto Social</p>
+                <span>PDF (máx. 10MB)</span>
+                <label for="estatuto" class="btn-selecionar-arquivo"
+                  >Selecionar arquivo</label
+                >
+                <input
+                  type="file"
+                  id="estatuto"
+                  name="estatuto"
+                  accept=".pdf"
+                  hidden
+                />
+              </div>
+            </div>
+
+            <div class="campo">
+              <p class="label-documentos">
+                <i class="fa-solid fa-id-card"></i> CNPJ (Comprovante)
+              </p>
+              <div class="upload-area">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <p>Envie o Comprovante de CNPJ</p>
+                <span>PDF ou Imagem (máx. 10MB)</span>
+                <label for="comprovanteCnpj" class="btn-selecionar-arquivo"
+                  >Selecionar arquivo</label
+                >
+                <input
+                  type="file"
+                  id="comprovanteCnpj"
+                  name="comprovanteCnpj"
+                  accept=".pdf,image/*"
+                  hidden
+                />
+              </div>
+            </div>
+
+            <div class="campo">
+              <p class="label-documentos">
+                <i class="fa-solid fa-file-signature"></i> Ata de Fundação /
+                Constituição
+              </p>
+              <div class="upload-area">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <p>Envie a Ata de Fundação</p>
+                <span>PDF (máx. 10MB)</span>
+                <label for="ataFundacao" class="btn-selecionar-arquivo"
+                  >Selecionar arquivo</label
+                >
+                <input
+                  type="file"
+                  id="ataFundacao"
+                  name="ataFundacao"
+                  accept=".pdf"
+                  hidden
+                />
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="navegacao-etapas">
+            <button type="button" class="btn-voltar-etapa">← Voltar</button>
+            <button type="button" class="btn-proximo">Próximo →</button>
           </div>
+        </div>
 
-          <div class="campo">
-            <label for="pais">País</label>
-            <select id="pais" name="pais" required>
-              <option value="Brasil" selected>Brasil</option>
-            </select>
+        <!-- ETAPA 4: Responsável Legal -->
+        <div class="form-step" data-step="4">
+          <fieldset class="secao">
+            <div class="secao-titulo">
+              <i class="fa-solid fa-user"></i> Responsável Legal
+            </div>
+
+            <div class="campo">
+              <label for="nomeResponsavel">Nome Completo</label>
+              <input
+                type="text"
+                id="nomeResponsavel"
+                name="nomeResponsavel"
+                placeholder="Digite o nome completo"
+                required
+              />
+            </div>
+
+            <div class="campo">
+              <label for="cpfResponsavel">CPF</label>
+              <input
+                type="text"
+                id="cpfResponsavel"
+                name="cpfResponsavel"
+                placeholder="000.000.000-00"
+                required
+                maxlength="14"
+                data-mask="cpf"
+              />
+            </div>
+
+            <div class="campo">
+              <label for="cargo">Cargo na ONG</label>
+              <input
+                type="text"
+                id="cargo"
+                name="cargo"
+                placeholder="Ex: Presidente, Diretor, etc."
+                required
+              />
+            </div>
+
+            <div class="campo">
+              <label for="emailResponsavel">E-mail</label>
+              <input
+                type="email"
+                id="emailResponsavel"
+                name="emailResponsavel"
+                placeholder="email@exemplo.com"
+                required
+              />
+            </div>
+
+            <div class="campo">
+              <label for="telefoneResponsavel">Telefone / WhatsApp</label>
+              <input
+                type="tel"
+                id="telefoneResponsavel"
+                name="telefoneResponsavel"
+                placeholder="(00) 00000-0000"
+                required
+                maxlength="15"
+                data-mask="telefone"
+              />
+            </div>
+
+            <div class="campo">
+              <p class="label-documentos">
+                <i class="fa-solid fa-id-card"></i> Documento de Identidade
+                (RG/CNH)
+              </p>
+              <div class="upload-area">
+                <i class="fa-solid fa-cloud-arrow-up"></i>
+                <p>Envie o Documento de Identidade do Responsável</p>
+                <span>PDF ou Imagem (máx. 10MB)</span>
+                <label for="docIdentidade" class="btn-selecionar-arquivo"
+                  >Selecionar arquivo</label
+                >
+                <input
+                  type="file"
+                  id="docIdentidade"
+                  name="docIdentidade"
+                  accept=".pdf,image/*"
+                  required
+                  hidden
+                />
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="navegacao-etapas">
+            <button type="button" class="btn-voltar-etapa">← Voltar</button>
+            <button type="button" class="btn-proximo">Próximo →</button>
           </div>
         </div>
 
-        <div class="campo">
-          <p class="label-documentos"><i class="fa-solid fa-file-lines"></i> Documentos</p>
-          <div class="upload-area">
-            <i class="fa-solid fa-cloud-arrow-up"></i>
-            <p>Envie o Estatuto Social da ONG</p>
-            <span>PDF ou Imagem (máx. 10MB)</span>
-            <label for="estatuto" class="btn-selecionar-arquivo">Selecionar arquivo</label>
-            <input type="file" id="estatuto" name="estatuto" accept=".pdf,image/*" hidden />
+        <!-- ETAPA 5: Causas de Atuação -->
+        <div class="form-step" data-step="5">
+          <fieldset class="secao">
+            <div class="secao-titulo">
+              <i class="fa-solid fa-paw"></i> Causas de Atuação
+            </div>
+
+            <div class="campo campo-checkboxes">
+              <p class="label-causa">
+                <i class="fa-solid fa-paw"></i> Principais áreas de atuação
+              </p>
+              <span class="sublabel"
+                >Selecione uma ou mais causas nas quais sua ONG atua</span
+              >
+
+              <label class="checkbox-item">
+                <input type="checkbox" name="causa" value="resgate" /> Resgate e
+                Reabilitação
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="causa" value="adocao" /> Adoção
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="causa" value="castracao" />
+                Castração e Controle Populacional
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="causa" value="educacao" /> Educação
+                e Conscientização
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="causa" value="saude" /> Saúde e
+                Bem-estar Animal
+              </label>
+              <label class="checkbox-item">
+                <input type="checkbox" name="causa" value="outros" /> Outros
+              </label>
+            </div>
+
+            <div class="campo">
+              <label for="outrasCausas">Outras causas (especifique)</label>
+              <textarea
+                id="outrasCausas"
+                name="outrasCausas"
+                maxlength="300"
+                placeholder="Se selecionou 'Outros', descreva aqui as áreas de atuação..."
+              ></textarea>
+            </div>
+
+            <div class="aviso-seguranca">
+              <i class="fa-solid fa-shield-halved"></i>
+              <div class="aviso-seguranca__texto">
+                <p class="aviso-seguranca__titulo">Seus dados estão seguros!</p>
+                <p class="aviso-seguranca__descricao">
+                  Utilizamos suas informações apenas para conectar você a
+                  oportunidades que fazem a diferença na vida dos pets.
+                </p>
+              </div>
+            </div>
+          </fieldset>
+
+          <div class="navegacao-etapas">
+            <button type="button" class="btn-voltar-etapa">← Voltar</button>
+            <button type="submit" class="btn-continuar">
+              Finalizar Cadastro <i class="fa-solid fa-arrow-right"></i>
+            </button>
           </div>
         </div>
-      </fieldset>
+      </form>
 
-
-
-      <fieldset class="secao">
-        <legend><i class="fa-solid fa-user"></i> Responsável Legal</legend>
-
-        <div class="campo">
-          <label for="nomeResponsavel">Nome Completo</label>
-          <input type="text" id="nomeResponsavel" name="nomeResponsavel" placeholder="Digite o nome completo"
-            required />
+      <!-- Tela de Sucesso / Conclusão -->
+      <div class="tela-sucesso" hidden>
+        <div class="tela-sucesso__container">
+          <div class="tela-sucesso__icone" aria-hidden="true">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <h2 class="tela-sucesso__titulo">Cadastro realizado com sucesso!</h2>
+          <p class="tela-sucesso__mensagem">
+            Sua ONG foi cadastrada no Vira Dengo. Em breve nossa equipe entrará
+            em contato para validar as informações e ativar seu perfil.
+          </p>
+          <div class="tela-sucesso__detalhes">
+            <div class="tela-sucesso__item">
+              <i class="fa-solid fa-envelope"></i>
+              <span
+                >E-mail de confirmação enviado para
+                <strong id="emailConfirmacao"></strong
+              ></span>
+            </div>
+            <div class="tela-sucesso__item">
+              <i class="fa-solid fa-clock"></i>
+              <span>Validação em até 2 dias úteis</span>
+            </div>
+          </div>
+          <div class="tela-sucesso__acoes">
+            <a
+              href="../Feed/feed.html"
+              class="btn btn--primario tela-sucesso__btn"
+            >
+              <i class="fa-solid fa-paw"></i> Ir para o Feed
+            </a>
+            <a
+              href="../index.html"
+              class="btn btn--secundario tela-sucesso__btn"
+            >
+              <i class="fa-solid fa-house"></i> Voltar ao Início
+            </a>
+          </div>
         </div>
+      </div>
+    </main>
+    <footer>
+      <section class="footer-logo">
+        <img
+          class="logo-img-footer"
+          src="../img/logoImagem.png"
+          alt="imagem-logo"
+        />
 
-
-        <div class="campo">
-          <label for="cargo">Cargo na ONG</label>
-          <input type="text" id="cargo" name="cargo" placeholder="Ex: Presidente, Diretor, etc." required />
-        </div>
-
-        <div class="campo">
-          <label for="emailResponsavel">E-mail</label>
-          <input type="email" id="emailResponsavel" name="emailResponsavel" placeholder="email@exemplo.com" required />
-        </div>
-
-        <div class="campo">
-          <label for="telefoneResponsavel">Telefone / WhatsApp</label>
-          <input type="tel" id="telefoneResponsavel" name="telefoneResponsavel" placeholder="(00) 00000-0000"
-            required />
-        </div>
-
-        <div class="campo campo-checkboxes">
-          <p class="label-causa"><i class="fa-solid fa-paw"></i>Causa de Atuação</p>
-          <span class="sublabel">Principais áreas de atuação (Selecione uma ou mais)</span>
-
-          <label class="checkbox-item">
-            <input type="checkbox" name="causa" value="resgate">Resgate e Reabilitação</label>
-
-
-          <label class="checkbox-item">
-            <input type="checkbox" name="causa" value="adocao" /> Adoção
-          </label>
-
-          <label class="checkbox-item">
-            <input type="checkbox" name="causa" value="castracao" />Castração e Controle Populacional
-          </label>
-
-          <label class="checkbox-item">
-            <input type="checkbox" name="causa" value="educacao" />Educação e Conscientização</label>
-
-          <label class="checkbox-item">
-            <input type="checkbox" name="causa" value="saude" />Saúde e Bem-estar Animal</label>
-
-          <label class="checkbox-item">
-            <input type="checkbox" name="causa" value="outros" />Outros</label>
-
-          </label>
-        </div>
-    </div>
-    </fieldset>
-
-    
-<div class="aviso-seguranca">
-  <i class="fa-solid fa-shield-halved"></i>
-  <div class="aviso-seguranca__texto">
-    <p class="aviso-seguranca__titulo">Seus dados estão seguros!</p>
-    <p class="aviso-seguranca__descricao">
-      Utilizamos suas informações apenas para conectar você a
-      oportunidades que fazem a diferença na vida dos pets.
-    </p>
-  </div>
-</div>
-
-<button type="submit" class="btn-continuar">
-  Continuar <i class="fa-solid fa-arrow-right"></i>
-</button>
-
-  <footer>
-<section class="footer-logo">
-        <img class="logo-img-footer" src="img/logo1.webp" alt="imagem-logo" />
-        <img class="nome-img-footer" src="img/logo2.webp" alt="nome-logo" />
         <p class="span-negrito">
           O serviço que faz você e seu pet virarem fãs.
         </p>
@@ -246,8 +582,8 @@
           <li>Como funciona? (Voluntário)</li>
         </div>
       </section>
-  </footer>
+    </footer>
 
-</body>
-
+    <script src="cadastro-ong.js"></script>
+  </body>
 </html>

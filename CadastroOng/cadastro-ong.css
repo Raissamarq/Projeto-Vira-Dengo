@@ -21,7 +21,28 @@ body {
   line-height: 1.5;
   background-color: var(--cor-fundo);
   color: var(--cor-secundaria);
-  background-image: url(img/fundo\ viradengo.webp);
+  min-height: 100vh;
+  position: relative;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/imagemDeFundo.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+main {
+  position: relative;
+  margin: 30px 20px;
 }
 
 /* #region MENU*/
@@ -96,18 +117,30 @@ a {
   margin-right: 10px;
 }
 
-/* #endregion*/
-
 .cadastro {
   width: 100%;
   text-align: left;
   margin-bottom: 20px;
 }
 
+.cadastro-intro {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.cadastro-intro img {
+  width: 100px;
+  margin-right: 30px;
+}
+/* #endregion*/
+
+/* #region titulos */
 .voltar {
   display: incline-block;
   color: var(--cor-secundaria);
-  font-size: 14px;
+  font-size: 20px;
   font-weight: 600;
   text-decoration: none;
   padding: 6px 14px;
@@ -147,6 +180,9 @@ a {
   font-weight: 600;
 }
 
+/* #endregion */
+
+/* #region colunas e seções */
 .colunas {
   display: flex;
   gap: 20px;
@@ -165,7 +201,7 @@ a {
   min-width: 280px;
   flex-direction: column;
 }
-.secao legend {
+.secao-titulo {
   display: flex;
   align-items: center;
   gap: 8px;
@@ -174,13 +210,9 @@ a {
   color: #0f766e;
   border-bottom: 1px solid #e5e5e5;
   padding-bottom: 12px;
-  margin-bottom: 15px;
+  margin: 0 0 15px;
   width: 100%;
   font-family: 'Poppins', sans-serif;
-}
-
-.secao legend i {
-  color: #0f766e;
 }
 
 .campo {
@@ -358,6 +390,9 @@ a {
   display: column;
 }
 
+/* #endregion */
+
+/* #region checkbox */
 .checkbox-item,
 .check-box {
   display: flex;
@@ -401,7 +436,9 @@ a {
 .sublabel {
   grid-column: 1 / -1;
 }
+/* #endregion */
 
+/* #region ETAPAS DO FORMULÁRIO */
 .rodape-formulario {
   display: flex;
   align-items: center;
@@ -531,7 +568,9 @@ a {
     gap: 22px;
   }
 }
+/* #endregion */
 
+/* #region footer */
 footer {
   height: 250px;
   background-color: var(--cor-laranja-100);
@@ -548,3 +587,420 @@ footer {
   width: 200px;
   gap: 10px;
 }
+
+.footer-logo p {
+  font-size: 13px;
+  margin-top: 8px;
+}
+
+.logo-img-footer {
+  width: 100px;
+}
+
+.nome-img-footer {
+  width: 140px;
+}
+
+footer div {
+  list-style: none;
+}
+
+footer div p {
+  font-weight: bold;
+}
+
+.footer-nav-cont {
+  display: flex;
+  gap: 150px;
+}
+/* #endregion */
+
+/* #region CONTAINER */
+.img-container {
+  position: absolute;
+  top: 40%;
+  right: 7%;
+  width: 300px;
+  height: 300px;
+  pointer-events: none;
+}
+
+.frente {
+  width: 280px;
+  height: auto;
+}
+
+.fundo {
+  width: 300px;
+}
+/* #endregion */
+
+/* #region PROGRESSO DE ETAPAS */
+
+.progresso-etapas {
+  max-width: 900px;
+  margin: 0 auto 32px;
+  padding: 0 5%;
+}
+
+.progresso-etapas__barra {
+  position: relative;
+  height: 4px;
+  background-color: #d8e0e2;
+  border-radius: 2px;
+  margin-top: 16px;
+  overflow: hidden;
+}
+
+.progresso-etapas__barra::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--cor-primaria), #ffa73d);
+  border-radius: 2px;
+  transition: width 0.4s ease;
+}
+
+.progresso-etapas__barra[data-progress='1']::before {
+  width: 0%;
+}
+.progresso-etapas__barra[data-progress='2']::before {
+  width: 25%;
+}
+.progresso-etapas__barra[data-progress='3']::before {
+  width: 50%;
+}
+.progresso-etapas__barra[data-progress='4']::before {
+  width: 75%;
+}
+.progresso-etapas__barra[data-progress='5']::before {
+  width: 100%;
+}
+
+.progresso-etapas__lista {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  margin-top: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.progresso-etapas__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+  text-align: center;
+  color: #8a969a;
+  transition: color 0.3s ease;
+}
+
+.progresso-etapas__numero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #d8e0e2;
+  background-color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  color: #8a969a;
+  transition: all 0.3s ease;
+}
+
+.progresso-etapas__label {
+  font-size: 12px;
+  font-weight: 500;
+  color: inherit;
+  white-space: nowrap;
+}
+
+.progresso-etapas__item.ativo .progresso-etapas__numero {
+  background-color: var(--cor-primaria);
+  border-color: var(--cor-primaria);
+  color: #fff;
+}
+
+.progresso-etapas__item.ativo .progresso-etapas__label {
+  color: var(--cor-primaria);
+  font-weight: 600;
+}
+
+.progresso-etapas__item.concluido .progresso-etapas__numero {
+  background-color: var(--cor-secundaria);
+  border-color: var(--cor-secundaria);
+  color: #fff;
+}
+
+.progresso-etapas__item.concluido .progresso-etapas__numero::before {
+  content: '\f00c';
+  font-family: 'Font Awesome 6 Free';
+  font-weight: 900;
+  font-size: 12px;
+}
+
+.progresso-etapas__item.concluido .progresso-etapas__label {
+  color: var(--cor-secundaria);
+}
+
+/* #endregion */
+
+/* #region TELA DE SUCESSO */
+
+.tela-sucesso {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 5%;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tela-sucesso__container {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 48px 40px;
+  text-align: center;
+}
+
+.tela-sucesso__icone {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25a02f);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  box-shadow: 0 8px 24px rgba(255, 134, 21, 0.3);
+}
+
+.tela-sucesso__icone i {
+  font-size: 36px;
+  color: #fff;
+}
+
+.tela-sucesso__titulo {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--cor-secundaria);
+  margin-bottom: 12px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.tela-sucesso__mensagem {
+  font-size: 1rem;
+  color: #5c6b6e;
+  line-height: 1.6;
+  margin-bottom: 32px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tela-sucesso__detalhes {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 32px;
+  padding: 24px;
+  background-color: #faf6f1;
+  border-radius: 12px;
+  border: 1px solid #ffe7d1;
+}
+
+.tela-sucesso__item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--cor-secundaria);
+}
+
+.tela-sucesso__item i {
+  color: var(--cor-primaria);
+  font-size: 18px;
+}
+
+.tela-sucesso__item strong {
+  color: #1a4d5c;
+}
+
+.tela-sucesso__acoes {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.tela-sucesso__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+  font-family: 'Poppins', sans-serif;
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.btn--primario {
+  background-color: var(--cor-primaria);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 16px rgba(255, 134, 21, 0.3);
+}
+
+.btn--primario:hover {
+  background-color: #e0740f;
+  box-shadow: 0 6px 20px rgba(255, 134, 21, 0.4);
+  transform: translateY(-2px);
+}
+
+.btn--secundario {
+  background-color: #fff;
+  color: var(--cor-secundaria);
+  border: 1.5px solid var(--cor-secundaria);
+}
+
+.btn--secundario:hover {
+  background-color: var(--cor-secundaria);
+  color: #fff;
+}
+
+/* #endregion */
+
+/* #region ETAPAS DO FORMULÁRIO */
+
+.form-cadastro-ong {
+  padding: 0 5% 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.form-step {
+  display: none;
+}
+
+.form-step.ativo {
+  display: block;
+}
+
+.form-step .secao {
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+}
+
+.steps {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  list-style: none;
+  margin: 0 auto 20px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #d8e0e2;
+  color: #8a969a;
+  font-weight: 700;
+  font-size: 14px;
+  background-color: #fff;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.step.ativo {
+  background-color: var(--cor-primaria);
+  border-color: var(--cor-primaria);
+  color: #fff;
+}
+
+.step.concluido {
+  background-color: var(--cor-secundaria);
+  border-color: var(--cor-secundaria);
+  color: #fff;
+}
+
+.step:not(:last-child)::after {
+  content: '';
+  width: 40px;
+  height: 2px;
+  background-color: #d8e0e2;
+  margin-left: 12px;
+}
+
+.navegacao-etapas {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 24px;
+}
+
+.btn-voltar-etapa {
+  background-color: #fff;
+  color: var(--cor-secundaria);
+  border: 1.5px solid var(--cor-secundaria);
+  border-radius: 999px;
+  padding: 12px 28px;
+  font-weight: 700;
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.btn-voltar-etapa:hover {
+  background-color: var(--cor-secundaria);
+  color: #fff;
+}
+
+.btn-proximo {
+  background-color: var(--cor-primaria);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 28px;
+  font-weight: 700;
+  font-size: 14px;
+  font-family: inherit;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.btn-proximo:hover {
+  background-color: #e0740f;
+}
+
+/* #endregion */

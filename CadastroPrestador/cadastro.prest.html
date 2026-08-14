@@ -1,0 +1,439 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cadastro de Prestador</title>
+    <link rel="stylesheet" href="./cadastro.prest.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <header>
+      <div>
+        <img class="logoImagem" src="../img/logoImagem.png" alt="logo" />
+      </div>
+
+      <nav class="box">
+        <ul class="menu">
+          <li><a class="list" href="../Feed/feed.html">Conexões</a></li>
+          <li><a class="list" href="../index.html">Home</a></li>
+          <li><a class="list" href="#">Profissionais</a></li>
+        </ul>
+      </nav>
+      <a class="botaoHome" href="./ConexaoCadastro/conexaoCadastro.html"
+        ><i class="fa-solid fa-paw"></i>Quero doar</a
+      >
+    </header>
+
+    <main>
+      <div class="titulo-cadastro">
+        <h1 class="titulo-principal">Cadastro de Profissional</h1>
+        <p class="subtitulo">
+          <span class="destaque">Juntos</span>, vamos conectar quem
+          <span class="destaque">cuida</span> a quem
+          <span class="destaque">precisa</span>.
+        </p>
+      </div>
+
+      <!-- Indicador de Progresso / Etapas -->
+      <div class="progresso-etapas" aria-label="Progresso do cadastro">
+        <div
+          class="progresso-etapas__barra"
+          role="progressbar"
+          aria-valuenow="1"
+          aria-valuemin="1"
+          aria-valuemax="3"
+        >
+          <div class="progresso-etapas__preenchimento"></div>
+        </div>
+        <ol class="progresso-etapas__lista">
+          <li class="progresso-etapas__item ativo" data-step="1">
+            <span class="progresso-etapas__numero">1</span>
+            <span class="progresso-etapas__label">Dados Pessoais</span>
+          </li>
+          <li class="progresso-etapas__item" data-step="2">
+            <span class="progresso-etapas__numero">2</span>
+            <span class="progresso-etapas__label">Credenciais</span>
+          </li>
+          <li class="progresso-etapas__item" data-step="3">
+            <span class="progresso-etapas__numero">3</span>
+            <span class="progresso-etapas__label">Sobre o Trabalho</span>
+          </li>
+        </ol>
+      </div>
+
+      <form class="form-cadastro-prestador" novalidate>
+        <!-- ETAPA 1: DADOS PESSOAIS -->
+        <div class="form-step ativo" data-step="1">
+          <section class="secao-cadastro">
+            <div class="secao-titulo">
+              <i class="fa-solid fa-user"></i> Dados Pessoais
+            </div>
+
+            <div class="campo-linha">
+              <div class="campo">
+                <label for="nomeCompleto">Nome Completo</label>
+                <input
+                  type="text"
+                  id="nomeCompleto"
+                  name="nomeCompleto"
+                  placeholder="Digite seu nome completo"
+                  required
+                />
+              </div>
+              <div class="campo">
+                <label for="cpf">CPF</label>
+                <input
+                  type="text"
+                  id="cpf"
+                  name="cpf"
+                  placeholder="000.000.000-00"
+                  maxlength="14"
+                  data-mask="cpf"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="campo-linha">
+              <div class="campo">
+                <label for="telefone">Telefone / WhatsApp</label>
+                <input
+                  type="tel"
+                  id="telefone"
+                  name="telefone"
+                  placeholder="(00) 00000-0000"
+                  maxlength="15"
+                  data-mask="telefone"
+                  required
+                />
+              </div>
+              <div class="campo">
+                <label for="dataNascimento">Data de Nascimento</label>
+                <input
+                  type="date"
+                  id="dataNascimento"
+                  name="dataNascimento"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="campo-linha campo-linha--email">
+              <div class="campo">
+                <label for="email">E-mail</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  placeholder="email@exemplo.com"
+                  required
+                />
+              </div>
+
+              <div class="aviso-seguranca">
+                <i class="fa-solid fa-shield-halved"></i>
+                <div class="aviso-seguranca__texto">
+                  <p class="aviso-seguranca__titulo">
+                    Seus dados estão seguros!
+                  </p>
+                  <p class="aviso-seguranca__descricao">
+                    Utilizamos suas informações apenas para conectar você a
+                    oportunidades que fazem a diferença na vida dos pets.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="navegacao-etapas">
+            <span></span>
+            <button type="button" class="btn-proximo">Próximo →</button>
+          </div>
+        </div>
+
+        <!-- ETAPA 2: CREDENCIAIS DE ACESSO -->
+        <div class="form-step" data-step="2">
+          <section class="secao-cadastro">
+            <div class="secao-titulo">
+              <i class="fa-solid fa-lock"></i> Credenciais de Acesso
+            </div>
+
+            <div class="campo-linha">
+              <div class="campo">
+                <label for="senha">Senha</label>
+                <input
+                  type="password"
+                  id="senha"
+                  name="senha"
+                  placeholder="Crie uma senha"
+                  minlength="6"
+                  required
+                />
+              </div>
+              <div class="campo">
+                <label for="confirmarSenha">Confirmar Senha</label>
+                <input
+                  type="password"
+                  id="confirmarSenha"
+                  name="confirmarSenha"
+                  placeholder="Repita a senha"
+                  minlength="6"
+                  required
+                />
+              </div>
+            </div>
+            
+          </section>
+
+          <div class="navegacao-etapas">
+            <button type="button" class="btn-voltar-etapa">← Voltar</button>
+            <button type="button" class="btn-proximo">Próximo →</button>
+          </div>
+        </div>
+
+        <!-- ETAPA 3: SOBRE SEU TRABALHO -->
+        <div class="form-step" data-step="3">
+          <section class="secao-cadastro secao-trabalho">
+            <div class="secao-titulo">
+              <i class="fa-solid fa-briefcase"></i> Sobre seu trabalho
+            </div>
+
+            <div class="trabalho-conteudo">
+              <div class="trabalho-campos">
+                <div class="campo">
+                  <label
+                    >Com o que você trabalha? (selecione uma ou mais
+                    opções)</label
+                  >
+                  <div class="multi-select" id="areasAtuacao">
+                    <button type="button" class="multi-select__toggle">
+                      <span class="multi-select__texto"
+                        >Selecione suas áreas de atuação</span
+                      >
+                      <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="multi-select__painel" hidden>
+                      <label class="multi-select__opcao">
+                        <input type="checkbox" value="banho-tosa" /> Banho e
+                        Tosa
+                      </label>
+                      <label class="multi-select__opcao">
+                        <input type="checkbox" value="adestramento" />
+                        Adestramento
+                      </label>
+                      <label class="multi-select__opcao">
+                        <input type="checkbox" value="passeador" /> Passeador
+                        (Dog Walker)
+                      </label>
+                      <label class="multi-select__opcao">
+                        <input type="checkbox" value="pet-sitter" /> Pet Sitter
+                        / Hospedagem
+                      </label>
+                      <label class="multi-select__opcao">
+                        <input type="checkbox" value="veterinario" />
+                        Veterinário(a)
+                      </label>
+                      <label class="multi-select__opcao">
+                        <input type="checkbox" value="fotografia" /> Fotografia
+                        Pet
+                      </label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="campo-linha">
+                  <div class="campo">
+                    <label for="faixaValores">Faixa de Valores</label>
+                    <select id="faixaValores" name="faixaValores" required>
+                      <option value="">Selecione a faixa de valores</option>
+                      <option value="ate-50">Até R$ 50</option>
+                      <option value="50-100">R$ 50 - R$ 100</option>
+                      <option value="100-200">R$ 100 - R$ 200</option>
+                      <option value="acima-200">Acima de R$ 200</option>
+                    </select>
+                  </div>
+                  <div class="campo">
+                    <label for="localAtendimento">Local de Atendimento</label>
+                    <select
+                      id="localAtendimento"
+                      name="localAtendimento"
+                      required
+                    >
+                      <option value="">Selecione onde você atende</option>
+                      <option value="domicilio">Na casa do cliente</option>
+                      <option value="estabelecimento">
+                        No meu estabelecimento
+                      </option>
+                      <option value="ambos">Ambos</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="campo">
+                  <label for="descricaoTrabalho"
+                    >Descrição de seu trabalho</label
+                  >
+                  <textarea
+                    id="descricaoTrabalho"
+                    name="descricaoTrabalho"
+                    maxlength="500"
+                    placeholder="Conte um pouco sobre você, sua experiência e como ajuda os pets e tutores."
+                  ></textarea>
+                  <span class="contador-caracteres"
+                    ><span id="contDescricao">0</span>/500</span
+                  >
+                </div>
+
+                <div class="campo-linha">
+                  <div class="campo">
+                    <p class="label-documentos">
+                      Foto de Perfil ou Logo (opcional)
+                    </p>
+                    <div class="upload-area" id="uploadFoto">
+                      <i class="fa-solid fa-cloud-arrow-up"></i>
+                      <p class="upload-area__texto">
+                        Clique para <span class="destaque-upload">enviar</span>
+                      </p>
+                      <span class="upload-area__ajuda"
+                        >PDF ou imagem (máx. 10MB)</span
+                      >
+                      <input
+                        type="file"
+                        id="fotoPerfil"
+                        name="fotoPerfil"
+                        accept=".pdf,image/*"
+                        hidden
+                      />
+                    </div>
+                  </div>
+
+                  <div class="campo">
+                    <p class="label-documentos">
+                      Portfólio / Trabalhos realizados
+                    </p>
+                    <div class="upload-area" id="uploadPortfolio">
+                      <i class="fa-solid fa-cloud-arrow-up"></i>
+                      <p class="upload-area__texto">
+                        Clique para <span class="destaque-upload">enviar</span>
+                      </p>
+                      <span class="upload-area__ajuda"
+                        >Imagens dos seus serviços, antes/depois, etc. Máx. 5
+                        imagens</span
+                      >
+                      <input
+                        type="file"
+                        id="portfolio"
+                        name="portfolio"
+                        accept="image/*"
+                        multiple
+                        hidden
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="trabalho-imagem" aria-hidden="true">
+                <img src="img/gato-prestador.png" alt="" />
+              </div>
+            </div>
+          </section>
+
+          <div class="navegacao-etapas">
+            <button type="button" class="btn-voltar-etapa">← Voltar</button>
+            <button type="submit" class="btn-continuar">
+              Finalizar Cadastro <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </form>
+
+      <!-- Tela de Sucesso / Conclusão -->
+      <div class="tela-sucesso" hidden>
+        <div class="tela-sucesso__container">
+          <div class="tela-sucesso__icone" aria-hidden="true">
+            <i class="fa-solid fa-circle-check"></i>
+          </div>
+          <h2 class="tela-sucesso__titulo">Cadastro realizado com sucesso!</h2>
+          <p class="tela-sucesso__mensagem">
+            Seu perfil profissional foi cadastrado no Vira Dengo. Em breve nossa
+            equipe entrará em contato para validar as informações e ativar seu
+            perfil.
+          </p>
+          <div class="tela-sucesso__detalhes">
+            <div class="tela-sucesso__item">
+              <i class="fa-solid fa-envelope"></i>
+              <span
+                >E-mail de confirmação enviado para
+                <strong id="emailConfirmacao"></strong
+              ></span>
+            </div>
+            <div class="tela-sucesso__item">
+              <i class="fa-solid fa-clock"></i>
+              <span>Validação em até 2 dias úteis</span>
+            </div>
+          </div>
+          <div class="tela-sucesso__acoes">
+            <a
+              href="./Feed/feed.html"
+              class="btn btn--primario tela-sucesso__btn"
+            >
+              <i class="fa-solid fa-paw"></i> Ir para o Feed
+            </a>
+            <a
+              href="./index.html"
+              class="btn btn--secundario tela-sucesso__btn"
+            >
+              <i class="fa-solid fa-house"></i> Voltar ao Início
+            </a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <section class="footer-logo">
+        <img
+          class="logo-img-footer"
+          src="../img/logoImagem.png"
+          alt="imagem-logo"
+        />
+        <p class="span-negrito">
+          O serviço que faz você e seu pet virarem fãs.
+        </p>
+      </section>
+      <section class="footer-nav-cont">
+        <div class="footer-nav">
+          <p>Navegação</p>
+          <li><a href="">Início</a></li>
+          <li><a href="">Doação</a></li>
+          <li><a href="">Profissionais</a></li>
+          <li><a href="">Voluntariado</a></li>
+        </div>
+        <div class="footer-contato">
+          <p>Contato</p>
+          <li>ViraDengo@gmail.com</li>
+          <li>Tel.: 11 977666555</li>
+        </div>
+        <div class="footer-tutorial">
+          <p>Suporte</p>
+          <li>Como funciona? (Doação)</li>
+          <li>Como funciona? (Voluntário)</li>
+        </div>
+      </section>
+    </footer>
+
+    <script src="./cadastro.prest.js"></script>
+  </body>
+</html>

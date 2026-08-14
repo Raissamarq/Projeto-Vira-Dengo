@@ -39,6 +39,7 @@
         <div class="perfil-dropdown">
           <a href="../PerfilUsuario/perfilUsuario.html">Meu Perfil</a>
           <a href="../PerfilOng/perfilOng.html">Perfil ONG</a>
+          <a href="../Planos/planos.html">Planos</a>
           <a href="">Configurações</a>
           <a href="../index.html">Sair</a>
         </div>
@@ -48,26 +49,62 @@
       <div class="conteudo-esquerda">
         <div class="intro-filtro">
           <h3>Filtros</h3>
-          <div>
-            <label>Limpar filtros</label>
+          <button type="button" id="limparFiltros" class="limpar-filtros">
+            Limpar filtros
+          </button>
+        </div>
+
+        <div class="filtro-lista">
+          <button type="button" class="filtro-botao ativo" data-filtro="todos">
+            <i class="fa-solid fa-table-cells-large"></i> Todos os posts
+          </button>
+          <button type="button" class="filtro-botao" data-filtro="campanha">
+            <i class="fa-solid fa-heart"></i> Campanhas
+          </button>
+          <button type="button" class="filtro-botao" data-filtro="voluntariado">
+            <i class="fa-solid fa-hand-holding-heart"></i> Voluntariado
+          </button>
+          <button type="button" class="filtro-botao" data-filtro="item">
+            <i class="fa-solid fa-box-open"></i> Itens doados
+          </button>
+        </div>
+
+        <div class="filtro-secao">
+          <label class="filtro-label" for="filtroLocalizacao"
+            >Localização</label
+          >
+          <div class="filtro-input-icone">
+            <i class="fa-solid fa-location-dot"></i>
+            <input
+              type="text"
+              id="filtroLocalizacao"
+              placeholder="Cidade, Estado"
+              value="São Paulo, SP"
+            />
           </div>
         </div>
 
-        <div class="filtro-item">
-          <input type="checkbox" id="Todos" class="filtro-checkbox" />
-          <label for="todos" class="filtro-botao">Todos os posts</label>
+        <div class="filtro-secao">
+          <div class="filtro-raio-header">
+            <label class="filtro-label" for="filtroRaio">Raio de busca</label>
+            <span class="filtro-raio-valor" id="raioValor">25 km</span>
+          </div>
+          <input
+            type="range"
+            id="filtroRaio"
+            class="filtro-slider"
+            min="1"
+            max="100"
+            value="25"
+          />
         </div>
-        <div class="filtro-item">
-          <input type="checkbox" id="Campanhas" class="filtro-checkbox" />
-          <label for="campanhas" class="filtro-botao">Campanhas</label>
-        </div>
-        <div class="filtro-item">
-          <input type="checkbox" id="Voluntariado" class="filtro-checkbox" />
-          <label for="Voluntariado" class="filtro-botao">Voluntariado</label>
-        </div>
-        <div class="filtro-item">
-          <input type="checkbox" id="Itens doados" class="filtro-checkbox" />
-          <label for="Itens doados" class="filtro-botao">Itens doados</label>
+
+        <div class="filtro-secao">
+          <label class="filtro-label" for="filtroOrdenar">Ordenar por</label>
+          <select id="filtroOrdenar" class="filtro-select">
+            <option value="recentes">Mais recentes</option>
+            <option value="antigos">Mais antigos</option>
+          </select>
         </div>
       </div>
       <div class="conteudo-central">
@@ -119,7 +156,7 @@
 
         <!-- FEED -->
         <section class="feed">
-          <article class="card">
+          <article class="card" data-categoria="campanha">
             <div class="card-imagem">
               <span class="tag tag-campanha">Campanha gratuita</span>
               <img
@@ -144,7 +181,7 @@
               <button class="btn-acao btn-detalhes">Ver detalhes</button>
             </div>
           </article>
-          <article class="card">
+          <article class="card" data-categoria="item">
             <div class="card-imagem">
               <span class="tag tag-item">Item doado</span>
               <button class="btn-salvar">🔖</button>
@@ -167,7 +204,7 @@
             </div>
           </article>
 
-          <article class="card">
+          <article class="card" data-categoria="voluntariado">
             <div class="card-imagem">
               <span class="tag tag-voluntariado">Voluntariado</span>
               <button class="btn-salvar">🔖</button>
@@ -195,7 +232,7 @@
             </div>
           </article>
 
-          <article class="card">
+          <article class="card" data-categoria="item">
             <div class="card-imagem">
               <span class="tag tag-item">Item doado</span>
               <button class="btn-salvar">🔖</button>
@@ -218,7 +255,69 @@
           </article>
         </section>
       </div>
-      <div class="conteudo-direita">asasasas</div>
+      <div class="conteudo-direita">
+        <!-- CHAT PANEL -->
+        <aside class="chat-panel" aria-label="Chat de entrega">
+          <div class="chat-header">
+            <div class="chat-contato">
+              <img src="../img/woman.jpg" alt="Juliana Martins" class="chat-avatar" />
+              <div class="chat-info">
+                <h4>Juliana Martins</h4>
+                <span class="chat-status">Online</span>
+              </div>
+            </div>
+            <button class="chat-fechar" aria-label="Fechar chat">
+              <i class="fa-solid fa-xmark"></i>
+            </button>
+          </div>
+
+          <div class="chat-mensagens" role="log" aria-live="polite">
+            <div class="mensagem recebida">
+              <div class="mensagem-bolha">
+                <p>Oi! Vi seu interesse na caminha para cães porte médio. Ainda está disponível?</p>
+                <span class="mensagem-hora">14:22</span>
+              </div>
+            </div>
+            <div class="mensagem enviada">
+              <div class="mensagem-bolha">
+                <p>Oi! Sim, ainda está disponível. Está em ótimo estado, pouco usada.</p>
+                <span class="mensagem-hora">14:23</span>
+              </div>
+            </div>
+            <div class="mensagem recebida">
+              <div class="mensagem-bolha">
+                <p>Perfeito! Como fazemos a entrega? Posso buscar aí ou você traz?</p>
+                <span class="mensagem-hora">14:24</span>
+              </div>
+            </div>
+            <div class="mensagem enviada">
+              <div class="mensagem-bolha">
+                <p>Moro na Vila Mariana. Se quiser buscar aqui é tranquilo, ou posso deixar num ponto de encontro no metrô.</p>
+                <span class="mensagem-hora">14:25</span>
+              </div>
+            </div>
+            <div class="mensagem recebida">
+              <div class="mensagem-bolha">
+                <p>Legal! Vou buscar aí amanhã de manhã, por volta das 10h. Manda seu endereço no privado?</p>
+                <span class="mensagem-hora">14:26</span>
+              </div>
+            </div>
+            <div class="mensagem enviada">
+              <div class="mensagem-bolha">
+                <p>Combinado! Te mando a localização por aqui mesmo. Até amanhã! ���</p>
+                <span class="mensagem-hora">14:27</span>
+              </div>
+            </div>
+          </div>
+
+          <form class="chat-input-form" aria-label="Enviar mensagem">
+            <input type="text" class="chat-input" placeholder="Digite uma mensagem..." aria-label="Mensagem" />
+            <button type="submit" class="chat-enviar" aria-label="Enviar">
+              <i class="fa-solid fa-paper-plane"></i>
+            </button>
+          </form>
+        </aside>
+      </div>
     </div>
     <footer>
       <section class="footer-logo">
@@ -272,12 +371,11 @@
         >
       </div>
       <div class="botao-add">
-        <a href="">
-          <button>
-            <img src="../img/icons/messenger.png" alt="" /> Mensagem
-          </button></a
-        >
+        <button id="btnToggleChat" type="button">
+          <img src="../img/icons/messenger.png" alt="" /> Mensagem
+        </button>
       </div>
     </div>
+    <script src="./feed.js"></script>
   </body>
 </html>

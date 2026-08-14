@@ -1,0 +1,779 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --cor-primaria: #ff8615;
+  --cor-secundaria: #006d77;
+  --cor-fundo: #faf6f1;
+
+  --cor-laranja-100: #fff0e1;
+
+  --cor-branca: #ffffff;
+  --cor-texto: #333333;
+  --cor-cinza: #777777;
+  --cor-borda: #dddddd;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+  display: flex;
+  align-items: center;
+
+  padding: 5px 100px;
+
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  background: var(--cor-fundo);
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.logoImagem {
+  width: 100px;
+}
+
+.viraDengo {
+  width: 150px;
+  margin: 20px 0px;
+}
+
+.box {
+  margin: auto;
+}
+
+.menu {
+  display: flex;
+
+  margin-right: 40px;
+
+  list-style: none;
+}
+
+.list {
+  color: var(--cor-secundaria);
+
+  padding: 10px 28px;
+
+  border-radius: 999px;
+
+  font-weight: bold;
+}
+
+.list:hover {
+  color: var(--cor-fundo);
+  background: var(--cor-primaria);
+}
+
+.botaoHome {
+  color: var(--cor-secundaria);
+
+  padding: 10px 25px;
+
+  border-radius: 999px;
+
+  border: solid 1px var(--cor-secundaria);
+
+  cursor: pointer;
+
+  font: inherit;
+}
+
+.botaoHome:hover {
+  background-color: var(--cor-primaria);
+
+  color: var(--cor-fundo);
+
+  border: solid 1px var(--cor-laranja-100);
+}
+
+.menu li {
+  padding: 0 8px;
+}
+
+.fa-paw {
+  margin-right: 10px;
+}
+
+.perfil-box img {
+  width: 60px;
+  height: 60px;
+
+  object-fit: cover;
+
+  border-radius: 50%;
+
+  border: solid 3.5px var(--cor-primaria);
+}
+
+/* =========================
+   PÁGINA DE PLANOS
+========================= */
+
+.pagina-planos {
+  width: 100%;
+  max-width: 1200px;
+
+  margin: 0 auto;
+
+  padding: 55px 30px 70px;
+}
+
+/* =========================
+   TÍTULO
+========================= */
+
+.cabecalho-planos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+.etapa {
+  color: var(--cor-secundaria);
+
+  background-color: rgba(0, 109, 119, 0.08);
+
+  padding: 7px 16px;
+
+  border-radius: 999px;
+
+  font-size: 14px;
+  font-weight: bold;
+
+  margin-bottom: 14px;
+}
+
+.cabecalho-planos h1 {
+  color: var(--cor-secundaria);
+
+  font-size: 42px;
+
+  margin-bottom: 8px;
+}
+
+.cabecalho-planos h1 span {
+  color: var(--cor-primaria);
+}
+
+.cabecalho-planos p {
+  color: var(--cor-cinza);
+
+  font-size: 17px;
+}
+
+/* =========================
+   USUÁRIO / PRESTADOR
+========================= */
+
+.tipo-usuario {
+  display: flex;
+
+  width: 450px;
+
+  margin: 30px auto 45px;
+
+  border: 1px solid #cccccc;
+
+  border-radius: 999px;
+
+  overflow: hidden;
+
+  background-color: white;
+}
+
+.tipo-btn {
+  flex: 1;
+
+  padding: 12px 20px;
+
+  border: none;
+
+  background-color: transparent;
+
+  color: #555;
+
+  font-size: 15px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  border-radius: 999px;
+}
+
+.tipo-btn i {
+  margin-right: 8px;
+}
+
+.tipo-btn.ativo {
+  background-color: var(--cor-secundaria);
+  color: white;
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.planos-container {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+
+  gap: 28px;
+}
+
+.card-plano {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 31%;
+  min-height: 480px;
+
+  padding: 30px 28px;
+
+  background-color: white;
+
+  border: 1px solid var(--cor-borda);
+
+  border-radius: 16px;
+
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+
+  transition: 0.3s;
+}
+
+.card-plano:hover {
+  transform: translateY(-7px);
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.13);
+}
+
+.card-plano.destaque {
+  border: 2px solid var(--cor-primaria);
+
+  transform: translateY(-10px);
+}
+
+.card-plano.destaque:hover {
+  transform: translateY(-16px);
+}
+
+/* =========================
+   MAIS ESCOLHIDO
+========================= */
+
+.mais-escolhido {
+  position: absolute;
+
+  top: -17px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  white-space: nowrap;
+
+  padding: 7px 18px;
+
+  border-radius: 999px;
+
+  background-color: var(--cor-primaria);
+
+  color: white;
+
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.mais-escolhido i {
+  margin-right: 5px;
+}
+
+/* =========================
+   ÍCONE
+========================= */
+
+.icone-plano {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 65px;
+  height: 65px;
+
+  margin: 0 auto 15px;
+
+  border-radius: 50%;
+
+  background-color: rgba(0, 109, 119, 0.1);
+
+  color: var(--cor-secundaria);
+
+  font-size: 28px;
+}
+
+.icone-destaque {
+  background-color: rgba(255, 134, 21, 0.13);
+
+  color: var(--cor-primaria);
+}
+
+/* =========================
+   TÍTULO DO CARD
+========================= */
+
+.card-plano h2 {
+  text-align: center;
+
+  color: var(--cor-secundaria);
+
+  font-size: 21px;
+
+  margin-bottom: 12px;
+}
+
+.linha-card {
+  height: 2px;
+  width: 100%;
+
+  background-color: rgba(0, 109, 119, 0.2);
+
+  margin-bottom: 18px;
+}
+
+.destaque .linha-card {
+  background-color: rgba(255, 134, 21, 0.4);
+}
+
+/* =========================
+   PREÇO
+========================= */
+
+.preco {
+  color: var(--cor-secundaria);
+
+  font-size: 31px;
+  font-weight: bold;
+
+  text-align: center;
+
+  margin-bottom: 25px;
+}
+
+.destaque .preco {
+  color: var(--cor-primaria);
+}
+
+.preco span {
+  font-size: 13px;
+  font-weight: normal;
+
+  color: var(--cor-cinza);
+}
+
+.preco.gratis {
+  font-size: 30px;
+}
+
+/* =========================
+   BENEFÍCIOS
+========================= */
+
+.beneficios {
+  display: flex;
+  flex-direction: column;
+
+  gap: 15px;
+
+  list-style: none;
+
+  margin-bottom: 30px;
+}
+
+.beneficios li {
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  font-size: 15px;
+
+  color: #555;
+}
+
+.beneficios i {
+  color: var(--cor-secundaria);
+}
+
+.destaque .beneficios i {
+  color: var(--cor-primaria);
+}
+
+/* =========================
+   BOTÕES DOS PLANOS
+========================= */
+
+.btn-plano {
+  width: 100%;
+
+  margin-top: auto;
+
+  padding: 12px 18px;
+
+  border-radius: 999px;
+
+  border: 2px solid var(--cor-secundaria);
+
+  background-color: white;
+
+  color: var(--cor-secundaria);
+
+  font-size: 15px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.btn-plano:hover {
+  background-color: var(--cor-secundaria);
+
+  color: white;
+}
+
+.btn-destaque {
+  background-color: var(--cor-primaria);
+
+  border-color: var(--cor-primaria);
+
+  color: white;
+}
+
+.btn-destaque:hover {
+  background-color: #e87308;
+}
+
+.card-plano.selecionado {
+  border: 3px solid var(--cor-secundaria);
+
+  box-shadow: 0 8px 25px rgba(0, 109, 119, 0.2);
+}
+
+.card-plano.destaque.selecionado {
+  border-color: var(--cor-primaria);
+
+  box-shadow: 0 8px 25px rgba(255, 134, 21, 0.25);
+}
+
+/* =========================
+   VANTAGENS
+========================= */
+
+.vantagens {
+  display: flex;
+
+  margin-top: 50px;
+
+  padding: 24px;
+
+  background-color: white;
+
+  border: 1px solid var(--cor-borda);
+
+  border-radius: 14px;
+
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+.vantagem {
+  display: flex;
+  align-items: center;
+
+  flex: 1;
+
+  gap: 15px;
+
+  padding: 0 25px;
+}
+
+.vantagem:not(:last-child) {
+  border-right: 1px solid #dddddd;
+}
+
+.vantagem-icone {
+  min-width: 55px;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background-color: rgba(0, 109, 119, 0.1);
+
+  color: var(--cor-secundaria);
+
+  font-size: 22px;
+}
+
+.vantagem h3 {
+  color: var(--cor-secundaria);
+
+  margin-bottom: 5px;
+
+  font-size: 16px;
+}
+
+.vantagem p {
+  color: var(--cor-cinza);
+
+  font-size: 13px;
+
+  line-height: 1.5;
+}
+
+/* =========================
+   CONTINUAR
+========================= */
+
+.continuar-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  margin-top: 30px;
+}
+
+#plano-selecionado {
+  min-height: 20px;
+
+  color: var(--cor-secundaria);
+
+  font-size: 14px;
+  font-weight: bold;
+
+  margin-bottom: 10px;
+}
+
+.btn-continuar {
+  width: 400px;
+
+  padding: 14px;
+
+  border: none;
+
+  border-radius: 999px;
+
+  background-color: var(--cor-primaria);
+
+  color: white;
+
+  font-size: 17px;
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.btn-continuar:hover {
+  background-color: #e87308;
+}
+
+.btn-continuar i {
+  margin-left: 7px;
+}
+
+.pagamento-seguro {
+  color: var(--cor-cinza);
+
+  font-size: 12px;
+
+  margin-top: 10px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  height: 250px;
+
+  background-color: var(--cor-laranja-100);
+
+  color: var(--cor-secundaria);
+
+  display: flex;
+
+  justify-content: space-between;
+
+  padding: 30px 50px;
+}
+
+.footer-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 200px;
+
+  gap: 10px;
+}
+
+.footer-logo p {
+  font-size: 13px;
+
+  margin-top: 8px;
+
+  text-align: center;
+}
+
+.logo-img-footer {
+  width: 100px;
+}
+
+.nome-img-footer {
+  width: 140px;
+}
+
+footer div {
+  list-style: none;
+}
+
+footer div p {
+  font-weight: bold;
+}
+
+.footer-nav-cont {
+  display: flex;
+
+  gap: 150px;
+}
+
+.footer-nav,
+.footer-contato,
+.footer-tutorial {
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+
+.footer-nav li,
+.footer-contato li,
+.footer-tutorial li {
+  font-size: 14px;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 950px) {
+  header {
+    padding: 10px 30px;
+  }
+
+  .planos-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-plano {
+    width: 90%;
+    max-width: 500px;
+  }
+
+  .card-plano.destaque {
+    transform: none;
+  }
+
+  .card-plano.destaque:hover {
+    transform: translateY(-7px);
+  }
+
+  .vantagens {
+    flex-direction: column;
+
+    gap: 25px;
+  }
+
+  .vantagem:not(:last-child) {
+    border-right: none;
+
+    border-bottom: 1px solid #dddddd;
+
+    padding-bottom: 25px;
+  }
+
+  footer {
+    height: auto;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 30px;
+  }
+
+  .footer-nav-cont {
+    flex-wrap: wrap;
+
+    justify-content: center;
+
+    gap: 50px;
+  }
+}
+
+@media (max-width: 650px) {
+  .menu {
+    display: none;
+  }
+
+  header {
+    justify-content: space-between;
+  }
+
+  .pagina-planos {
+    padding: 40px 15px;
+  }
+
+  .cabecalho-planos h1 {
+    font-size: 32px;
+  }
+
+  .tipo-usuario {
+    width: 100%;
+  }
+
+  .card-plano {
+    width: 100%;
+  }
+
+  .btn-continuar {
+    width: 100%;
+  }
+}

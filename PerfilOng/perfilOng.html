@@ -1,125 +1,172 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Vira Dengo - Perfil ONG</title>
-  <link rel="stylesheet" href="../PerfilOng/perfilOng.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body>
-  <header>
-    <div class="logo">
-      <img class="logoImagem" src="../img/logo.png" alt="Logo ViraDengo" />
-      <img class="viraDengo" src="../img/viraDengo.png" alt="Texto ViraDengo" />
-    </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vira Dengo - Perfil ONG</title>
+    <link rel="stylesheet" href="perfilong.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div>
+        <img class="logoImagem" src="../img/logoImagem.png" alt="" />
+      </div>
 
-    <nav class="box">
-      <ul class="menu">
-        <li><a class="list" href="#">Início</a></li>
-        <li><a class="list" href="#">Profissionais</a></li>
-        <li><a class="list" href="#">Doação</a></li>
-        <li><a class="list" href="#">Adoção</a></li>
-        <li><a class="list" href="#">Cadastrar-se</a></li>
-      </ul>
-    </nav>
-  </header>
+      <nav class="box">
+        <ul class="menu">
+          <li><a class="list" href="./Feed/feed.html">Conexões</a></li>
+          <li><a class="list" href="./index.html">Home</a></li>
+          <li><a class="list" href="#">Profissionais</a></li>
+        </ul>
+      </nav>
+      <div class="perfil-box">
+        <a href="../PerfilUsuario/perfilUsuario.html">
+          <img src="../img/woman.jpg" alt="" />
+        </a>
+      </div>
+    </header>
 
-  <main class="container">
-    <div class="perfil-info">
-      <section class="perfil">
-        <div class="foto-perfil">
-          <img src="amigos-de-patas.jpg" alt="Amigos de Patas">
-        </div>
-        <h2>Amigos de Patas class <span class="verificado">✔</span></h2>
-        <p class="local">📍 São Paulo, SP</p>
-        <p class="data">Cadastrada em 12 de março de 2025</p>
-        <p class="status"><strong>Status:</strong> Ativa</p>
-        <p class="descricao-status">Sua ONG está ativa e visível na plataforma.</p>
-      </section>
-
-      <section class="info">
-        <div class="card">
-          <h3>Sobre a ONG</h3>
-          <p>A Amigos de Patas é uma organização sem fins lucrativos que atua no resgate, cuidado e adoção responsável de animais em situação de abandono e maus-tratos.</p>
-        </div>
-
-        <div class="card">
-          <h3>Localização</h3>
-          <p>São Paulo, SP<br>Brasil</p>
-        </div>
-
-        <div class="card">
-          <h3>Contato</h3>
-          <p>📞 (11) XXXX-XXXX<br>✉️ contato@amigosdepatas.org.br</p>
-        </div>
-
-        <div class="card">
-          <h3>Área de atuação</h3>
-          <div class="tags">
-            <span>Adoção</span>
-            <span>Resgate</span>
-            <span>Castração</span>
-            <span>Proteção Animal</span>
+    <main class="container">
+      <div class="perfil-info">
+        <section class="perfil">
+          <div class="foto-perfil">
+            <img src="./img/amigos-de-patas.png" alt="" />
           </div>
+
+          <div class="nome-verificado">
+            <h2>Amigos de Patas</h2>
+            <img
+              class="selo-verificado"
+              src="./img/check.png"
+              alt="Perfil verificado"
+            />
+          </div>
+
+          <p class="local">
+            <img class="icone-local" src="./img/place.png" alt="" />
+            São Paulo, SP
+          </p>
+
+          <hr />
+
+          <p class="data">
+            <img class="icone-info" src="./img/calendar.png" alt="" />
+            Cadastrada em 12 de março de 2025
+          </p>
+
+          <p class="verificada">
+            <img class="icone-info" src="./img/security.png" alt="" />
+            ONG verificada
+          </p>
+
+          <div class="status-box">
+            <p class="status">
+              <span class="status-dot"></span><strong>Status: Ativa</strong>
+            </p>
+            <p class="descricao-status">
+              Sua ONG está ativa e visível na plataforma.
+            </p>
+          </div>
+        </section>
+
+        <section class="info">
+          <div class="card">
+            <div class="card-header">
+              <div class="icon-circle"></div>
+              <h3>Sobre a ONG</h3>
+            </div>
+            <p>
+              A Amigos de Patas é uma organização sem fins lucrativos que atua
+              no resgate, cuidado e adoção responsável de animais em situação de
+              abandono e maus-tratos.
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Localização</h3>
+            <p>São Paulo, SP<br />Brasil</p>
+          </div>
+
+          <div class="card">
+            <h3>Contato</h3>
+            <p class="contato">
+              <img class="icone-contato" src="./img/phone.png" alt="" />
+              (11) XXXX-XXXX<br />
+            </p>
+            <p class="contato">
+              <img class="icone-contato" src="./img/email.png" alt="" />
+              contato@amigosdepatas.org.br
+            </p>
+          </div>
+
+          <div class="card">
+            <h3>Área de atuação</h3>
+            <div class="tags">
+              <span>Adoção</span>
+              <span>Resgate</span>
+              <span>Castração</span>
+              <span>Proteção Animal</span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <section class="acoes">
+        <div class="acao-card">
+          <div class="icon"><i class="fa-solid fa-plus"></i></div>
+          <h4>Publicar nova doação</h4>
+          <p>Publique um item para doação</p>
+          <button class="btn-acao">Ver todas</button>
+        </div>
+        <div class="acao-card">
+          <div class="icon"><i class="fa-regular fa-user"></i></div>
+          <h4>Minhas Vagas</h4>
+          <p>Veja as oportunidades que sua ONG publicou</p>
+          <button class="btn-acao">Ver oportunidades</button>
+        </div>
+        <div class="acao-card">
+          <div class="icon"><i class="fa-regular fa-calendar"></i></div>
+          <h4>Publicar vaga</h4>
+          <p>Publique uma nova oportunidade de voluntariado</p>
+          <button class="btn-acao">Publicar vaga</button>
+        </div>
+        <div class="acao-card">
+          <div class="icon"><i class="fa-regular fa-envelope"></i></div>
+          <h4>Mensagens</h4>
+          <p>Acesse seus chats e conversas</p>
+          <button class="btn-acao">Abrir chat</button>
         </div>
       </section>
-    </div>
-
-    <section class="acoes">
-      <div class="acao-card">
-        <div class="icon"><i class="fa-solid fa-plus"></i></div>
-        <h4>Publicar nova doação</h4>
-        <p>Publique um item para doação</p>
-        <button class="btn-acao">Ver todas</button>
+    </main>
+  </body>
+  <footer>
+    <section class="footer-logo">
+      <img class="logo-img-footer" src="../img/logo.png" alt="imagem-logo" />
+      <img class="nome-img-footer" src="../img/viraDengo.png" alt="nome-logo" />
+      <p class="span-negrito">O serviço que faz você e seu pet virarem fãs.</p>
+    </section>
+    <section class="footer-nav-cont">
+      <div class="footer-nav">
+        <p>Navegação</p>
+        <li><a href="">Início</a></li>
+        <li><a href="">Doação</a></li>
+        <li><a href="">Profissionais</a></li>
+        <li><a href="">Voluntariado</a></li>
       </div>
-      <div class="acao-card">
-        <div class="icon"><i class="fa-regular fa-user"></i></div>
-        <h4>Minhas Vagas</h4>
-        <p>Veja as oportunidades que sua ONG publicou</p>
-        <button class="btn-acao">Ver oportunidades</button>
+      <div class="footer-contato">
+        <p>Contato</p>
+        <li>ViraDengo@gmail.com</li>
+        <li>Tel.: 11 977666555</li>
       </div>
-      <div class="acao-card">
-        <div class="icon"><i class="fa-regular fa-calendar"></i></div>
-        <h4>Publicar vaga</h4>
-        <p>Publique uma nova oportunidade de voluntariado</p>
-        <button class="btn-acao">Publicar vaga</button>
-      </div>
-      <div class="acao-card">
-        <div class="icon"><i class="fa-regular fa-envelope"></i></div>
-        <h4>Mensagens</h4>
-        <p>Acesse seus chats e conversas</p>
-        <button class="btn-acao">Abrir chat</button>
+      <div class="footer-tutorial">
+        <p>Suporte</p>
+        <li>Como funciona? (Doação)</li>
+        <li>Como funciona? (Voluntário)</li>
       </div>
     </section>
-  </main>
-</body>
-<footer>
-      <section class="footer-logo">
-        <img class="logo-img-footer" src="img/logo.png" alt="imagem-logo" />
-        <img class="nome-img-footer" src="img/viraDengo.png" alt="nome-logo" />
-        <p class="span-negrito">
-          O serviço que faz você e seu pet virarem fãs.
-        </p>
-      </section>
-      <section class="footer-nav-cont">
-        <div class="footer-nav">
-          <p>Navegação</p>
-          <li><a href="">Início</a></li>
-          <li><a href="">Doação</a></li>
-          <li><a href="">Profissionais</a></li>
-          <li><a href="">Voluntariado</a></li>
-        </div>
-        <div class="footer-contato">
-          <p>Contato</p>
-          <li>ViraDengo@gmail.com</li>
-          <li>Tel.: 11 977666555</li>
-        </div>
-        <div class="footer-tutorial">
-          <p>Suporte</p>
-          <li>Como funciona? (Doação)</li>
-          <li>Como funciona? (Voluntário)</li>
-        </div>
-      </section>
-    </footer>
+  </footer>
 </html>
