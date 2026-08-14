@@ -848,9 +848,55 @@ footer div p {
 
 /* #region responsivo */
 
+@media (max-width: 1024px) {
+  header {
+    padding: 5px 24px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+
+  .box {
+    margin: 0;
+    order: 3;
+    width: 100%;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  .progresso-etapas {
+    padding: 0 16px;
+  }
+}
+
 @media (max-width: 768px) {
   header {
-    padding: 5px 20px;
+    padding: 5px 16px;
+  }
+
+  .logoImagem {
+    width: 60px;
+  }
+
+  .viraDengo {
+    width: 100px;
+  }
+
+  .list {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+
+  .menu li {
+    padding: 0 4px;
+  }
+
+  .perfil-box img {
+    width: 40px;
+    border-width: 2.5px;
   }
 
   .campo-linha {
@@ -872,22 +918,87 @@ footer div p {
   footer {
     height: auto;
     flex-direction: column;
+    align-items: center;
     gap: 24px;
+    padding: 24px 20px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    width: auto;
   }
 
   .footer-nav-cont {
-    gap: 40px;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
   }
 }
 
 @media (max-width: 480px) {
+  header {
+    padding: 5px 12px;
+  }
+
+  .logoImagem {
+    width: 50px;
+  }
+
+  .viraDengo {
+    width: 80px;
+  }
+
+  .list {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .menu li {
+    padding: 0 3px;
+  }
+
   .secao-cadastro {
     padding: 20px 18px;
   }
 
   .tela-sucesso__container {
     padding: 32px 20px;
+  }
+
+  .titulo-principal {
+    font-size: 24px;
+  }
+
+  .subtitulo {
+    font-size: 14px;
+  }
+
+  .progresso-etapas {
+    padding: 0 12px;
+  }
+
+  .progresso-etapas__numero {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+
+  .btn-voltar-etapa,
+  .btn-proximo,
+  .btn-continuar {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .navegacao-etapas {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .footer-nav-cont {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
   }
 }
 

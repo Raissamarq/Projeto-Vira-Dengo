@@ -506,26 +506,304 @@ footer div p {
 /* endregion*/
 
 /* RESPONSIVO */
+
+@media (max-width: 1024px) {
+  header {
+    padding: 5px 24px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+
+  .box {
+    margin: 0;
+    order: 3;
+    width: 100%;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  .hero {
+    padding: 40px 20px;
+  }
+
+  .fundo {
+    top: -120px;
+    left: -150px;
+    width: 500px;
+  }
+
+  .frente {
+    width: 300px;
+  }
+}
+
 @media (max-width: 768px) {
+  header {
+    padding: 5px 16px;
+  }
+
+  .logoImagem {
+    width: 60px;
+  }
+
+  .viraDengo {
+    width: 100px;
+  }
+
+  .list {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+
+  .menu li {
+    padding: 0 4px;
+  }
+
+  .perfil-box img {
+    width: 40px;
+    border-width: 2.5px;
+  }
+
   .hero {
     flex-direction: column;
     text-align: center;
+    padding: 30px 16px;
   }
 
   .hero div {
     max-width: 100%;
+    margin: 20px 0;
   }
 
   .img-container {
     max-width: 100%;
   }
 
+  .fundo {
+    display: none;
+  }
+
+  .frente {
+    width: 250px;
+    margin: 0 auto;
+  }
+
   .span-dengo {
-    font-size: 60px;
+    font-size: 50px;
+  }
+
+  .size-m {
+    font-size: 24px;
+  }
+
+  .hero h2 {
+    font-size: 2.5rem;
   }
 
   .passos {
     flex-direction: column;
     align-items: center;
+    gap: 24px;
+  }
+
+  .passo {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .voluntarios .passo {
+    width: 100%;
+    max-width: 280px;
+  }
+
+  .cards {
+    padding: 40px 20px;
+    gap: 20px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  .itens {
+    gap: 40px;
+    padding: 30px 16px;
+  }
+
+  .item img {
+    width: 50px;
+  }
+
+  .item h3 {
+    font-size: 15px;
+  }
+
+  .item p {
+    font-size: 13px;
+  }
+
+  .como-funciona {
+    padding: 40px 16px;
+  }
+
+  .como-funciona h2 {
+    margin: 20px 0;
+    font-size: 24px;
+  }
+
+  .equipe {
+    padding: 40px 16px;
+  }
+
+  .equipe h2 {
+    margin-bottom: 30px;
+    font-size: 24px;
+  }
+
+  .membros {
+    gap: 20px;
+  }
+
+  .membro {
+    width: 100%;
+    max-width: 180px;
+  }
+
+  .membro img {
+    width: 100px;
+    height: 100px;
+  }
+
+  footer {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 20px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    width: auto;
+  }
+
+  .footer-nav-cont {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
   }
 }
+
+@media (max-width: 480px) {
+  header {
+    padding: 5px 12px;
+  }
+
+  .logoImagem {
+    width: 50px;
+  }
+
+  .viraDengo {
+    width: 80px;
+  }
+
+  .list {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .menu li {
+    padding: 0 3px;
+  }
+
+  .span-dengo {
+    font-size: 36px;
+  }
+
+  .size-m {
+    font-size: 20px;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .btn-intro {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .box-btn-intro {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .card {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    gap: 16px;
+  }
+
+  .icon-card i {
+    font-size: 80px;
+  }
+
+  .card-description h3 {
+    font-size: 1.1em;
+  }
+
+  .card-description p {
+    font-size: 0.9em;
+  }
+
+  .passo {
+    padding: 16px;
+  }
+
+  .passo span {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  .passo img {
+    width: 80px;
+  }
+
+  .passo h3 {
+    font-size: 16px;
+  }
+
+  .passo p {
+    font-size: 14px;
+  }
+
+  .membro {
+    max-width: 150px;
+    padding: 16px;
+  }
+
+  .membro img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .footer-nav-cont {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+}
+
+/* #endregion */

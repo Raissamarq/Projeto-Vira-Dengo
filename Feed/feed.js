@@ -229,7 +229,7 @@ document.addEventListener('DOMContentLoaded', () => {
       user: 'Amigos de Patas',
       avatar: '../img/woman.jpg',
       time: '2h atrás',
-      media: '../img/vacina.jpg',
+      media: '../img/cachorroSelfie.jpg',
       type: 'image'
     },
     {
@@ -237,7 +237,7 @@ document.addEventListener('DOMContentLoaded', () => {
       user: 'Patinhas Felizes',
       avatar: '../img/isa.png',
       time: '4h atrás',
-      media: '../img/doacao.png',
+      media: '../img/cachorroSelfie.jpg',
       type: 'image'
     },
     {
@@ -245,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
       user: 'Lar Doce Lar',
       avatar: '../img/julia.png',
       time: '6h atrás',
-      media: '../img/dois-caes-petlove.jpg',
+      media: '../img/cachorroSelfie.jpg',
       type: 'image'
     },
     {
@@ -253,7 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
       user: 'Cão sem Dono',
       avatar: '../img/kat.png',
       time: '8h atrás',
-      media: '../img/doacao2.jpg',
+      media: '../img/cachorroSelfie.jpg',
       type: 'image'
     }
   ];

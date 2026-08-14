@@ -730,9 +730,57 @@ footer div p {
 }
 
 /* ===== RESPONSIVO ===== */
+
+@media (max-width: 1024px) {
+  header {
+    padding: 5px 24px;
+    flex-wrap: wrap;
+    row-gap: 10px;
+  }
+
+  .box {
+    margin: 0;
+    order: 3;
+    width: 100%;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-right: 0;
+  }
+
+  .img-container {
+    right: -200px;
+    width: 280px;
+  }
+}
+
 @media (max-width: 768px) {
   header {
     padding: 5px 20px;
+  }
+
+  .logoImagem {
+    width: 60px;
+  }
+
+  .viraDengo {
+    width: 100px;
+  }
+
+  .list {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+
+  .menu li {
+    padding: 0 4px;
+  }
+
+  .perfil-box img {
+    width: 40px;
+    border-width: 2.5px;
   }
 
   .img-container {
@@ -765,13 +813,57 @@ footer div p {
     font-size: 10px;
   }
 
+  .secao-titulo {
+    font-size: 18px;
+  }
+
   .footer-nav-cont {
     flex-direction: column;
     gap: 30px;
   }
+
+  footer {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+    padding: 24px 20px;
+    text-align: center;
+  }
+
+  .footer-logo {
+    width: auto;
+  }
 }
 
 @media (max-width: 480px) {
+  header {
+    padding: 5px 12px;
+  }
+
+  .logoImagem {
+    width: 50px;
+  }
+
+  .viraDengo {
+    width: 80px;
+  }
+
+  .list {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+  }
+
+  .menu li {
+    padding: 0 3px;
+  }
+
+  .cadastro-intro {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
   .titulo-principal {
     font-size: 1.5rem;
   }
@@ -779,4 +871,41 @@ footer div p {
   .subtitulo {
     font-size: 1rem;
   }
+
+  .form-cadastro-usuario {
+    padding: 20px 16px 24px;
+  }
+
+  .campo input,
+  .campo textarea {
+    font-size: 16px;
+  }
+
+  .navegacao-etapas {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .navegacao-etapas .btn-voltar-etapa,
+  .navegacao-etapas .btn-proximo,
+  .navegacao-etapas .btn-continuar {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .tela-sucesso__container {
+    padding: 32px 20px;
+  }
+
+  .tela-sucesso__titulo {
+    font-size: 1.5rem;
+  }
+
+  .footer-nav-cont {
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
 }
+
+/* #endregion */
