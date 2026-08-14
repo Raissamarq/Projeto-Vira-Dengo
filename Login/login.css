@@ -13,7 +13,14 @@ a {
 :root {
   --cor-primaria: #ff8615;
   --cor-secundaria: #006d77;
+  --cor-verde: #1fae5f;
+  --cor-roxo: #7b5cff;
+  --cor-texto: #333;
+  --cor-texto-claro: #777;
+  --cor-borda: #eee;
+  --radius: 14px;
   --cor-fundo: #faf6f1;
+  --cor-sub-fundo: #fff8f8;
   --cor-laranja-100: #ffe7d1;
 }
 /* #endregion*/

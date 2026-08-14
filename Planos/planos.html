@@ -20,33 +20,33 @@
 
     <header>
       <div>
-        <img
-          class="logoImagem"
-          src="../img/logoImagem.png"
-          alt="Logo ViraDengo"
-        />
+        <img class="logoImagem" src="../img/logoImagem.png" alt="" />
       </div>
 
       <nav class="box">
         <ul class="menu">
+          <li><a class="list" href="../Feed/feed.html">Conexões</a></li>
+          <li><a class="list" href="../index.html">Home</a></li>
           <li>
-            <a class="list" href="../Feed/feed.html"> Conexões </a>
-          </li>
-
-          <li>
-            <a class="list" href="../index.html"> Home </a>
-          </li>
-
-          <li>
-            <a class="list" href="#"> Profissionais </a>
+            <a class="list" href="../FeedPrestador/feed-prestador.html"
+              >Profissionais</a
+            >
           </li>
         </ul>
       </nav>
-
       <div class="perfil-box">
-        <a href="../PerfilUsuario/perfilUsuario.html">
-          <img src="../img/woman.jpg" alt="Foto de perfil" />
-        </a>
+        <input type="checkbox" id="perfil-toggle" class="perfil-toggle-input" />
+        <label for="perfil-toggle">
+          <img src="../img/woman.jpg" alt="Perfil" class="perfil-icone" />
+        </label>
+
+        <div class="perfil-dropdown">
+          <a href="../PerfilUsuario/perfilUsuario.html">Meu Perfil</a>
+          <a href="../PerfilOng/perfilOng.html">Perfil ONG</a>
+          <a href="../Planos/planos.html">Planos</a>
+          <a href="">Configurações</a>
+          <a href="../index.html">Sair</a>
+        </div>
       </div>
     </header>
 

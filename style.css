@@ -14,7 +14,14 @@ body {
 :root {
   --cor-primaria: #ff8615;
   --cor-secundaria: #006d77;
+  --cor-verde: #1fae5f;
+  --cor-roxo: #7b5cff;
+  --cor-texto: #333;
+  --cor-texto-claro: #777;
+  --cor-borda: #eee;
+  --radius: 14px;
   --cor-fundo: #faf6f1;
+  --cor-sub-fundo: #fff8f8;
   --cor-laranja-100: #ffe7d1;
 }
 /* #region MENU*/
@@ -441,9 +448,12 @@ article {
 }
 
 .membro img {
-  width: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
+  object-fit: cover;
   margin-bottom: 10px;
+  border: 3px solid var(--cor-primaria);
 }
 
 /* #endregion */

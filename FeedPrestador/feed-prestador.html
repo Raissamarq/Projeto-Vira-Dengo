@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feed Prestador</title>
+    <link rel="stylesheet" href="feed-prestador.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <div>
+        <img class="logoImagem" src="../img/logoImagem.png" alt="" />
+      </div>
+
+      <nav class="box">
+        <ul class="menu">
+          <li><a class="list" href="../Feed/feed.html">Conexões</a></li>
+          <li><a class="list" href="../index.html">Home</a></li>
+          <li>
+            <a class="list" href="../FeedPrestador/feed-prestador.html"
+              >Profissionais</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <div class="perfil-box">
+        <input type="checkbox" id="perfil-toggle" class="perfil-toggle-input" />
+        <label for="perfil-toggle">
+          <img src="../img/woman.jpg" alt="Perfil" class="perfil-icone" />
+        </label>
+
+        <div class="perfil-dropdown">
+          <a href="../PerfilUsuario/perfilUsuario.html">Meu Perfil</a>
+          <a href="../PerfilOng/perfilOng.html">Perfil ONG</a>
+          <a href="../Planos/planos.html">Planos</a>
+          <a href="">Configurações</a>
+          <a href="../index.html">Sair</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="pagina-profissionais">
+      <section class="hero-profissionais">
+        <div class="hero-texto">
+          <h1 class="hero-titulo">
+            Encontre o <span>profissional</span> ideal para o seu pet
+          </h1>
+          <p class="hero-subtitulo">
+            Aqui você encontra profissionais qualificados que cuidam do seu pet
+            com amor e responsabilidade.
+          </p>
+          <div class="hero-botoes">
+            <a href="#profissionais-destaque" class="btn-buscar-profissionais"
+              ><i class="fa-solid fa-paw"></i> Buscar profissionais</a
+            >
+            <a href="#como-funciona" class="btn-como-funciona"
+              >Como funciona <i class="fa-solid fa-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+
+        <div class="hero-imagem">
+          <img class="hero-fundo" src="./img/circulo.png" alt="" />
+          <img class="hero-pets" src="./img/pets.png" alt="Cachorro e gato" />
+        </div>
+      </section>
+
+      <section class="filtro-busca">
+        <form class="filtro-form">
+          <div class="filtro-campo">
+            <i class="fa-solid fa-list"></i>
+            <select name="categoria" id="categoria">
+              <option value="">Todas as categorias</option>
+              <option value="veterinaria">Veterinária</option>
+              <option value="pet-sitter">Pet Sitter</option>
+              <option value="banho-tosa">Banho e Tosa</option>
+              <option value="adestrador">Adestradores</option>
+              <option value="comportamento">Comportamento Animal</option>
+              <option value="nutricionista">Nutricionistas</option>
+              <option value="fotografo">Fotógrafos</option>
+            </select>
+          </div>
+
+          <div class="filtro-campo">
+            <i class="fa-solid fa-paw"></i>
+            <select name="servico" id="servico">
+              <option value="">Todos os serviços</option>
+              <option value="consulta">Consulta</option>
+              <option value="vacina">Vacinação</option>
+              <option value="banho">Banho</option>
+              <option value="tosa">Tosa</option>
+              <option value="hospedagem">Hospedagem</option>
+              <option value="adestramento">Adestramento</option>
+            </select>
+          </div>
+
+          <div class="filtro-campo">
+            <i class="fa-solid fa-location-dot"></i>
+            <select name="localizacao" id="localizacao">
+              <option value="">Todas as cidades</option>
+              <option value="sao-paulo">São Paulo - SP</option>
+              <option value="rio-de-janeiro">Rio de Janeiro - RJ</option>
+              <option value="belo-horizonte">Belo Horizonte - MG</option>
+              <option value="curitiba">Curitiba - PR</option>
+              <option value="porto-alegre">Porto Alegre - RS</option>
+            </select>
+          </div>
+
+          <div class="filtro-campo">
+            <i class="fa-solid fa-sack-dollar"></i>
+            <select name="faixaValores" id="faixaValores">
+              <option value="">Selecione a faixa</option>
+              <option value="0-50">Até R$ 50</option>
+              <option value="50-100">R$ 50 a R$ 100</option>
+              <option value="100-200">R$ 100 a R$ 200</option>
+              <option value="200+">Acima de R$ 200</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn-buscar-filtro">
+            <i class="fa-solid fa-magnifying-glass"></i> Buscar
+          </button>
+        </form>
+      </section>
+
+      <section class="categorias">
+        <h2 class="titulo-secao">Navegue por categoria</h2>
+
+        <div class="categorias-grid">
+          <a href="#" class="categoria-item">
+            <span class="categoria-icone categoria-icone--veterinaria"
+              ><i class="fa-solid fa-stethoscope"></i
+            ></span>
+            <span class="categoria-nome">Veterinária</span>
+          </a>
+          <a href="#" class="categoria-item">
+            <span class="categoria-icone categoria-icone--petsitter"
+              ><i class="fa-solid fa-house-chimney"></i
+            ></span>
+            <span class="categoria-nome">Pet Sitter</span>
+          </a>
+          <a href="#" class="categoria-item">
+            <span class="categoria-icone categoria-icone--banho"
+              ><i class="fa-solid fa-shower"></i
+            ></span>
+            <span class="categoria-nome">Banho e Tosa</span>
+          </a>
+          <a href="#" class="categoria-item">
+            <span class="categoria-icone categoria-icone--adestrador"
+              ><i class="fa-solid fa-heart"></i
+            ></span>
+            <span class="categoria-nome">Adestradores</span>
+          </a>
+          <a href="#" class="categoria-item">
+            <span class="categoria-icone categoria-icone--comportamento"
+              ><i class="fa-solid fa-brain"></i
+            ></span>
+            <span class="categoria-nome">Comportamento animal</span>
+          </a>
+          <a href="#" class="categoria-item">
+            <span class="categoria-icone categoria-icone--nutricionista"
+              ><i class="fa-solid fa-bone"></i
+            ></span>
+            <span class="categoria-nome">Nutricionistas</span>
+          </a>
+          <a href="#" class="categoria-item">
+            <span class="categoria-icone categoria-icone--fotografo"
+              ><i class="fa-solid fa-camera"></i
+            ></span>
+            <span class="categoria-nome">Fotógrafos</span>
+          </a>
+          <a href="#" class="categoria-item">
+            <span class="categoria-icone categoria-icone--todos"
+              ><i class="fa-solid fa-grip"></i
+            ></span>
+            <span class="categoria-nome">Ver todos</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="profissionais-destaque" id="profissionais-destaque">
+        <h2 class="titulo-secao">Profissionais em destaque</h2>
+        <p class="subtitulo-secao">
+          Conheça alguns dos profissionais mais bem avaliados da nossa
+          plataforma
+        </p>
+
+        <div class="profissionais-grid">
+          <article class="profissional-card">
+            <div class="profissional-imagem">
+              <img src="./img/veterinaria.png" alt="Dra. Camila Prado" />
+              <button
+                type="button"
+                class="btn-favoritar"
+                aria-label="Favoritar"
+              >
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+            <div class="profissional-info">
+              <h3 class="profissional-nome">Dra. Camila Prado</h3>
+              <p class="profissional-especialidade">Veterinária</p>
+              <p class="profissional-avaliacao">
+                <i class="fa-solid fa-star"></i> 5.0
+                <span>(58 avaliações)</span>
+              </p>
+              <p class="profissional-local">
+                <i class="fa-solid fa-location-dot"></i> São Paulo - SP
+              </p>
+              <div class="profissional-tags">
+                <span class="tag">Domicílio</span>
+                <span class="tag">Online</span>
+              </div>
+              <p class="profissional-preco">
+                A partir de <strong>R$ 80,00</strong>
+              </p>
+              <a href="#" class="btn-ver-perfil"
+                >Ver perfil <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </article>
+
+          <article class="profissional-card">
+            <div class="profissional-imagem">
+              <img src="./img/petsitter.png" alt="Rafael Souza" />
+              <button
+                type="button"
+                class="btn-favoritar"
+                aria-label="Favoritar"
+              >
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+            <div class="profissional-info">
+              <h3 class="profissional-nome">Rafael Souza</h3>
+              <p class="profissional-especialidade">Pet Sitter</p>
+              <p class="profissional-avaliacao">
+                <i class="fa-solid fa-star"></i> 4.9
+                <span>(39 avaliações)</span>
+              </p>
+              <p class="profissional-local">
+                <i class="fa-solid fa-location-dot"></i> São Paulo - SP
+              </p>
+              <div class="profissional-tags">
+                <span class="tag">Hospedagem</span>
+              </div>
+              <p class="profissional-preco">
+                A partir de <strong>R$ 65,00</strong>
+              </p>
+              <a href="#" class="btn-ver-perfil"
+                >Ver perfil <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </article>
+
+          <article class="profissional-card">
+            <div class="profissional-imagem">
+              <img src="./img/banhoEtosa.png" alt="Juliana Martins" />
+              <button
+                type="button"
+                class="btn-favoritar"
+                aria-label="Favoritar"
+              >
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+            <div class="profissional-info">
+              <h3 class="profissional-nome">Juliana Martins</h3>
+              <p class="profissional-especialidade">Banho e Tosa</p>
+              <p class="profissional-avaliacao">
+                <i class="fa-solid fa-star"></i> 4.8
+                <span>(74 avaliações)</span>
+              </p>
+              <p class="profissional-local">
+                <i class="fa-solid fa-location-dot"></i> São Paulo - SP
+              </p>
+              <div class="profissional-tags">
+                <span class="tag">Domicílio</span>
+              </div>
+              <p class="profissional-preco">
+                A partir de <strong>R$ 55,00</strong>
+              </p>
+              <a href="#" class="btn-ver-perfil"
+                >Ver perfil <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </article>
+
+          <article class="profissional-card">
+            <div class="profissional-imagem">
+              <img src="./img/adestrador.png" alt="André Ferreira" />
+              <button
+                type="button"
+                class="btn-favoritar"
+                aria-label="Favoritar"
+              >
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+            <div class="profissional-info">
+              <h3 class="profissional-nome">André Ferreira</h3>
+              <p class="profissional-especialidade">Adestrador</p>
+              <p class="profissional-avaliacao">
+                <i class="fa-solid fa-star"></i> 4.9
+                <span>(51 avaliações)</span>
+              </p>
+              <p class="profissional-local">
+                <i class="fa-solid fa-location-dot"></i> São Paulo - SP
+              </p>
+              <div class="profissional-tags">
+                <span class="tag">Domicílio</span>
+                <span class="tag">Online</span>
+              </div>
+              <p class="profissional-preco">
+                A partir de <strong>R$ 90,00</strong>
+              </p>
+              <a href="#" class="btn-ver-perfil"
+                >Ver perfil <i class="fa-solid fa-arrow-right"></i
+              ></a>
+            </div>
+          </article>
+        </div>
+
+        <a href="#" class="link-ver-todos"
+          >Ver todos os profissionais <i class="fa-solid fa-arrow-right"></i
+        ></a>
+      </section>
+
+      <section class="por-que-escolher" id="como-funciona">
+        <div class="por-que-texto">
+          <h2 class="titulo-secao titulo-secao--esquerda">
+            Por que escolher profissionais da <span>ViraDengo</span>?
+          </h2>
+          <p class="subtitulo-secao subtitulo-secao--esquerda">
+            Todos os profissionais passam por um processo de verificação para
+            garantir mais segurança e confiança para você e seu pet.
+          </p>
+
+          <div class="beneficios-grid">
+            <div class="beneficio-item">
+              <span class="beneficio-icone"
+                ><i class="fa-solid fa-shield-halved"></i
+              ></span>
+              <p class="beneficio-titulo">Profissionais verificados</p>
+              <p class="beneficio-descricao">
+                Todos passam por análise de documentos e antecedentes
+              </p>
+            </div>
+
+            <div class="beneficio-item">
+              <span class="beneficio-icone"
+                ><i class="fa-solid fa-star"></i
+              ></span>
+              <p class="beneficio-titulo">Avaliações reais</p>
+              <p class="beneficio-descricao">
+                Depoimentos de outros tutores para você decidir com confiança
+              </p>
+            </div>
+
+            <div class="beneficio-item">
+              <span class="beneficio-icone"
+                ><i class="fa-solid fa-headset"></i
+              ></span>
+              <p class="beneficio-titulo">Suporte dedicado</p>
+              <p class="beneficio-descricao">
+                Nosso time está pronto para te ajudar em qualquer etapa
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="por-que-imagem">
+          <img src="./img/gato.png" alt="Gato" />
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <section class="footer-logo">
+        <img
+          class="logo-img-footer"
+          src="../img/logoImagem.png"
+          alt="imagem-logo"
+        />
+        <p class="span-negrito">
+          O serviço que faz você e seu pet virarem fãs.
+        </p>
+      </section>
+      <section class="footer-nav-cont">
+        <div class="footer-nav">
+          <p>Navegação</p>
+          <li><a href="">Início</a></li>
+          <li><a href="">Conexões</a></li>
+          <li><a href="">Home</a></li>
+          <li><a href="">Profissionais</a></li>
+        </div>
+        <div class="footer-contato">
+          <p>Contato</p>
+          <li>ViraDengo@gmail.com</li>
+          <li>Tel.: 11 977666555</li>
+        </div>
+        <div class="footer-tutorial">
+          <p>Suporte</p>
+          <li>Como funciona? (Doação)</li>
+          <li>Como funciona? (Voluntário)</li>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>

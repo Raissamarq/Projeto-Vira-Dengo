@@ -27,7 +27,11 @@
         <ul class="menu">
           <li><a class="list" href="../Feed/feed.html">Conexões</a></li>
           <li><a class="list" href="../index.html">Home</a></li>
-          <li><a class="list" href="#">Profissionais</a></li>
+          <li>
+            <a class="list" href="../FeedPrestador/feed-prestador.html"
+              >Profissionais</a
+            >
+          </li>
         </ul>
       </nav>
       <div class="perfil-box">
@@ -260,7 +264,11 @@
         <aside class="chat-panel" aria-label="Chat de entrega">
           <div class="chat-header">
             <div class="chat-contato">
-              <img src="../img/woman.jpg" alt="Juliana Martins" class="chat-avatar" />
+              <img
+                src="../img/woman.jpg"
+                alt="Juliana Martins"
+                class="chat-avatar"
+              />
               <div class="chat-info">
                 <h4>Juliana Martins</h4>
                 <span class="chat-status">Online</span>
@@ -274,44 +282,67 @@
           <div class="chat-mensagens" role="log" aria-live="polite">
             <div class="mensagem recebida">
               <div class="mensagem-bolha">
-                <p>Oi! Vi seu interesse na caminha para cães porte médio. Ainda está disponível?</p>
+                <p>
+                  Oi! Vi seu interesse na caminha para cães porte médio. Ainda
+                  está disponível?
+                </p>
                 <span class="mensagem-hora">14:22</span>
               </div>
             </div>
             <div class="mensagem enviada">
               <div class="mensagem-bolha">
-                <p>Oi! Sim, ainda está disponível. Está em ótimo estado, pouco usada.</p>
+                <p>
+                  Oi! Sim, ainda está disponível. Está em ótimo estado, pouco
+                  usada.
+                </p>
                 <span class="mensagem-hora">14:23</span>
               </div>
             </div>
             <div class="mensagem recebida">
               <div class="mensagem-bolha">
-                <p>Perfeito! Como fazemos a entrega? Posso buscar aí ou você traz?</p>
+                <p>
+                  Perfeito! Como fazemos a entrega? Posso buscar aí ou você
+                  traz?
+                </p>
                 <span class="mensagem-hora">14:24</span>
               </div>
             </div>
             <div class="mensagem enviada">
               <div class="mensagem-bolha">
-                <p>Moro na Vila Mariana. Se quiser buscar aqui é tranquilo, ou posso deixar num ponto de encontro no metrô.</p>
+                <p>
+                  Moro na Vila Mariana. Se quiser buscar aqui é tranquilo, ou
+                  posso deixar num ponto de encontro no metrô.
+                </p>
                 <span class="mensagem-hora">14:25</span>
               </div>
             </div>
             <div class="mensagem recebida">
               <div class="mensagem-bolha">
-                <p>Legal! Vou buscar aí amanhã de manhã, por volta das 10h. Manda seu endereço no privado?</p>
+                <p>
+                  Legal! Vou buscar aí amanhã de manhã, por volta das 10h. Manda
+                  seu endereço no privado?
+                </p>
                 <span class="mensagem-hora">14:26</span>
               </div>
             </div>
             <div class="mensagem enviada">
               <div class="mensagem-bolha">
-                <p>Combinado! Te mando a localização por aqui mesmo. Até amanhã! ���</p>
+                <p>
+                  Combinado! Te mando a localização por aqui mesmo. Até amanhã!
+                  ���
+                </p>
                 <span class="mensagem-hora">14:27</span>
               </div>
             </div>
           </div>
 
           <form class="chat-input-form" aria-label="Enviar mensagem">
-            <input type="text" class="chat-input" placeholder="Digite uma mensagem..." aria-label="Mensagem" />
+            <input
+              type="text"
+              class="chat-input"
+              placeholder="Digite uma mensagem..."
+              aria-label="Mensagem"
+            />
             <button type="submit" class="chat-enviar" aria-label="Enviar">
               <i class="fa-solid fa-paper-plane"></i>
             </button>
@@ -371,11 +402,87 @@
         >
       </div>
       <div class="botao-add">
-        <button id="btnToggleChat" type="button">
-          <img src="../img/icons/messenger.png" alt="" /> Mensagem
-        </button>
+        <a href="">
+          <button id="btnToggleChat" type="button">
+            <img src="../img/icons/messenger.png" alt="" /> Mensagem
+          </button>
+        </a>
       </div>
     </div>
+    <!-- STORY VIEWER MODAL (estilo Instagram) -->
+    <div
+      class="story-viewer"
+      id="storyViewer"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Visualizador de story"
+    >
+      <div class="story-viewer-header">
+        <div class="story-viewer-user">
+          <img src="" alt="" class="story-viewer-avatar" />
+          <div class="story-viewer-user-info">
+            <h4 class="story-viewer-name"></h4>
+            <span class="story-viewer-time"></span>
+          </div>
+        </div>
+        <button class="story-viewer-close" aria-label="Fechar story">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="story-viewer-content">
+        <button class="story-nav story-nav-prev" aria-label="Story anterior">
+          <i class="fa-solid fa-chevron-left"></i>
+        </button>
+
+        <div class="story-media-container">
+          <img
+            src="../img/cachorroSelfie.jpg"
+            alt=""
+            class="story-media"
+            id="storyMedia"
+          />
+          <div class="story-progress" id="storyProgress"></div>
+        </div>
+
+        <button class="story-nav story-nav-next" aria-label="Próximo story">
+          <i class="fa-solid fa-chevron-right"></i>
+        </button>
+      </div>
+
+      <div class="story-viewer-footer">
+        <div class="story-reactions">
+          <button class="reaction-btn" data-reaction="❤️" aria-label="Curtir">
+            ❤️
+          </button>
+          <button class="reaction-btn" data-reaction="🔥" aria-label="Fogo">
+            🔥
+          </button>
+          <button
+            class="reaction-btn"
+            data-reaction="😍"
+            aria-label="Apaixonado"
+          >
+            😍
+          </button>
+          <button class="reaction-btn" data-reaction="🐾" aria-label="Pata">
+            🐾
+          </button>
+        </div>
+        <form class="story-reply-form" aria-label="Responder ao story">
+          <input
+            type="text"
+            class="story-reply-input"
+            placeholder="Enviar mensagem..."
+            aria-label="Mensagem"
+          />
+          <button type="submit" class="story-reply-send" aria-label="Enviar">
+            <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+
     <script src="./feed.js"></script>
   </body>
 </html>

@@ -12,7 +12,14 @@ a {
 :root {
   --cor-primaria: #ff8615;
   --cor-secundaria: #006d77;
+  --cor-verde: #1fae5f;
+  --cor-roxo: #7b5cff;
+  --cor-texto: #333;
+  --cor-texto-claro: #777;
+  --cor-borda: #eee;
+  --radius: 14px;
   --cor-fundo: #faf6f1;
+  --cor-sub-fundo: #fff8f8;
   --cor-laranja-100: #ffe7d1;
 }
 
@@ -107,6 +114,57 @@ a {
 }
 
 /* endregion*/
+
+/* #region DROPDOWN */
+
+.perfil-box {
+  position: relative;
+  display: inline-block;
+}
+
+.perfil-toggle-input {
+  display: none;
+}
+
+.perfil-icone {
+  width: 60px;
+  border-radius: 50%;
+  border: solid 3.5px var(--cor-primaria);
+  cursor: pointer;
+  object-fit: cover;
+}
+
+.perfil-dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 55px;
+  background-color: var(--cor-borda);
+  min-width: 160px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 100;
+}
+
+.perfil-dropdown a {
+  display: block;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: var(--cor-secundaria);
+  font-size: 14px;
+}
+
+.perfil-dropdown a:hover {
+  background-color: var(--cor-sub-fundo);
+}
+
+/* Mostra o dropdown quando o checkbox está marcado */
+.perfil-toggle-input:checked ~ .perfil-dropdown {
+  display: block;
+}
+
+/* #endregion */
 
 .container {
   display: flex;
